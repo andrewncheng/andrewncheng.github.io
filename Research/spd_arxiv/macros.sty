@@ -1,0 +1,358 @@
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\def\defas{\stackrel{\text{def}}{=}}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\diag}{\textbf{diag}}
+\newcommand{\epi}{\textbf{epi}}
+\newcommand{\dom}{\textbf{dom}}
+\newcommand{\rank}{\textbf{rank}}
+\newcommand{\hadamard}{\mathcal{H}}
+\newcommand{\green}{\color{green}}
+\newcommand{\red}{\color{red}}
+\newcommand{\infconv}{\ \square \ }
+\DeclareMathOperator{\prox}{\mathbf{prox}}
+
+
+% \usepackage[dvipsnames]{xcolor}
+% \definecolor{mydarkblue}{rgb}{0,0.08,0.45}
+% \usepackage[colorlinks=true,
+%     linkcolor=mydarkblue,
+%     citecolor=mydarkblue,
+%     filecolor=mydarkblue,
+%     urlcolor=mydarkblue,
+%     pdfview=FitH]{hyperref}
+
+%Colors for the paper
+\definecolor{myteal}{RGB}{27,158,119}
+\definecolor{myorange}{RGB}{217,95,2}
+%\definecolor{mypurple}{RGB}{117,112,179}
+\definecolor{myred}{RGB}{231,41,138}
+\definecolor{mypurple}{RGB}{152,78,163}
+\definecolor{myblue}{RGB}{55,126,184}
+\definecolor{mygreen}{RGB}{0,100,0}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}{Exercise}
+
+
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\newcommand{\psd}{\mathbb{S}^{n}_{+}}
+\newcommand{\herm}{\mathbb{H}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand{\quadratic}{\mathcal{R}}
+\newcommand{\gradflowgamma}{\mathcal{\XX}_{\Gamma(t)}^{gf}}
+\newcommand{\gradflowgt}{\mathcal{\XX}_{\gamma t}^{gf}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\wiener}{\mathcal{W}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\y}{\tilde{y}}
+\newcommand{\OOmega}{\boldsymbol{\Omega}}
+\newcommand{\mmu}{\boldsymbol{\mu}}
+\newcommand{\env}{\textbf{env}}
+\newcommand{\EE}{\boldsymbol{E}}
+\newcommand{\conv}{\textbf{conv}}
+\newcommand{\SSigma}{\boldsymbol{\Sigma}}
+\newcommand{\martError}{\mathcal{E}_{M}}
+\newcommand{\emprisk}{\mathcal{L}}
+\newcommand{\XX}{\boldsymbol{X}}
+\newcommand{\stoppingtime}{\ww^{\vartheta}}
+\newcommand{\GG}{\boldsymbol{G}}
+\newcommand{\spd}{\mathbb{S}^n_{++}}
+\newcommand{\pd}{\mathbb{P}_d}
+\newcommand{\spsd}{\mathbb{S}^n_{+}}
+\newcommand{\KK}{\boldsymbol{K}}
+\newcommand{\Gmatrix}{\tilde{G}}
+\newcommand{\xx}{\boldsymbol{x}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Mc}{\mathcal{M}}
+
+
+\newcommand{\CC}{\boldsymbol{C}}
+\newcommand{\uu}{\boldsymbol{u}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\ZZ}{\boldsymbol{Z}}
+\def\II{{\boldsymbol I}}
+\def\AA{{\boldsymbol A}}
+\newcommand{\bb}{\boldsymbol{b}}
+%\newcommand{\martIncrement}{\mathring{\boldsymbol M}}
+\def\CC{{\boldsymbol C}}
+\def\FF{{\boldsymbol F}}
+\def\MM{{\boldsymbol M}}
+\def\SS{{\boldsymbol S}}
+\def\DD{{\boldsymbol D}}
+\def\OO{{\boldsymbol O}}
+\def\NN{{\boldsymbol N}}
+\def\hh{{\boldsymbol h}}
+\def\ww{{\boldsymbol w}}
+\def\ee{{\boldsymbol e}}
+\def\yy{{\boldsymbol y}}
+\def\PP{{\boldsymbol P}}
+\def\TT{{\boldsymbol T}}
+\def\bphi{{\boldsymbol \phi}}
+\def\QQ{{\boldsymbol Q}}
+\def\UU{{\boldsymbol U}}
+\def\VV{{\boldsymbol V}}
+\def\HH{{\boldsymbol H}}
+\def\balpha{{\boldsymbol \alpha}}
+\def\bpsi{{\boldsymbol \psi}}
+\def\bbeta{{\boldsymbol \beta}}
+\def\LLambda{{\boldsymbol \Lambda}}
+\def\SSigma{{\boldsymbol \Sigma}}
+\def\nnu{{\boldsymbol \nu}}
+\def\eeps{{\boldsymbol \varepsilon}}
+\def\eeta{{\boldsymbol \eta}}
+\def\llambda{{\boldsymbol \lambda}}
+\def\g{{g}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+% Math macros to be imported into main.tex
+
+%ANDREW 
+\newcommand{\Tangent}{\mathcal{T}}
+
+
+
+%ELLIOT
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\E{\mathbb{E}}
+\def\Filt{\mathscr{F}}
+\renewcommand\ss{{\boldsymbol s}}
+%\renewcommand\gg{{\boldsymbol g}}
+
+%KIWON
+\def\aa{{\boldsymbol a}}
+\def\bb{{\boldsymbol b}}
+\def\hh{{\boldsymbol h}}
+
+%COURTNEY
+\def\xx{{\boldsymbol x}}
+\def\qq{{\boldsymbol q}}
+\def\dd{{\boldsymbol d}}
+\def\XX{{\boldsymbol X}}
+\def\YY{{\boldsymbol Y}}
+\def\ZZ{{\boldsymbol Z}}
+\def\aa{{\boldsymbol a}}
+\def\zzeta{{\boldsymbol \zeta}}
+\def\bb{{\boldsymbol b}}
+\def\rr{{\boldsymbol r}}
+\def\ee{{\boldsymbol e}}
+\def\cc{{\boldsymbol c}}
+\def\qq{{\boldsymbol q}}
+
+\def\WW{{\boldsymbol W}}
+\def\JJ{{\boldsymbol J}}
+\def\KK{{\boldsymbol K}}
+\def\II{{\text{\textbf{I}}}}
+\def\yy{{\boldsymbol y}}
+\def\vv{{\boldsymbol v}}
+\def\uu{{\boldsymbol u}}
+\def\ww{{\boldsymbol w}}
+\def\zz{{\boldsymbol z}}
+\def\SS{{\boldsymbol S}}
+\def\BB{{\boldsymbol B}}
+\def\AA{{\boldsymbol A}}
+\def\CC{{\boldsymbol C}}
+\def\FF{{\boldsymbol F}}
+\def\GG{{\boldsymbol G}}
+\def\MM{{\boldsymbol M}}
+\def\DD{{\boldsymbol D}}
+\def\OO{{\boldsymbol O}}
+\def\PP{{\boldsymbol P}}
+\def\TT{{\boldsymbol T}}
+\def\bphi{{\boldsymbol \phi}}
+\def\QQ{{\boldsymbol Q}}
+\def\UU{{\boldsymbol U}}
+\def\VV{{\boldsymbol V}}
+\def\HH{{\boldsymbol H}}
+
+\def\balpha{{\boldsymbol \alpha}}
+\def\bpsi{{\boldsymbol \psi}}
+\def\LLambda{{\boldsymbol \Lambda}}
+\def\xxi{  {\boldsymbol \xi} } 
+\def\SSigma{{\boldsymbol \Sigma}}
+
+\def\YY{ {\boldsymbol Y} }
+
+\def\nnu{{\boldsymbol \nu}}
+\def\eeps{{\boldsymbol \varepsilon}}
+\def\eeta{{\boldsymbol \eta}}
+\def\DDelta{{\boldsymbol \Delta}}
+\def\llambda{{\boldsymbol \lambda}}
+\def\bbeta{{\boldsymbol \beta}}
+
+\def\g{{g}}
+
+\def\dif{\mathop{}\!\mathrm{d}}
+\def\Proba{\mathbb{P}}
+\def\MP{\mu_{\mathrm{MP}}}
+\def\RR{{\widehat{\bm {R}}}}
+
+%\newcommand{\Econd}{\mathbf{E}}
+\renewcommand{\vec}{\mathbf{vec}}
+%\DeclareMathOperator{\prox}{\mathbf{prox}}
+\def\defas{\stackrel{\text{def}}{=}}
+%\DeclareMathOperator*{\dom}{dom}
+%\DeclareMathOperator*{\supp}{supp}
+%\DeclareMathOperator*{\Fix}{Fix}
+%\DeclareMathOperator*{\Var}{Var}
+%\DeclareMathOperator*{\argmax}{{arg\,max}}
+%\DeclareMathOperator*{\argmin}{{arg\,min}}
+%\DeclareMathOperator*{\minimize}{minimize}
+%\DeclareMathOperator*{\diag}{\mathbf{diag}}
+
+\def\concentration{\! \! \underset{d \rightarrow \infty}{\mathcal{E}} \!  [\|\nabla f(\xx_{k})\|^2]\,}
+
+
+% \DeclareDocumentCommand{\Prto} {o} {
+%   \IfNoValueTF {#1}
+%   {\overset{\Pr}{\longrightarrow}}
+%   { \xrightarrow[ #1 \to \infty]{\Pr }}
+% }
+
+% \DeclareDocumentCommand{\Asto} {o} {
+%   \IfNoValueTF {#1}
+%   {\overset{\text{\rm a.s.}}{\longrightarrow}}
+%   { \xrightarrow[ #1 \to \infty]{\text{\rm a.s.} }}
+% }
+
+% \DeclareDocumentCommand{\law} {o} {
+%   \IfNoValueTF {#1}
+%   {\overset{\text{law}}{=}}
+%   { \xrightarrow[ #1 \to \infty]{\Pr }}
+% }
+\newcommand{\SG}{\mathcal{SG}(\mathbb{P}_d)}
+\newcommand{\D}{\tilde{D}}
+\newcommand{\B}{\tilde{B}}
+\newcommand{\M}{\tilde{M}}
+\newcommand{\K}{\tilde{K}}
+\newcommand{\Z}{\mathcal{Z}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Id}{\text{\textbf{I}}}
+\newcommand{\manifold}{\mathcal{M}}
+
+
+%\newcommand{\blue}{\color{blue}}
+
+
+
+%BEN
+
+\newcommand{\gcal}{R}
+\newcommand{\gcaltil}{\tilde{R}}
+\newcommand{\gcalm}[1]{R^{(#1)}}
+\newcommand{\gcaltilm}[1]{\tilde{R}^{(#1)}}
+\newcommand{\deq}{\mathrel{\mathop:}=} 
+
+
+% shortcut for inline equations and alignments
+%\newcommand{\eq}[1]{\begin{equation}#1\end{equation}}
+%\newcommand{\eqs}[1]{\begin{equation*}#1\end{equation*}}
+\newcommand{\al}[1]{\begin{align}#1\end{align}}
+\newcommand{\als}[1]{\begin{align*}#1\end{align*}}
+\newcommand{\ca}[1]{\begin{cases}#1\end{cases}}
+
+% ( round parentheses )
+%\newcommand{\p}[1]{({#1})}
+%\newcommand{\pb}[1]{\bigl({#1}\bigr)}
+%\newcommand{\pB}[1]{\Bigl({#1}\Bigr)}
+%\newcommand{\pbb}[1]{\biggl({#1}\biggr)}
+%\newcommand{\pBB}[1]{\Biggl({#1}\Biggr)}
+%\newcommand{\pa}[1]{\left({#1}\right)}
+
+% [ square brackets ]
+\newcommand{\q}[1]{[{#1}]}
+\newcommand{\qb}[1]{\bigl[{#1}\bigr]}
+\newcommand{\qB}[1]{\Bigl[{#1}\Bigr]}
+\newcommand{\qbb}[1]{\biggl[{#1}\biggr]}
+\newcommand{\qBB}[1]{\Biggl[{#1}\Biggr]}
+\newcommand{\qa}[1]{\left[{#1}\right]}
+
+% { curly braces }
+\newcommand{\h}[1]{\{{#1}\}}
+\newcommand{\hb}[1]{\bigl\{{#1}\bigr\}}
+\newcommand{\hB}[1]{\Bigl\{{#1}\Bigr\}}
+\newcommand{\hbb}[1]{\biggl\{{#1}\biggr\}}
+\newcommand{\hBB}[1]{\Biggl\{{#1}\Biggr\}}
+\newcommand{\ha}[1]{\left\{{#1}\right\}}
+
+% | absolute value |
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\absb}[1]{\bigl\lvert #1 \bigr\rvert}
+\newcommand{\absB}[1]{\Bigl\lvert #1 \Bigr\rvert}
+\newcommand{\absbb}[1]{\biggl\lvert #1 \biggr\rvert}
+\newcommand{\absBB}[1]{\Biggl\lvert #1 \Biggr\rvert}
+\newcommand{\absa}[1]{\left\lvert #1 \right\rvert}
+
+% || norm ||
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\normb}[1]{\bigl\lVert #1 \bigr\rVert}
+\newcommand{\normB}[1]{\Bigl\lVert #1 \Bigr\rVert}
+\newcommand{\normbb}[1]{\biggl\lVert #1 \biggr\rVert}
+\newcommand{\normBB}[1]{\Biggl\lVert #1 \Biggr\rVert}
+\newcommand{\norma}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\vertiii}[1]{{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 
+    \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}}
+    
+\newcommand{\gf}{\bm{\mathscr{X}}^{\text{gf}}}
+
+\newcommand{\sgf}{\bm{\mathscr{X}}^{\text{s-gf}}}
+
+\newcommand{\gd}{\bm{\xx}^{\text{gd}}}
+
+\newcommand{\sgd}{\bm{\xx}^{\text{sgd}}}
+
+\newcommand{\mgd}{\bm{x}^{\text{m-gd}}}
+
+\newcommand{\martIncrement}{\mathring{\boldsymbol M}}
+
+\newcommand{\A}{\boldsymbol{A}}
+\newcommand{\seqevents}{\{E_n : n \geq 1\}}
+\newcommand{\z}{\tilde{z}}
+\newcommand{\Bplus}{\mathcal{B}_j^{(+)}}
+\newcommand{\Bminus}{\mathcal{B}_j^{(-)}}
+\newcommand{\filter}{ \{\mathcal{F}_t : t \geq 0\} }
+\newcommand{\dB}{\big(\Delta B_{n,k}^{(j)}\big)}
+\newcommand{\dBjprime}{\big(\Delta B_{n,k}^{(j')}\big)}
+\newcommand{\probspace}{(\Omega, \mathcal{F}, \mathbb{P})}
+\newcommand{\filteredspace}{(\Omega, \mathcal{F}, \{\mathcal{F}_t : t \geq 0\}, \mathbb{P})}
+\newcommand{\sigmaalgebra}{\sigma\text{-algebra}}
+\newcommand{\Minf}{\mathcal{M}_\infty(\real^d)}
+\newcommand{\jumpmeasure}{j(t,dy, \omega)}
+\newcommand{\stochprocess}{\{X_t: t \geq 0\}}
+\newcommand{\naturalfiltration}{\mathcal{F}^X_t}
+\newcommand{\UL}{\GG_{UL}}
+\newcommand{\UR}{\GG_{UR}}
+
+\newcommand{\p}{\text{\rm Pr}}
+\newcommand{\BM}{\{B_t: t \geq 0\}}
+
+
+\newcommand{\mw}[1]{\textcolor{blue}{\emph{MW: #1}}}
+\newcommand{\ac}[1]{\textcolor{cyan}{\emph{AC: #1}}}
+
+
+\newcommand{\bluebox}[1]{
+    \begin{center}
+    \begin{tcolorbox}[colback=blue!10!white, colframe=blue!50!black, width=\textwidth, boxrule=0.5mm, colbacktitle=blue!75!black, title=]
+    \emph{#1}
+    \end{tcolorbox}
+    \end{center}
+}

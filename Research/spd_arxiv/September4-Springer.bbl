@@ -1,0 +1,251 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\burl{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem{tyler1987distribution}
+\bibinfo{author}{Tyler, D.~E.}
+\newblock \bibinfo{title}{A distribution-free {M}-estimator of multivariate scatter}.
+\newblock \emph{\bibinfo{journal}{{The Annals of Statistics}}} \bibinfo{pages}{234--251} (\bibinfo{year}{1987}).
+
+\bibitem{m-scatter}
+\bibinfo{author}{Ollila, E.} \& \bibinfo{author}{Tyler, D.~E.}
+\newblock \bibinfo{title}{{Regularized $M$-Estimators of Scatter Matrix}}.
+\newblock \emph{\bibinfo{journal}{IEEE Transactions on Signal Processing}} \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{6059--6070} (\bibinfo{year}{2014}).
+
+\bibitem{wiesel2012geodesic}
+\bibinfo{author}{Wiesel, A.}
+\newblock \bibinfo{title}{Geodesic convexity and covariance estimation}.
+\newblock \emph{\bibinfo{journal}{{IEEE Transactions on Signal Processing}}} \textbf{\bibinfo{volume}{60}}, \bibinfo{pages}{6182--6189} (\bibinfo{year}{2012}).
+
+\bibitem{zhang2016robust}
+\bibinfo{author}{Zhang, T.}
+\newblock \bibinfo{title}{{Robust subspace recovery by Tyler's M-estimator}}.
+\newblock \emph{\bibinfo{journal}{Information and Inference: A Journal of the IMA}} \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{1--21} (\bibinfo{year}{2016}).
+
+\bibitem{sra2013sdivergence}
+\bibinfo{author}{Sra, S.}
+\newblock \bibinfo{title}{Positive definite matrices and the s-divergence}.
+\newblock \emph{\bibinfo{journal}{arXiv:1110.1773}}  (\bibinfo{year}{2013}).
+
+\bibitem{sra2015matrixsquareroot}
+\bibinfo{author}{Sra, S.}
+\newblock \bibinfo{title}{On the matrix square root via geometric optimization}.
+\newblock \emph{\bibinfo{journal}{arXiv:1507.08366}}  (\bibinfo{year}{2015}).
+
+\bibitem{weber2022computing}
+\bibinfo{author}{Weber, M.} \& \bibinfo{author}{Sra, S.}
+\newblock \bibinfo{title}{{Computing Brascamp-Lieb Constants through the lens of Thompson Geometry}}.
+\newblock \emph{\bibinfo{journal}{arXiv:2208.05013}}  (\bibinfo{year}{2022}).
+
+\bibitem{mariet2015fixed}
+\bibinfo{author}{Mariet, Z.} \& \bibinfo{author}{Sra, S.}
+\newblock \emph{\bibinfo{title}{Fixed-point algorithms for learning determinantal point processes}}, \bibinfo{pages}{2389--2397} (\bibinfo{organization}{PMLR}, \bibinfo{year}{2015}).
+
+\bibitem{liu2019simple}
+\bibinfo{author}{Liu, C.} \& \bibinfo{author}{Boumal, N.}
+\newblock \bibinfo{title}{Simple algorithms for optimization on {R}iemannian manifolds with constraints}.
+\newblock \emph{\bibinfo{journal}{arXiv:1901.10000}}  (\bibinfo{year}{2019}).
+
+\bibitem{frank-wolfe}
+\bibinfo{author}{Weber, M.} \& \bibinfo{author}{Sra, S.}
+\newblock \bibinfo{title}{Riemannian optimization via {Frank-Wolfe} methods}.
+\newblock \emph{\bibinfo{journal}{Mathematical Programming}}  (\bibinfo{year}{2022}).
+
+\bibitem{weber2021projection}
+\bibinfo{author}{Weber, M.} \& \bibinfo{author}{Sra, S.}
+\newblock \bibinfo{title}{Projection-free nonconvex stochastic optimization on {R}iemannian manifolds}.
+\newblock \emph{\bibinfo{journal}{{IMA Journal of Numerical Analysis}}} \textbf{\bibinfo{volume}{42}}, \bibinfo{pages}{3241--3271} (\bibinfo{year}{2021}).
+
+\bibitem{pmlr-v202-weber23a}
+\bibinfo{author}{Weber, M.} \& \bibinfo{author}{Sra, S.}
+\newblock \emph{\bibinfo{title}{Global optimality for {E}uclidean {CCCP} under {R}iemannian convexity}}, Vol. \bibinfo{volume}{202}, \bibinfo{pages}{36790--36803} (\bibinfo{publisher}{PMLR}, \bibinfo{year}{2023}).
+
+\bibitem{udriste1994convex}
+\bibinfo{author}{Udriste, C.}
+\newblock \emph{\bibinfo{title}{Convex Functions and Optimization Methods on {R}iemannian Manifolds}} Vol. \bibinfo{volume}{297} (\bibinfo{publisher}{Springer Science \& Business Media}, \bibinfo{year}{1994}).
+
+\bibitem{Bacak+2014}
+\bibinfo{author}{Bacak, M.}
+\newblock \emph{\bibinfo{title}{Convex Analysis and Optimization in Hadamard Spaces}}  (\bibinfo{publisher}{De Gruyter}, \bibinfo{address}{Berlin, München, Boston}, \bibinfo{year}{2014}).
+
+\bibitem{zhang2016first}
+\bibinfo{author}{Zhang, H.} \& \bibinfo{author}{Sra, S.}
+\newblock \emph{\bibinfo{title}{First-order methods for geodesically convex optimization}}, \bibinfo{pages}{1617--1638} (\bibinfo{year}{2016}).
+
+\bibitem{boumal2019global}
+\bibinfo{author}{Boumal, N.}, \bibinfo{author}{Absil, P.-A.} \& \bibinfo{author}{Cartis, C.}
+\newblock \bibinfo{title}{Global rates of convergence for nonconvex optimization on manifolds}.
+\newblock \emph{\bibinfo{journal}{IMA Journal of Numerical Analysis}} \textbf{\bibinfo{volume}{39}}, \bibinfo{pages}{1--33} (\bibinfo{year}{2019}).
+
+\bibitem{bonnabel2013stochastic}
+\bibinfo{author}{Bonnabel, S.}
+\newblock \bibinfo{title}{Stochastic gradient descent on {R}iemannian manifolds}.
+\newblock \emph{\bibinfo{journal}{IEEE Transactions on Automatic Control}} \textbf{\bibinfo{volume}{58}}, \bibinfo{pages}{2217--2229} (\bibinfo{year}{2013}).
+
+\bibitem{Riemannian_SVRG}
+\bibinfo{author}{Zhang, H.}, \bibinfo{author}{J.~Reddi, S.} \& \bibinfo{author}{Sra, S.}
+\newblock \bibinfo{title}{Riemannian {SVRG}: Fast stochastic optimization on {R}iemannian manifolds}.
+\newblock \emph{\bibinfo{journal}{Advances in Neural Information Processing Systems}} \textbf{\bibinfo{volume}{29}} (\bibinfo{year}{2016}).
+
+\bibitem{bien}
+\bibinfo{author}{Bien, J.} \& \bibinfo{author}{Tibshirani, R.}
+\newblock \bibinfo{title}{Sparse estimation of a covariance matrix}.
+\newblock \emph{\bibinfo{journal}{Biometrika}} \textbf{\bibinfo{volume}{98}}, \bibinfo{pages}{807--820} (\bibinfo{year}{2011}).
+
+\bibitem{structuredcovestimation_wiesel}
+\bibinfo{author}{Wiesel, A.} \& \bibinfo{author}{Zhang, T.}
+\newblock \bibinfo{title}{Structured robust covariance estimation}.
+\newblock \emph{\bibinfo{journal}{Foundations and Trends in Signal Processing}} \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{127--216} (\bibinfo{year}{2015}).
+
+\bibitem{Nguyen2019CalculatingOL}
+\bibinfo{author}{Nguyen, V.~A.}, \bibinfo{author}{Shafieezadeh-Abadeh, S.}, \bibinfo{author}{Yue, M.-C.}, \bibinfo{author}{Kuhn, D.} \& \bibinfo{author}{Wiesemann, W.}
+\newblock \emph{\bibinfo{title}{Calculating optimistic likelihoods using (geodesically) convex optimization}} (\bibinfo{year}{2019}).
+
+\bibitem{DC-review}
+\bibinfo{author}{Tuy, H.}
+\newblock \emph{\bibinfo{title}{D.C. Optimization: Theory, Methods and Algorithms}}, \bibinfo{pages}{149--216} (\bibinfo{publisher}{Springer US}, \bibinfo{address}{Boston, MA}, \bibinfo{year}{1995}).
+
+\bibitem{cruzneto}
+\bibinfo{author}{Almeida, Y.~T.}, \bibinfo{author}{da~Cruz~Neto, J.~X.}, \bibinfo{author}{Oliveira, P.~R.} \& \bibinfo{author}{Souza, J. C. d.~O.}
+\newblock \bibinfo{title}{A modified proximal point method for {DC} functions on {H}adamard manifolds}.
+\newblock \emph{\bibinfo{journal}{Computational Optimization and Applications}} \textbf{\bibinfo{volume}{76}}, \bibinfo{pages}{649--673} (\bibinfo{year}{2020}).
+
+\bibitem{souza2015proximal}
+\bibinfo{author}{Souza, J. C. d.~O.} \& \bibinfo{author}{Oliveira, P.~R.}
+\newblock \bibinfo{title}{A proximal point algorithm for {DC} fuctions on {H}adamard manifolds}.
+\newblock \emph{\bibinfo{journal}{Journal of Global Optimization}} \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{797--810} (\bibinfo{year}{2015}).
+
+\bibitem{ferreira2021difference}
+\bibinfo{author}{Ferreira, O.~P.}, \bibinfo{author}{Santos, E.~M.} \& \bibinfo{author}{Souza, J. C.~O.}
+\newblock \bibinfo{title}{The difference of convex algorithm on riemannian manifolds}.
+\newblock \emph{\bibinfo{journal}{arXiv preprint arXiv:2112.05250}}  (\bibinfo{year}{2021}).
+
+\bibitem{Nesterov1994InteriorpointPA}
+\bibinfo{author}{Nesterov, Y.} \& \bibinfo{author}{Nemirovski, A.}
+\newblock \emph{\bibinfo{title}{Interior-point polynomial algorithms in convex programming}} (\bibinfo{year}{1994}).
+
+\bibitem{lanckriet2009convergence}
+\bibinfo{author}{Lanckriet, G.} \& \bibinfo{author}{Sriperumbudur, B.~K.}
+\newblock \bibinfo{title}{On the convergence of the concave-convex procedure}.
+\newblock \emph{\bibinfo{journal}{Advances in {N}eural {I}nformation {P}rocessing {S}ystems}} \textbf{\bibinfo{volume}{22}} (\bibinfo{year}{2009}).
+
+\bibitem{LIM2013115}
+\bibinfo{author}{Lim, Y.}
+\newblock \bibinfo{title}{Convex geometric means}.
+\newblock \emph{\bibinfo{journal}{Journal of Mathematical Analysis and Applications}} \textbf{\bibinfo{volume}{404}}, \bibinfo{pages}{115--128} (\bibinfo{year}{2013}).
+
+\bibitem{bhatia97}
+\bibinfo{author}{Bhatia, R.}
+\newblock \emph{\bibinfo{title}{Matrix Analysis}} Vol. \bibinfo{volume}{169} (\bibinfo{publisher}{Springer}, \bibinfo{year}{1997}).
+
+\bibitem{uhler2017gaussiangraphicalmodelsalgebraic}
+\bibinfo{author}{Uhler, C.}
+\newblock \bibinfo{title}{Gaussian graphical models: An algebraic and geometric perspective}.
+\newblock \emph{\bibinfo{journal}{arXiv:1707.04345}}  (\bibinfo{year}{2017}).
+
+\bibitem{vandereycken2013low}
+\bibinfo{author}{Vandereycken, B.}
+\newblock \bibinfo{title}{Low-rank matrix completion by riemannian optimization}.
+\newblock \emph{\bibinfo{journal}{SIAM Journal on Optimization}} \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{1214--1236} (\bibinfo{year}{2013}).
+
+\bibitem{Karcher1977RiemannianCO}
+\bibinfo{author}{Karcher, H.}
+\newblock \bibinfo{title}{Riemannian center of mass and mollifier smoothing}.
+\newblock \emph{\bibinfo{journal}{Communications on Pure and Applied Mathematics}} \textbf{\bibinfo{volume}{30}}, \bibinfo{pages}{509--541} (\bibinfo{year}{1977}).
+
+\bibitem{von1937some}
+\bibinfo{author}{Von~Neumann, J.}
+\newblock \emph{\bibinfo{title}{Some matrix-inequalities and metrization of matric space}}  (\bibinfo{year}{1937}).
+
+\bibitem{thompson1963certain}
+\bibinfo{author}{Thompson, A.~C.}
+\newblock \bibinfo{title}{On certain contraction mappings in a partially ordered vector space}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the American Mathematical Society}} \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{438--443} (\bibinfo{year}{1963}).
+
+\bibitem{bhatia07positivedefinitematrices}
+\bibinfo{author}{Bhatia, R.}
+\newblock \emph{\bibinfo{title}{Positive Definite Matrices}} Princeton Series in Applied Mathematics (\bibinfo{publisher}{Princeton University Press}, \bibinfo{address}{Princeton, NJ, USA}, \bibinfo{year}{2007}).
+
+\bibitem{cheng2024disciplinedgeodesicallyconvexprogramming}
+\bibinfo{author}{Cheng, A.}, \bibinfo{author}{Dixit, V.} \& \bibinfo{author}{Weber, M.}
+\newblock \bibinfo{title}{Disciplined geodesically convex programming}.
+\newblock \emph{\bibinfo{journal}{arXiv:2407.05261}}  (\bibinfo{year}{2024}).
+
+\bibitem{Vishnoi2018GeodesicCO}
+\bibinfo{author}{Vishnoi, N.~K.}
+\newblock \bibinfo{title}{Geodesic convex optimization: Differentiation on manifolds, geodesics, and convexity}.
+\newblock \emph{\bibinfo{journal}{arXiv:1806.06373}}  (\bibinfo{year}{2018}).
+
+\bibitem{irls_fazel}
+\bibinfo{author}{Mohan, K.} \& \bibinfo{author}{Fazel, M.}
+\newblock \bibinfo{title}{Iterative reweighted algorithms for matrix rank minimization}.
+\newblock \emph{\bibinfo{journal}{Journal of Machine Learning Research}} \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{3441--3473} (\bibinfo{year}{2012}).
+
+\bibitem{scieur2023strong}
+\bibinfo{author}{Scieur, D.}, \bibinfo{author}{Kerdreux, T.}, \bibinfo{author}{d'Aspremont, A.} \& \bibinfo{author}{Pokutta, S.}
+\newblock \bibinfo{title}{Strong convexity of sets in {R}iemannian manifolds}.
+\newblock \emph{\bibinfo{journal}{arXiv:2312.03583}}  (\bibinfo{year}{2023}).
+
+\bibitem{COMBETTES2021565}
+\bibinfo{title}{Complexity of linear minimization and projection on some sets}.
+\newblock \emph{\bibinfo{journal}{Operations Research Letters}} \textbf{\bibinfo{volume}{49}}, \bibinfo{pages}{565--571} (\bibinfo{year}{2021}).
+
+\bibitem{efficientsimilarityCherian}
+\bibinfo{author}{Cherian, A.}, \bibinfo{author}{Sra, S.}, \bibinfo{author}{Banerjee, A.} \& \bibinfo{author}{Papanikolopoulos, N.}
+\newblock \bibinfo{title}{Efficient similarity search for covariance matrices via the {J}ensen-{B}regman {L}og{D}et divergence}.
+\newblock \emph{\bibinfo{journal}{International Conference on Computer Vision}} \bibinfo{pages}{2399--2406} (\bibinfo{year}{2011}).
+
+\bibitem{Jeuris2012ASA}
+\bibinfo{author}{Jeuris, B.}, \bibinfo{author}{Vandebril, R.} \& \bibinfo{author}{Vandereycken, B.}
+\newblock \bibinfo{title}{A survey and comparison of contemporary algorithms for computing the matrix geometric mean}.
+\newblock \emph{\bibinfo{journal}{Electronic Transactions on Numerical Analysis}} \textbf{\bibinfo{volume}{39}}, \bibinfo{pages}{379--402} (\bibinfo{year}{2012}).
+
+\bibitem{Fang2018}
+\bibinfo{author}{Fang, K.-T.}, \bibinfo{author}{Kotz, S.} \& \bibinfo{author}{Ng, K.~W.}
+\newblock \emph{\bibinfo{title}{Symmetric Multivariate and Related Distributions}}  (\bibinfo{publisher}{Chapman and Hall/CRC}, \bibinfo{year}{2018}).
+
+\bibitem{discriminant_analysis_sapatinas}
+\bibinfo{author}{Sapatinas, T.}
+\newblock \bibinfo{title}{{Discriminant Analysis and Statistical Pattern Recognition}}.
+\newblock \emph{\bibinfo{journal}{Journal of the Royal Statistical Society Series A: Statistics in Society}} \textbf{\bibinfo{volume}{168}}, \bibinfo{pages}{635--636} (\bibinfo{year}{2005}).
+
+\bibitem{Price2017}
+\bibinfo{author}{Price, L.~F.}, \bibinfo{author}{Drovandi, C.~C.}, \bibinfo{author}{Lee, A.} \& \bibinfo{author}{Nott, D.~J.}
+\newblock \bibinfo{title}{Bayesian synthetic likelihood}.
+\newblock \emph{\bibinfo{journal}{Journal of Computational and Graphical Statistics}} \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{1–11} (\bibinfo{year}{2017}).
+
+\bibitem{riemanniangaussianSPD}
+\bibinfo{author}{Said, S.}, \bibinfo{author}{Bombrun, L.}, \bibinfo{author}{Berthoumieu, Y.} \& \bibinfo{author}{Manton, J.~H.}
+\newblock \bibinfo{title}{Riemannian {G}aussian distributions on the space of symmetric positive definite matrices}.
+\newblock \emph{\bibinfo{journal}{IEEE Transactions on Information Theory}} \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{2153--2170} (\bibinfo{year}{2017}).
+
+\bibitem{Sra_conic_geometric_Opt_SPD}
+\bibinfo{author}{Sra, S.} \& \bibinfo{author}{Hosseini, R.}
+\newblock \bibinfo{title}{Conic geometric optimization on the manifold of positive definite matrices}.
+\newblock \emph{\bibinfo{journal}{SIAM Journal on Optimization}} \textbf{\bibinfo{volume}{25}}, \bibinfo{pages}{713–739} (\bibinfo{year}{2015}).
+
+\bibitem{Kotz2004}
+\bibinfo{author}{Kotz, S.} \& \bibinfo{author}{Nadarajah, S.}
+\newblock \emph{\bibinfo{title}{Multivariate t-Distributions and Their Applications}}  (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2004}).
+
+\bibitem{Lange1989}
+\bibinfo{author}{Lange, K.~L.}, \bibinfo{author}{Little, R. J.~A.} \& \bibinfo{author}{Taylor, J. M.~G.}
+\newblock \bibinfo{title}{Robust statistical modeling using the t-distribution}.
+\newblock \emph{\bibinfo{journal}{Journal of the American Statistical Association}} \textbf{\bibinfo{volume}{84}}, \bibinfo{pages}{881–896} (\bibinfo{year}{1989}).
+
+\bibitem{Nadarajah2005}
+\bibinfo{author}{Nadarajah, S.} \& \bibinfo{author}{Kotz, S.}
+\newblock \bibinfo{title}{Mathematical properties of the multivariate t-distribution}.
+\newblock \emph{\bibinfo{journal}{Acta Applicandae Mathematicae}} \textbf{\bibinfo{volume}{89}}, \bibinfo{pages}{53–84} (\bibinfo{year}{2005}).
+
+\bibitem{regression_pd}
+\bibinfo{author}{Meyer, G.}, \bibinfo{author}{Bonnabel, S.} \& \bibinfo{author}{Sepulchre, R.}
+\newblock \bibinfo{title}{Regression on fixed-rank positive semidefinite matrices: A {R}iemannian approach}.
+\newblock \emph{\bibinfo{journal}{Journal of Machine Learning Research}} \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{593--625} (\bibinfo{year}{2011}).
+
+\end{thebibliography}

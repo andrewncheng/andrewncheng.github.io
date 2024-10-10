@@ -1,0 +1,2200 @@
+
+
+@misc{pmlr-v202-weber23a,
+  title = 	 {Global optimality for {E}uclidean {CCCP} under {R}iemannian convexity},
+  author =       {Weber, Melanie and Sra, Suvrit},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {36790--36803},
+  year = 	 {2023},
+  volume = 	 {202},
+  month = 	 {23--29 Jul},
+  publisher =    {PMLR}
+}
+
+
+
+@inproceedings{NEURIPS2022_efcb76ac,
+ author = {Lee, Kiwon and Cheng, Andrew and Paquette, Elliot and Paquette, Courtney},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {36944--36957},
+ title = {Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions},
+ volume = {35},
+ year = {2022}
+}
+
+
+
+
+
+@inproceedings{Donoho2003HessianE,
+  title={Hessian Eigenmaps : new locally linear embedding techniques for high-dimensional data},
+  author={David L. Donoho and Carrie Grimes and Hessian Eigenmaps},
+  year={2003},
+  url={https://api.semanticscholar.org/CorpusID:6618760}
+}
+
+@article{JMLR:v9:vandermaaten08a,
+  author  = {Laurens van der Maaten and Geoffrey Hinton},
+  title   = {Visualizing Data using t-SNE},
+  journal = {Journal of Machine Learning Research},
+  year    = {2008},
+  volume  = {9},
+  number  = {86},
+  pages   = {2579--2605},
+  url     = {http://jmlr.org/papers/v9/vandermaaten08a.html}
+}
+
+
+@INPROCEEDINGS {matrixscaling,
+author = {Z. Allen-Zhu and Y. Li and R. Oliveira and A. Wigderson},
+booktitle = {2017 IEEE 58th Annual Symposium on Foundations of Computer Science (FOCS)},
+title = {Much Faster Algorithms for Matrix Scaling},
+year = {2017},
+volume = {},
+issn = {0272-5428},
+pages = {890-901},
+abstract = {We develop several efficient algorithms for the classical Matrix Scaling problem, which is used in many diverse areas, from preconditioning linear systems to approximation of the permanent. On an input n×n matrix A, this problem asks to find diagonal (scaling) matrices X and Y (if they exist), so that XAY ε-approximates a doubly stochastic matrix, or more generally a matrix with prescribed row and column sums. We address the general scaling problem as well as some important special cases. In particular, if A has m nonzero entries, and if there exist X and Y with polynomially large entries such that XAY is doubly stochastic, then we can solve the problem in total complexity Õ(m + n4/3). This greatly improves on the best known previous results, which were either Õ(n4) or O(mn1/2/ε). Our algorithms are based on tailor-made first and second order techniques, combined with other recent advances in continuous optimization, which may be of independent interest for solving similar problems.},
+keywords = {complexity theory;linear systems;optimization;convergence;ellipsoids;manganese;computer science},
+doi = {10.1109/FOCS.2017.87},
+url = {https://doi.ieeecomputersociety.org/10.1109/FOCS.2017.87},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {oct}
+}
+
+@inproceedings{DPP,
+ author = {Gillenwater, Jennifer A and Kulesza, Alex and Fox, Emily and Taskar, Ben},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {Z. Ghahramani and M. Welling and C. Cortes and N. Lawrence and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Expectation-Maximization for Learning Determinantal Point Processes},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/4462bf0ddbe0d0da40e1e828ebebeb11-Paper.pdf},
+ volume = {27},
+ year = {2014}
+}
+
+
+@ARTICLE{m-scatter,
+  author={Ollila, Esa and Tyler, David E.},
+  journal={IEEE Transactions on Signal Processing}, 
+  title={Regularized $M$ -Estimators of Scatter Matrix}, 
+  year={2014},
+  volume={62},
+  number={22},
+  pages={6059-6070},
+  doi={10.1109/TSP.2014.2360826}}
+
+
+
+
+@misc{weber2022computing,
+      title={Computing Brascamp-Lieb Constants through the lens of Thompson Geometry}, 
+      author={Melanie Weber and Suvrit Sra},
+      year={2022},
+      eprint={2208.05013},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@article{COMBETTES2021565,
+title = {Complexity of linear minimization and projection on some sets},
+journal = {Operations Research Letters},
+volume = {49},
+number = {4},
+pages = {565-571},
+year = {2021}
+}
+
+
+
+@article{frank-wolfe, 
+author = {Weber, Melanie and Sra, Suvrit}, title = {Riemannian Optimization via Frank-Wolfe Methods}, year = {2022}, issue_date = {May 2023}, Publisher = {Springer-Verlag}, address = {Berlin, Heidelberg}, volume = {199}, number = {1–2}, journal = {Math. Program.}, month = {July}, pages = {525–556}, numpages = {32} }
+
+@article{sparse_covariance,
+ ISSN = {00063444, 14643510},
+ URL = {http://www.jstor.org/stable/23076173},
+ abstract = {We suggest a method for estimating a covariance matrix on the basis of a sample of vectors drawn from a multivariate normal distribution. In particular, we penalize the likelihood with a lasso penalty on the entries of the covariance matrix. This penalty plays two important roles: it reduces the effective number of parameters, which is important even when the dimension of the vectors is smaller than the sample size since the number of parameters grows quadratically in the number of variables, and it produces an estimate which is sparse. In contrast to sparse inverse covariance estimation, our method's close relative, the sparsity attained here is in the covariance matrix itself rather than in the inverse matrix. Zeros in the covariance matrix correspond to marginal independencies; thus, our method performs model selection while providing a positive definite estimate of the covariance. The proposed penalized maximum likelihood problem is not convex, so we use a majorize-minimize approach in which we iteratively solve convex approximations to the original nonconvex problem. We discuss tuning parameter selection and demonstrate on a flow-cytometry dataset how our method produces an interpretable graphical display of the relationship between variables. We perform simulations that suggest that simple elementwise thresholding of the empirical covariance matrix is competitive with our method for identifying the sparsity structure. Additionally, we show how our method can be used to solve a previously studied special case in which a desired sparsity pattern is prespecified.},
+ author = {Jacob Bien and Robert J. Tibshirani},
+ journal = {Biometrika},
+ number = {4},
+ pages = {807--820},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {Sparse estimation of a covariance matrix},
+ urldate = {2023-10-04},
+ volume = {98},
+ year = {2011}
+}
+
+@inbook{geodesic_likelihood, author = {Nguyen, Viet Anh and Shafieezadeh-Abadeh, Soroosh and Yue, Man-Chung and Kuhn, Daniel and Wiesemann, Wolfram}, title = {Calculating Optimistic Likelihoods Using (Geodesically) Convex Optimization}, year = {2019}, publisher = {Curran Associates Inc.}, address = {Red Hook, NY, USA}, abstract = {A fundamental problem arising in many areas of machine learning is the evaluation of the likelihood of a given observation under different nominal distributions. Frequently, these nominal distributions are themselves estimated from data, which makes them susceptible to estimation errors. We thus propose to replace each nominal distribution with an ambiguity set containing all distributions in its vicinity and to evaluate an optimistic likelihood, that is, the maximum of the likelihood over all distributions in the ambiguity set. When the proximity of distributions is quantified by the Fisher-Rao distance or the Kullback-Leibler divergence, the emerging optimistic likelihoods can be computed efficiently using either geodesic or standard convex optimization techniques. We showcase the advantages of working with optimistic likelihoods on a classification problem using synthetic as well as empirical data.}, booktitle = {Proceedings of the 33rd International Conference on Neural Information Processing Systems}, articleno = {1249}, numpages = {12} }
+
+
+@article{BHATIA2006594,
+title = {Riemannian geometry and matrix geometric means},
+journal = {Linear Algebra and its Applications},
+volume = {413},
+number = {2},
+pages = {594-618},
+year = {2006},
+author = {Rajendra Bhatia and John Holbrook},
+}
+
+@inproceedings{Riemannian_SVRG,
+ author = {Zhang, Hongyi and J. Reddi, Sashank and Sra, Suvrit},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {D. Lee and M. Sugiyama and U. Luxburg and I. Guyon and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Riemannian SVRG: Fast Stochastic Optimization on Riemannian Manifolds},
+ volume = {29},
+ year = {2016}
+}
+
+
+@article{bien,
+ ISSN = {00063444, 14643510},
+ URL = {http://www.jstor.org/stable/23076173},
+ abstract = {We suggest a method for estimating a covariance matrix on the basis of a sample of vectors drawn from a multivariate normal distribution. In particular, we penalize the likelihood with a lasso penalty on the entries of the covariance matrix. This penalty plays two important roles: it reduces the effective number of parameters, which is important even when the dimension of the vectors is smaller than the sample size since the number of parameters grows quadratically in the number of variables, and it produces an estimate which is sparse. In contrast to sparse inverse covariance estimation, our method's close relative, the sparsity attained here is in the covariance matrix itself rather than in the inverse matrix. Zeros in the covariance matrix correspond to marginal independencies; thus, our method performs model selection while providing a positive definite estimate of the covariance. The proposed penalized maximum likelihood problem is not convex, so we use a majorize-minimize approach in which we iteratively solve convex approximations to the original nonconvex problem. We discuss tuning parameter selection and demonstrate on a flow-cytometry dataset how our method produces an interpretable graphical display of the relationship between variables. We perform simulations that suggest that simple elementwise thresholding of the empirical covariance matrix is competitive with our method for identifying the sparsity structure. Additionally, we show how our method can be used to solve a previously studied special case in which a desired sparsity pattern is prespecified.},
+ author = {JACOB BIEN and ROBERT J. TIBSHIRANI},
+ journal = {Biometrika},
+ number = {4},
+ pages = {807--820},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {Sparse estimation of a covariance matrix},
+ urldate = {2023-11-29},
+ volume = {98},
+ year = {2011}
+}
+
+@misc{karcher2014riemannian,
+      title={Riemannian Center of Mass and so called karcher mean}, 
+      author={Hermann Karcher},
+      year={2014},
+      eprint={1407.2087},
+      archivePrefix={arXiv},
+      primaryClass={math.HO}
+}
+
+@article{bures-wasserstein,
+title = {On the Bures–Wasserstein distance between positive definite matrices},
+journal = {Expositiones Mathematicae},
+volume = {37},
+number = {2},
+pages = {165-191},
+year = {2019},
+issn = {0723-0869},
+doi = {https://doi.org/10.1016/j.exmath.2018.01.002},
+url = {https://www.sciencedirect.com/science/article/pii/S0723086918300021},
+author = {Rajendra Bhatia and Tanvi Jain and Yongdo Lim},
+keywords = {Positive definite matrices, Bures distance, Wasserstein metric, Optimal transport, Coupling problem, Fidelity},
+abstract = {The metric d(A,B)=trA+trB−2tr(A1∕2BA1∕2)1∕21∕2 on the manifold of n×n positive definite matrices arises in various optimisation problems, in quantum information and in the theory of optimal transport. It is also related to Riemannian geometry. In the first part of this paper we study this metric from the perspective of matrix analysis, simplifying and unifying various proofs. Then we develop a theory of a mean of two, and a barycentre of several, positive definite matrices with respect to this metric. We explain some recent work on a fixed point iteration for computing this Wasserstein barycentre. Our emphasis is on ideas natural to matrix analysis.}
+}
+
+@article{gaussian_graphical_model,
+ ISSN = {00063444, 14643510},
+ URL = {http://www.jstor.org/stable/20441351},
+ abstract = {We propose penalized likelihood methods for estimating the concentration matrix in the Gaussian graphical model. The methods lead to a sparse and shrinkage estimator of the concentration matrix that is positive definite, and thus conduct model selection and estimation simultaneously. The implementation of the methods is nontrivial because of the positive definite constraint on the concentration matrix, but we show that the computation can be done effectively by taking advantage of the efficient maxdet algorithm developed in convex optimization. We propose a BIC-type criterion for the selection of the tuning parameter in the penalized likelihood methods. The connection between our methods and existing methods is illustrated. Simulations and real examples demonstrate the competitive performance of the new methods.},
+ author = {Ming Yuan and Yi Lin},
+ journal = {Biometrika},
+ number = {1},
+ pages = {19--35},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {Model Selection and Estimation in the Gaussian Graphical Model},
+ urldate = {2023-11-29},
+ volume = {94},
+ year = {2007}
+}
+
+@article{pca_stifel, title={Fast and Efficient MMD-Based Fair PCA via Optimization over Stiefel Manifold}, volume={36}, url={https://ojs.aaai.org/index.php/AAAI/article/view/20699}, DOI={10.1609/aaai.v36i7.20699}, abstractNote={This paper defines fair principal component analysis (PCA) as minimizing the maximum mean discrepancy (MMD) between the dimensionality-reduced conditional distributions of different protected classes. The incorporation of MMD naturally leads to an exact and tractable mathematical formulation of fairness with good statistical properties. We formulate the problem of fair PCA subject to MMD constraints as a non-convex optimization over the Stiefel manifold and solve it using the Riemannian Exact Penalty Method with Smoothing (REPMS). Importantly, we provide a local optimality guarantee and explicitly show the theoretical effect of each hyperparameter in practical settings, extending previous results. Experimental comparisons based on synthetic and UCI datasets show that our approach outperforms prior work in explained variance, fairness, and runtime.}, number={7}, journal={Proceedings of the AAAI Conference on Artificial Intelligence}, author={Lee, Junghyun and Kim, Gwangsu and Olfat, Mahbod and Hasegawa-Johnson, Mark and Yoo, Chang D.}, year={2022}, month={Jun.}, pages={7363-7371} }
+
+
+
+@Inbook{disciplined_cvx,
+author="Grant, Michael
+and Boyd, Stephen
+and Ye, Yinyu",
+editor="Liberti, Leo
+and Maculan, Nelson",
+title="Disciplined Convex Programming",
+bookTitle="Global Optimization: From Theory to Implementation",
+year="2006",
+publisher="Springer US",
+address="Boston, MA",
+pages="155--210",
+abstract="A new methodology for constructing convex optimization models called disciplined convex programming is introduced. The methodology enforces a set of conventions upon the models constructed, in turn allowing much of the work required to analyze and solve the models to be automated.",
+isbn="978-0-387-30528-8",
+doi="10.1007/0-387-30528-9_7",
+url="https://doi.org/10.1007/0-387-30528-9_7"
+}
+
+@inproceedings{minibatch_trajectory,
+ author = {Lee, Kiwon and Cheng, Andrew and Paquette, Elliot and Paquette, Courtney},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {36944--36957},
+ publisher = {Curran Associates, Inc.},
+ title = {Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+@misc{scieur2023strong,
+      title={Strong Convexity of Sets in Riemannian Manifolds}, 
+      author={Damien Scieur and Thomas Kerdreux and Martínez-Rubio and Alexandre d'Aspremont and Sebastian Pokutta},
+      year={2023},
+      eprint={2312.03583},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@book{Vershynin_2018, place={Cambridge}, series={Cambridge Series in Statistical and Probabilistic Mathematics}, title={High-Dimensional Probability: An Introduction with Applications in Data Science}, publisher={Cambridge University Press}, author={Vershynin, Roman}, year={2018}, collection={Cambridge Series in Statistical and Probabilistic Mathematics}} 
+
+@book{horn_matrixanalysis,
+  added-at = {2017-06-29T07:13:07.000+0200},
+  author = {Horn, Roger A. and Johnson, Charles R.},
+  biburl = {https://www.bibsonomy.org/bibtex/24c33afdd2b6ceb17537c10958d6c3f64/gdmcbain},
+  citeulike-article-id = {13501953},
+  citeulike-linkout-0 = {http://www.worldcat.org/isbn/9780521548236},
+  citeulike-linkout-1 = {http://books.google.com/books?vid=ISBN9780521548236},
+  citeulike-linkout-2 = {http://www.amazon.com/gp/search?keywords=9780521548236\&index=books\&linkCode=qs},
+  citeulike-linkout-3 = {http://www.librarything.com/isbn/9780521548236},
+  citeulike-linkout-4 = {http://www.worldcat.org/oclc/849499908},
+  edition = {Second},
+  interhash = {42e630e87524c0309673c0fd71d9c610},
+  intrahash = {4c33afdd2b6ceb17537c10958d6c3f64},
+  isbn = {9780521548236},
+  keywords = {15a15-determinants-permanents-other-special-matrix-functions, 15a23-factorization-of-matrices 15a21-canonical-forms-reductions-classification},
+  posted-at = {2015-01-27 05:36:00},
+  priority = {2},
+  publisher = {Cambridge University Press},
+  timestamp = {2021-02-18T06:02:57.000+0100},
+  title = {{Matrix analysis}},
+  url = {http://www.worldcat.org/isbn/9780521548236},
+  year = 2013
+}
+
+@article{Markowitz_portfolio,
+ ISSN = {00221082, 15406261},
+ URL = {http://www.jstor.org/stable/2975974},
+ author = {Harry Markowitz},
+ journal = {The Journal of Finance},
+ number = {1},
+ pages = {77--91},
+ publisher = {[American Finance Association, Wiley]},
+ title = {Portfolio Selection},
+ urldate = {2024-01-17},
+ volume = {7},
+ year = {1952}
+}
+
+
+
+@inproceedings{Nguyen2019CalculatingOL,
+  title={Calculating Optimistic Likelihoods Using (Geodesically) Convex Optimization},
+  author={Viet Anh Nguyen and Soroosh Shafieezadeh-Abadeh and Man-Chung Yue and Daniel Kuhn and Wolfram Wiesemann},
+  booktitle={Neural Information Processing Systems},
+  year={2019},
+  url={https://api.semanticscholar.org/CorpusID:202781139}
+}
+
+
+@misc{miyamoto2023closedform,
+      title={On Closed-Form expressions for the Fisher-Rao Distance}, 
+      author={Henrique K. Miyamoto and Fábio C. C. Meneghetti and Sueli I. R. Costa},
+      year={2023},
+      eprint={2304.14885},
+      archivePrefix={arXiv},
+      primaryClass={math.ST}
+}
+
+
+@article{fisherdistance,
+ ISSN = {0581572X},
+ URL = {http://www.jstor.org/stable/25050283},
+ abstract = {Rao (1945) proposed a method for measuring distances between distributions of a parametric family satisfying certain regularity conditions. The measure is based on a metric of a Riemannian geometry, the metric being in terms of the elements of the information matrix for the family. In this paper Rao's (1945) method is studied in some detail. The mathematical difficulties in applying it are discussed. Distances are obtained for well-known families of distributions. In so far as the method produces some well-known distance measures for particular families, it provides a unifying treatment.},
+ author = {Colin Atkinson and Ann F. S. Mitchell},
+ journal = {Sankhyā: The Indian Journal of Statistics, Series A (1961-2002)},
+ number = {3},
+ pages = {345--365},
+ publisher = {Springer},
+ title = {Rao's Distance Measure},
+ urldate = {2024-01-24},
+ volume = {43},
+ year = {1981}
+}
+
+@Article{ApproximateToeplitzMatrix,
+author={Al-Homidan, S.},
+title={Approximate Toeplitz Matrix Problem Using Semidefinite Programming},
+journal={Journal of Optimization Theory and Applications},
+year={2007},
+month={Dec},
+day={01},
+volume={135},
+number={3},
+pages={583-598},
+abstract={Given a data matrix, we find its nearest symmetric positive-semidefinite Toeplitz matrix. In this paper, we formulate the problem as an optimization problem with a quadratic objective function and semidefinite constraints. In particular, instead of solving the so-called normal equations, our algorithm eliminates the linear feasibility equations from the start to maintain exact primal and dual feasibility during the course of the algorithm. Subsequently, the search direction is found using an inexact Gauss-Newton method rather than a Newton method on a symmetrized system and is computed using a diagonal preconditioned conjugate-gradient-type method. Computational results illustrate the robustness of the algorithm.},
+issn={1573-2878},
+doi={10.1007/s10957-007-9254-5},
+url={https://doi.org/10.1007/s10957-007-9254-5}
+}
+
+@misc{criscitiello2021accelerated,
+      title={An accelerated first-order method for non-convex optimization on manifolds}, 
+      author={Christopher Criscitiello and Nicolas Boumal},
+      year={2021},
+      eprint={2008.02252},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+
+
+
+
+
+
+
+
+
+
+@article{differentialApproachtoGeometricMean,
+author = {Moakher, Maher},
+title = {A Differential Geometric Approach to the Geometric Mean of Symmetric Positive-Definite Matrices},
+journal = {SIAM Journal on Matrix Analysis and Applications},
+volume = {26},
+number = {3},
+pages = {735-747},
+year = {2005},
+doi = {10.1137/S0895479803436937},
+
+URL = { 
+    
+        https://doi.org/10.1137/S0895479803436937
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/S0895479803436937
+    
+    
+
+}
+,
+    abstract = { In this paper we introduce metric-based means for the space of positive-definite matrices. The mean associated with the Euclidean metric of the ambient space is the usual arithmetic mean. The mean associated with the Riemannian metric corresponds to the geometric mean. We discuss some invariance properties of the Riemannian mean and we use differential geometric tools to give a characterization of this mean. }
+}
+
+
+@book{HadamardOpt,
+url = {https://doi.org/10.1515/9783110361629},
+title = {Convex Analysis and Optimization in Hadamard Spaces},
+author = {Miroslav Bacak},
+publisher = {De Gruyter},
+address = {Berlin, München, Boston},
+doi = {doi:10.1515/9783110361629},
+isbn = {9783110361629},
+year = {2014},
+lastchecked = {2024-01-31}
+}
+
+
+@InProceedings{pmlr-v162-kim22k,
+  title = 	 {Accelerated Gradient Methods for Geodesically Convex Optimization: Tractable Algorithms and Convergence Analysis},
+  author =       {Kim, Jungbin and Yang, Insoon},
+  booktitle = 	 {Proceedings of the 39th International Conference on Machine Learning},
+  pages = 	 {11255--11282},
+  year = 	 {2022},
+  editor = 	 {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  volume = 	 {162},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {17--23 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v162/kim22k/kim22k.pdf},
+  url = 	 {https://proceedings.mlr.press/v162/kim22k.html},
+  abstract = 	 {We propose computationally tractable accelerated first-order methods for Riemannian optimization, extending the Nesterov accelerated gradient (NAG) method. For both geodesically convex and geodesically strongly convex objective functions, our algorithms are shown to have the same iteration complexities as those for the NAG method on Euclidean spaces, under only standard assumptions. To the best of our knowledge, the proposed scheme is the first fully accelerated method for geodesically convex optimization problems. Our convergence analysis makes use of novel metric distortion lemmas as well as carefully designed potential functions. A connection with the continuous-time dynamics for modeling Riemannian acceleration in (Alimisis et al., 2020) is also identified by letting the stepsize tend to zero. We validate our theoretical results through numerical experiments.}
+}
+
+@misc{zhang2017riemannian,
+      title={Riemannian SVRG: Fast Stochastic Optimization on Riemannian Manifolds}, 
+      author={Hongyi Zhang and Sashank J. Reddi and Suvrit Sra},
+      year={2017},
+      eprint={1605.07147},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@misc{cherian2021learning,
+      title={Learning Log-Determinant Divergences for Positive Definite Matrices}, 
+      author={Anoop Cherian and Panagiotis Stanitsas and Jue Wang and Mehrtash Harandi and Vassilios Morellas and Nikolaos Papanikolopoulos},
+      year={2021},
+      eprint={2104.06461},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@article{Vishnoi2018GeodesicCO,
+  title={Geodesic Convex Optimization: Differentiation on Manifolds, Geodesics, and Convexity},
+  author={Nisheeth K. Vishnoi},
+  journal={ArXiv},
+  year={2018},
+  volume={abs/1806.06373},
+  url={https://api.semanticscholar.org/CorpusID:49300656}
+}
+
+@book{bhatia07positivedefinitematrices,
+  added-at = {2008-03-10T13:59:27.000+0100},
+  address = {Princeton, NJ, USA},
+  author = {Bhatia, Rajendra},
+  biburl = {https://www.bibsonomy.org/bibtex/2b4024a0d41d00fa8a049704b89834da7/sb3000},
+  interhash = {5df904d609b1294edae504b06d2948a8},
+  intrahash = {b4024a0d41d00fa8a049704b89834da7},
+  keywords = {math kernel},
+  publisher = {Princeton University Press},
+  series = {Princeton Series in Applied Mathematics},
+  timestamp = {2010-10-07T14:13:58.000+0200},
+  title = {Positive Definite Matrices},
+  url = {http://press.princeton.edu/titles/8445.html},
+  year = 2007
+}
+
+
+
+@article{Sra_conic_geometric_Opt_SPD,
+   title={Conic Geometric Optimization on the Manifold of Positive Definite Matrices},
+   volume={25},
+   number={1},
+   journal={SIAM Journal on Optimization},
+   publisher={Society for Industrial & Applied Mathematics (SIAM)},
+   author={Sra, Suvrit and Hosseini, Reshad},
+   year={2015},
+   month=jan, pages={713–739} }
+
+@book{Boumal_2023, place={Cambridge}, title={An Introduction to Optimization on Smooth Manifolds}, publisher={Cambridge University Press}, author={Boumal, Nicolas}, year={2023}} <div></div>
+
+@inproceedings{Hosseini2015MatrixMO,
+  title={Matrix Manifold Optimization for Gaussian Mixtures},
+  author={Reshad Hosseini and Suvrit Sra},
+  booktitle={Neural Information Processing Systems},
+  year={2015},
+  url={https://api.semanticscholar.org/CorpusID:18189811}
+}
+
+@book{ECDFinance,
+author = {Gupta, Arjun and Varga, Tamas and Bodnar, Taras},
+year = {2013},
+month = {07},
+pages = {},
+title = {Elliptically Contoured Models in Statistics and Portfolio Theory},
+isbn = {978-1-4614-8153-9},
+journal = {Elliptically Contoured Models in Statistics and Portfolio Theory},
+doi = {10.1007/978-1-4614-8154-6}
+}
+
+@misc{severa2023geometry,
+      title={The geometry of the maximum likelihood of Cauchy-like distributions}, 
+      author={Pavol Ševera},
+      year={2023},
+      eprint={2311.07165},
+      archivePrefix={arXiv},
+      primaryClass={math.ST}
+}
+
+@inproceedings{
+yurtsever2022cccp,
+title={{CCCP} is Frank-Wolfe in disguise},
+author={Alp Yurtsever and Suvrit Sra},
+booktitle={Advances in Neural Information Processing Systems},
+editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+year={2022},
+url={https://openreview.net/forum?id=OGGQs4xFHrr}
+}
+
+@misc{bergmann2023difference,
+      title={The difference of convex algorithm on Hadamard manifolds}, 
+      author={Ronny Bergmann and Orizon P. Ferreira and Elianderson M. Santos and João Carlos O. Souza},
+      year={2023},
+      eprint={2112.05250},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@inproceedings{NIPS2013_3948ead6,
+ author = {Sra, Suvrit and Hosseini, Reshad},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {C.J. Burges and L. Bottou and M. Welling and Z. Ghahramani and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Geometric optimisation on positive definite matrices for elliptically contoured distributions},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2013/file/3948ead63a9f2944218de038d8934305-Paper.pdf},
+ volume = {26},
+ year = {2013}
+}
+@article{LIM2013115,
+title = {Convex geometric means},
+journal = {Journal of Mathematical Analysis and Applications},
+volume = {404},
+number = {1},
+pages = {115-128},
+year = {2013},
+issn = {0022-247X},
+doi = {https://doi.org/10.1016/j.jmaa.2013.03.006},
+url = {https://www.sciencedirect.com/science/article/pii/S0022247X13001984},
+author = {Yongdo Lim},
+keywords = {Positive definite matrix, Geometric mean, Geometric mean majorization, Convex function, Karcher mean},
+abstract = {A class of multivariable weighted geometric means of positive definite matrices admitting Jensen-type inequalities for geodesically convex functions is considered. It is shown that there are infinitely many such geometric means including the weighted inductive, Bini–Meini–Poloni and Karcher means and each of these means provides a geometric mean majorization on the space of positive definite matrices. Some connections between our geometric mean majorizations and classical results of the standard majorization of real numbers are discussed. In particular, we establish the Hardy–Littlewood–Pólya majorization theorem and also Rado’s theorem and Schur’s convexity theorem for the weighted Karcher mean.}
+}
+
+@book{bhatia97,
+  added-at = {2013-06-15T01:58:38.000+0200},
+  author = {Bhatia, Rajendra},
+  biburl = {https://www.bibsonomy.org/bibtex/269934a372db92a018132c5880987691e/ytyoun},
+  interhash = {a52e63731d9a0e304c29b795ed54cf94},
+  intrahash = {69934a372db92a018132c5880987691e},
+  isbn = {0387948465},
+  keywords = {courant-fischer eigenvalues linear.algebra majorization matrix textbook},
+  publisher = {Springer},
+  timestamp = {2017-02-13T08:18:47.000+0100},
+  title = {Matrix Analysis},
+  volume = 169,
+  year = 1997
+}
+@misc{gcvxEM,
+      title={On a class of geodesically convex optimization problems solved via Euclidean MM methods}, 
+      author={Melanie Weber and Suvrit Sra},
+      year={2022},
+      eprint={2206.11426},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+
+@article{FenchelDuality-Primal-Dual,
+   title={Fenchel Duality Theory and a Primal-Dual Algorithm on Riemannian Manifolds},
+   volume={21},
+   ISSN={1615-3383},
+   url={http://dx.doi.org/10.1007/s10208-020-09486-5},
+   DOI={10.1007/s10208-020-09486-5},
+   number={6},
+   journal={Foundations of Computational Mathematics},
+   publisher={Springer Science and Business Media LLC},
+   author={Bergmann, Ronny and Herzog, Roland and Silva Louzeiro, Maurício and Tenbrinck, Daniel and Vidal-Núñez, José},
+   year={2021},
+   month=jan, pages={1465–1504} }
+
+
+@article{FenchelDuality-Separation,
+   title={Fenchel Duality and a Separation Theorem on Hadamard Manifolds},
+   volume={32},
+   ISSN={1095-7189},
+   url={http://dx.doi.org/10.1137/21M1400699},
+   DOI={10.1137/21m1400699},
+   number={2},
+   journal={SIAM Journal on Optimization},
+   publisher={Society for Industrial & Applied Mathematics (SIAM)},
+   author={Silva Louzeiro, Maurício and Bergmann, Ronny and Herzog, Roland},
+   year={2022},
+   month=may, pages={854–873} }
+
+
+
+
+@InProceedings{FisherSAM,
+  title = 	 {{F}isher {SAM}: Information Geometry and Sharpness Aware Minimisation},
+  author =       {Kim, Minyoung and Li, Da and Hu, Shell X and Hospedales, Timothy},
+  booktitle = 	 {Proceedings of the 39th International Conference on Machine Learning},
+  pages = 	 {11148--11161},
+  year = 	 {2022},
+  editor = 	 {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  volume = 	 {162},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {17--23 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v162/kim22f/kim22f.pdf},
+  url = 	 {https://proceedings.mlr.press/v162/kim22f.html},
+  abstract = 	 {Recent sharpness-aware minimisation (SAM) is known to find flat minima which is beneficial for better generalisation with improved robustness. SAM essentially modifies the loss function by the maximum loss value within the small neighborhood around the current iterate. However, it uses the Euclidean ball to define the neighborhood, which can be less accurate since loss functions for neural networks are typically defined over probability distributions (e.g., class predictive probabilities), rendering the parameter space no more Euclidean. In this paper we consider the information geometry of the model parameter space when defining the neighborhood, namely replacing SAM’s Euclidean balls with ellipsoids induced by the Fisher information. Our approach, dubbed Fisher SAM, defines more accurate neighborhood structures that conform to the intrinsic metric of the underlying statistical manifold. For instance, SAM may probe the worst-case loss value at either a too nearby or inappropriately distant point due to the ignorance of the parameter space geometry, which is avoided by our Fisher SAM. Another recent Adaptive SAM approach that stretches/shrinks the Euclidean ball in accordance with the scales of the parameter magnitudes, might be dangerous, potentially destroying the neighborhood structure even severely. We demonstrate the improved performance of the proposed Fisher SAM on several benchmark datasets/tasks.}
+}
+
+@misc{SAM-BAYES,
+      title={SAM as an Optimal Relaxation of Bayes}, 
+      author={Thomas Möllenhoff and Mohammad Emtiyaz Khan},
+      year={2023},
+      eprint={2210.01620},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+
+@inproceedings{min-max-g-cvx-Jordan,
+ author = {Jordan, Michael and Lin, Tianyi and Vlatakis-Gkaragkounis, Emmanouil-Vasileios},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {6557--6574},
+ publisher = {Curran Associates, Inc.},
+ title = {First-Order Algorithms for Min-Max Optimization in Geodesic Metric Spaces},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/2ad9a1a6ffac3dd72cc1df96019eca01-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+
+@inproceedings{
+zhang2023sions,
+title={Sion's Minimax Theorem in Geodesic Metric Spaces and a Riemannian Extragradient Algorithm},
+author={Peiyuan Zhang and Jingzhao Zhang and Suvrit Sra},
+booktitle={OPT 2023: Optimization for Machine Learning},
+year={2023},
+url={https://openreview.net/forum?id=D8WJ7gQEG1}
+}
+
+
+
+
+
+
+@misc{sra2015matrixsquareroot,
+      title={On the matrix square root via geometric optimization}, 
+      author={Suvrit Sra},
+      year={2015},
+      eprint={1507.08366},
+      archivePrefix={arXiv},
+      primaryClass={math.NA}
+}
+
+@book{VariationalAnalysisRockafellar1998,
+  title = {Variational Analysis},
+  ISBN = {9783642024313},
+  ISSN = {0072-7830},
+  url = {http://dx.doi.org/10.1007/978-3-642-02431-3},
+  DOI = {10.1007/978-3-642-02431-3},
+  journal = {Grundlehren der mathematischen Wissenschaften},
+  publisher = {Springer Berlin Heidelberg},
+  author = {Rockafellar,  R. Tyrrell and Wets,  Roger J. B.},
+  year = {1998}
+}
+
+@article{Koufany2006,
+  title = {Application of Hilbert’s Projective Metric on Symmetric Cones},
+  volume = {22},
+  ISSN = {1439-7617},
+  url = {http://dx.doi.org/10.1007/s10114-005-0755-6},
+  DOI = {10.1007/s10114-005-0755-6},
+  number = {5},
+  journal = {Acta Mathematica Sinica,  English Series},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Koufany,  Khalid},
+  year = {2006},
+  month = apr,
+  pages = {1467–1472}
+}
+
+@inproceedings{
+shah2023learning,
+title={Learning Mixtures of Gaussians Using the {DDPM} Objective},
+author={Kulin Shah and Sitan Chen and Adam Klivans},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+year={2023},
+url={https://openreview.net/forum?id=aig7sgdRfI}
+}
+
+
+@BOOK{structuredcovestimation_wiesel,
+  author={Wiesel, Ami and Zhang, Teng},
+  booktitle={Structured Robust Covariance Estimation},
+  year={2015},
+  volume={},
+  number={},
+  pages={},
+  keywords={Optimization;Statistical signal processing: classification and detection;Statistical signal processing: estimation and regression;Detection and estimation;Information theory and statistics},
+  doi={10.1561/2000000053}}
+
+
+
+
+@article{mariet2015fixed,
+  title={Fixed-point algorithms for learning determinantal point processes},
+  author={Mariet, Zelda and Sra, Suvrit},
+  booktitle={International Conference on Machine Learning},
+  pages={2389--2397},
+  year={2015},
+  organization={PMLR}
+}
+
+
+
+@article{irls_fazel,
+  author  = {Karthik Mohan and Maryam Fazel},
+  title   = {Iterative Reweighted Algorithms for Matrix Rank Minimization},
+  journal = {Journal of Machine Learning Research},
+  year    = {2012},
+  volume  = {13},
+  number  = {110},
+  pages   = {3441--3473},
+  url     = {http://jmlr.org/papers/v13/mohan12a.html}
+}
+
+@article{weber2021projection,
+  title={Projection-free nonconvex stochastic optimization on Riemannian manifolds},
+  author={Weber, Melanie and Sra, Suvrit},
+  journal={IMA Journal of Numerical Analysis},
+  volume={42},
+  number={4},
+  pages={3241--3271},
+  year={2021}
+}
+
+@article{lanckriet2009convergence,
+  title={On the convergence of the concave-convex procedure},
+  author={Lanckriet, Gert and Sriperumbudur, Bharath K},
+  journal={Advances in neural information processing systems},
+  volume={22},
+  year={2009}
+}
+
+@article{martinez2024convergence,
+  title={Convergence and Trade-Offs in Riemannian Gradient Descent and Riemannian Proximal Point},
+  author={Mart{\'\i}nez-Rubio, David and Roux, Christophe and Pokutta, Sebastian},
+  journal={arXiv preprint arXiv:2403.10429},
+  year={2024}
+}
+
+
+@book{Bacak+2014,
+url = {https://doi.org/10.1515/9783110361629},
+title = {Convex Analysis and Optimization in Hadamard Spaces},
+author = {Miroslav Bacak},
+publisher = {De Gruyter},
+address = {Berlin, München, Boston},
+doi = {doi:10.1515/9783110361629},
+isbn = {9783110361629},
+year = {2014},
+lastchecked = {2024-05-23}
+}
+
+@book{udriste1994convex,
+  title={Convex Functions and Optimization Methods on {R}iemannian Manifolds},
+  author={Udriste, Constantin},
+  volume={297},
+  year={1994},
+  publisher={Springer Science \& Business Media}
+}
+
+@inproceedings{zhang2016first,
+  title={First-order methods for geodesically convex optimization},
+  author={Zhang, Hongyi and Sra, Suvrit},
+  booktitle={Conference on Learning Theory},
+  pages={1617--1638},
+  year={2016}
+}
+
+@article{boumal2019global,
+  title={Global rates of convergence for nonconvex optimization on manifolds},
+  author={Boumal, Nicolas and Absil, Pierre-Antoine and Cartis, Coralia},
+  journal={IMA Journal of Numerical Analysis},
+  volume={39},
+  number={1},
+  pages={1--33},
+  year={2019},
+  publisher={Oxford University Press}
+}
+
+@article{bonnabel2013stochastic,
+  title={Stochastic gradient descent on {R}iemannian manifolds},
+  author={Bonnabel, Silvere},
+  journal={IEEE Transactions on Automatic Control},
+  volume={58},
+  number={9},
+  pages={2217--2229},
+  year={2013},
+  publisher={IEEE}
+}
+
+@article{cruzneto,
+  title={A modified proximal point method for {DC} functions on {H}adamard manifolds},
+author={Almeida, Yldenilson Torres and da Cruz Neto, Jo{\~a}o Xavier and Oliveira, Paulo Roberto and Souza, Jo{\~a}o Carlos de Oliveira},
+  journal={Computational Optimization and Applications},
+  volume={76},
+  number={3},
+  pages={649--673},
+  year={2020},
+  publisher={Springer}
+}
+
+@article{souza2015proximal,
+  title={A proximal point algorithm for {DC} fuctions on {H}adamard manifolds},
+  author={Souza, Jo{\~a}o Carlos de Oliveira and Oliveira, Paulo Roberto},
+  journal={Journal of Global Optimization},
+  volume={63},
+  number={4},
+  pages={797--810},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{ferreira2021difference,
+  title={The difference of convex algorithm on Riemannian manifolds},
+  author={Ferreira, Orizon P and Santos, Elianderson M and Souza, Jo{\~a}o Carlos O},
+  journal={arXiv preprint arXiv:2112.05250},
+  year={2021}
+}
+
+@ARTICLE{riemanniangaussianSPD,
+  author={Said, Salem and Bombrun, Lionel and Berthoumieu, Yannick and Manton, Jonathan H.},
+  journal={IEEE Transactions on Information Theory}, 
+  title={Riemannian Gaussian Distributions on the Space of Symmetric Positive Definite Matrices}, 
+  year={2017},
+  volume={63},
+  number={4},
+  pages={2153-2170},
+  keywords={Gaussian distribution;Measurement;Maximum likelihood estimation;Symmetric matrices;Probability distribution;Probability density function;Symmetric positive definite matrices;tensor;Riemannian metric;Gaussian distribution;expectation-maximisation;texture},
+  doi={10.1109/TIT.2017.2653803}}
+
+
+@article{MAL-001,
+url = {http://dx.doi.org/10.1561/2200000001},
+year = {2008},
+volume = {1},
+journal = {Foundations and Trends® in Machine Learning},
+title = {Graphical Models, Exponential Families, and Variational Inference},
+doi = {10.1561/2200000001},
+issn = {1935-8237},
+number = {1–2},
+pages = {1-305},
+author = {Martin J. Wainwright and Michael I. Jordan}
+}
+
+@misc{uhler2017gaussiangraphicalmodelsalgebraic,
+      title={Gaussian Graphical Models: An Algebraic and Geometric Perspective}, 
+      author={Caroline Uhler},
+      year={2017},
+      eprint={1707.04345},
+      archivePrefix={arXiv},
+      primaryClass={math.ST},
+      url={https://arxiv.org/abs/1707.04345}, 
+}
+
+
+@misc{cheng2024disciplinedgeodesicallyconvexprogramming,
+      title={Disciplined Geodesically Convex Programming}, 
+      author={Andrew Cheng and Vaibhav Dixit and Melanie Weber},
+      year={2024},
+      eprint={2407.05261},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      url={https://arxiv.org/abs/2407.05261}, 
+}
+
+@book{Fang2018,
+  title = {Symmetric Multivariate and Related Distributions},
+  ISBN = {9781351077040},
+  url = {http://dx.doi.org/10.1201/9781351077040},
+  DOI = {10.1201/9781351077040},
+  publisher = {Chapman and Hall/CRC},
+  author = {Fang,  Kai-Tai and Kotz,  Samuel and Ng,  Kai Wang},
+  year = {2018},
+  month = jan 
+}
+
+
+
+
+
+
+
+
+@article{lowrank_opt_bach,
+author = {Journ\'{e}e, M. and Bach, F. and Absil, P.-A. and Sepulchre, R.},
+title = {Low-Rank Optimization on the Cone of Positive Semidefinite Matrices},
+journal = {SIAM Journal on Optimization},
+volume = {20},
+number = {5},
+pages = {2327-2351},
+year = {2010},
+doi = {10.1137/080731359},
+
+URL = { 
+    
+        https://doi.org/10.1137/080731359
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/080731359
+    
+    
+
+}
+,
+    abstract = { We propose an algorithm for solving optimization problems defined on a subset of the cone of symmetric positive semidefinite matrices. This algorithm relies on the factorization \$X=YY^T\$, where the number of columns of Y fixes an upper bound on the rank of the positive semidefinite matrix X. It is thus very effective for solving problems that have a low-rank solution. The factorization \$X=YY^T\$ leads to a reformulation of the original problem as an optimization on a particular quotient manifold. The present paper discusses the geometry of that manifold and derives a second-order optimization method with guaranteed quadratic convergence. It furthermore provides some conditions on the rank of the factorization to ensure equivalence with the original problem. In contrast to existing methods, the proposed algorithm converges monotonically to the sought solution. Its numerical efficiency is evaluated on two applications: the maximal cut of a graph and the problem of sparse principal component analysis. }
+}
+
+
+
+@article{regression_pd,
+  author  = {Gilles Meyer and Silv{{\`e}}re Bonnabel and Rodolphe Sepulchre},
+  title   = {Regression on Fixed-Rank Positive Semidefinite Matrices: A Riemannian Approach},
+  journal = {Journal of Machine Learning Research},
+  year    = {2011},
+  volume  = {12},
+  number  = {18},
+  pages   = {593--625},
+  url     = {http://jmlr.org/papers/v12/meyer11a.html}
+}
+
+@article{Peel2000,
+  volume = {10},
+  ISSN = {0960-3174},
+  url = {http://dx.doi.org/10.1023/A:1008981510081},
+  DOI = {10.1023/a:1008981510081},
+  number = {4},
+  journal = {Statistics and Computing},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Peel,  D. and McLachlan,  G. J.},
+  year = {2000},
+  pages = {339–348}
+}
+
+@article{Lange1989,
+  title = {Robust Statistical Modeling Using thetDistribution},
+  volume = {84},
+  ISSN = {1537-274X},
+  url = {http://dx.doi.org/10.1080/01621459.1989.10478852},
+  DOI = {10.1080/01621459.1989.10478852},
+  number = {408},
+  journal = {Journal of the American Statistical Association},
+  publisher = {Informa UK Limited},
+  author = {Lange,  Kenneth L. and Little,  Roderick J. A. and Taylor,  Jeremy M. G.},
+  year = {1989},
+  month = dec,
+  pages = {881–896}
+}
+
+@article{Nadarajah2005,
+  title = {Mathematical Properties of the Multivariate t Distribution},
+  volume = {89},
+  ISSN = {1572-9036},
+  url = {http://dx.doi.org/10.1007/s10440-005-9003-4},
+  DOI = {10.1007/s10440-005-9003-4},
+  number = {1–3},
+  journal = {Acta Applicandae Mathematicae},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Nadarajah,  Saralees and Kotz,  Samuel},
+  year = {2005},
+  month = nov,
+  pages = {53–84}
+}
+
+@book{Kotz2004,
+  title = {Multivariate T-Distributions and Their Applications},
+  ISBN = {9780511550683},
+  url = {http://dx.doi.org/10.1017/CBO9780511550683},
+  DOI = {10.1017/cbo9780511550683},
+  publisher = {Cambridge University Press},
+  author = {Kotz,  Samuel and Nadarajah,  Saralees},
+  year = {2004},
+  month = feb 
+}
+
+@article{Jeuris2012ASA,
+  title={A survey and comparison of contemporary algorithms for computing the matrix geometric mean},
+  author={Ben Jeuris and Raf Vandebril and Bart Vandereycken},
+  journal={Electronic Transactions on Numerical Analysis},
+  year={2012},
+  volume={39},
+  pages={379-402}
+}
+
+@article{Karcher1977RiemannianCO,
+  title={Riemannian center of mass and mollifier smoothing},
+  author={Hermann Karcher},
+  journal={Communications on Pure and Applied Mathematics},
+  year={1977},
+  volume={30},
+  pages={509-541}
+}
+
+@inproceedings{Nesterov1994InteriorpointPA,
+  title={Interior-point polynomial algorithms in convex programming},
+  author={Yurii Nesterov and Arkadi Nemirovski},
+  booktitle={Siam studies in applied mathematics},
+  year={1994},
+  url={https://api.semanticscholar.org/CorpusID:117194167}
+}
+
+@INPROCEEDINGS{efficientsimilarityCherian,
+  author={Cherian, Anoop and Sra, Suvrit and Banerjee, Arindam and Papanikolopoulos, Nikolaos},
+  booktitle={2011 International Conference on Computer Vision}, 
+  title={Efficient similarity search for covariance matrices via the Jensen-Bregman LogDet Divergence}, 
+  year={2011},
+  volume={},
+  number={},
+  pages={2399-2406},
+  keywords={Covariance matrix;Measurement;Manifolds;Eigenvalues and eigenfunctions;Vectors;Accuracy;Databases},
+  doi={10.1109/ICCV.2011.6126523}}
+
+
+@inproceedings{jain2017global,
+  title={Global convergence of non-convex gradient descent for computing matrix squareroot},
+  author={Jain, Prateek and Jin, Chi and Kakade, Sham and Netrapalli, Praneeth},
+  booktitle={Artificial Intelligence and Statistics},
+  pages={479--488},
+  year={2017},
+  organization={PMLR}
+}
+
+
+@article{discriminant_analysis_sapatinas,
+    author = {Sapatinas, Theofanis},
+    title = "{Discriminant Analysis and Statistical Pattern Recognition}",
+    journal = {Journal of the Royal Statistical Society Series A: Statistics in Society},
+    volume = {168},
+    number = {3},
+    pages = {635-636},
+    year = {2005},
+    month = {06},
+    issn = {0964-1998},
+    doi = {10.1111/j.1467-985X.2005.00368_10.x},
+    url = {https://doi.org/10.1111/j.1467-985X.2005.00368\_10.x},
+    eprint = {https://academic.oup.com/jrsssa/article-pdf/168/3/635/49601531/jrsssa\_168\_3\_635.pdf}}
+
+@inproceedings{Cox1961TestsOS,
+  title={Tests of Separate Families of Hypotheses},
+  author={D. R. Cox},
+  year={1961},
+  url={https://api.semanticscholar.org/CorpusID:120201197}
+}
+
+@article{Basso2005,
+  title = {Reverse engineering of regulatory networks in human B cells},
+  volume = {37},
+  ISSN = {1546-1718},
+  url = {http://dx.doi.org/10.1038/ng1532},
+  DOI = {10.1038/ng1532},
+  number = {4},
+  journal = {Nature Genetics},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Basso,  Katia and Margolin,  Adam A and Stolovitzky,  Gustavo and Klein,  Ulf and Dalla-Favera,  Riccardo and Califano,  Andrea},
+  year = {2005},
+  month = mar,
+  pages = {382–390}
+}
+
+@article{Wille2004,
+  volume = {5},
+  ISSN = {1465-6906},
+  url = {http://dx.doi.org/10.1186/gb-2004-5-11-r92},
+  DOI = {10.1186/gb-2004-5-11-r92},
+  number = {11},
+  journal = {Genome Biology},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Wille,  Anja and Zimmermann,  Philip and Vranová,  Eva and F\"{u}rholz,  Andreas and Laule,  Oliver and Bleuler,  Stefan and Hennig,  Lars and Prelić,  Amela and von Rohr,  Peter and Thiele,  Lothar and Zitzler,  Eckart and Gruissem,  Wilhelm and B\"{u}hlmann,  Peter},
+  year = {2004},
+  pages = {R92}
+}
+
+@article{Price2017,
+  title = {Bayesian Synthetic Likelihood},
+  volume = {27},
+  ISSN = {1537-2715},
+  url = {http://dx.doi.org/10.1080/10618600.2017.1302882},
+  DOI = {10.1080/10618600.2017.1302882},
+  number = {1},
+  journal = {Journal of Computational and Graphical Statistics},
+  publisher = {Informa UK Limited},
+  author = {Price,  L. F. and Drovandi,  C. C. and Lee,  A. and Nott,  D. J.},
+  year = {2017},
+  month = jul,
+  pages = {1–11}
+}
+
+
+
+
+
+@inproceedings{NEURIPS2022_efcb76ac,
+ author = {Lee, Kiwon and Cheng, Andrew and Paquette, Elliot and Paquette, Courtney},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {36944--36957},
+ title = {Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions},
+ volume = {35},
+ year = {2022}
+}
+
+
+
+
+
+@inproceedings{Donoho2003HessianE,
+  title={Hessian Eigenmaps : new locally linear embedding techniques for high-dimensional data},
+  author={David L. Donoho and Carrie Grimes and Hessian Eigenmaps},
+  year={2003},
+  url={https://api.semanticscholar.org/CorpusID:6618760}
+}
+
+@article{JMLR:v9:vandermaaten08a,
+  author  = {Laurens van der Maaten and Geoffrey Hinton},
+  title   = {Visualizing Data using t-SNE},
+  journal = {Journal of Machine Learning Research},
+  year    = {2008},
+  volume  = {9},
+  number  = {86},
+  pages   = {2579--2605},
+  url     = {http://jmlr.org/papers/v9/vandermaaten08a.html}
+}
+
+
+@INPROCEEDINGS {matrixscaling,
+author = {Z. Allen-Zhu and Y. Li and R. Oliveira and A. Wigderson},
+booktitle = {2017 IEEE 58th Annual Symposium on Foundations of Computer Science (FOCS)},
+title = {Much Faster Algorithms for Matrix Scaling},
+year = {2017},
+volume = {},
+issn = {0272-5428},
+pages = {890-901},
+abstract = {We develop several efficient algorithms for the classical Matrix Scaling problem, which is used in many diverse areas, from preconditioning linear systems to approximation of the permanent. On an input n×n matrix A, this problem asks to find diagonal (scaling) matrices X and Y (if they exist), so that XAY ε-approximates a doubly stochastic matrix, or more generally a matrix with prescribed row and column sums. We address the general scaling problem as well as some important special cases. In particular, if A has m nonzero entries, and if there exist X and Y with polynomially large entries such that XAY is doubly stochastic, then we can solve the problem in total complexity Õ(m + n4/3). This greatly improves on the best known previous results, which were either Õ(n4) or O(mn1/2/ε). Our algorithms are based on tailor-made first and second order techniques, combined with other recent advances in continuous optimization, which may be of independent interest for solving similar problems.},
+keywords = {complexity theory;linear systems;optimization;convergence;ellipsoids;manganese;computer science},
+doi = {10.1109/FOCS.2017.87},
+url = {https://doi.ieeecomputersociety.org/10.1109/FOCS.2017.87},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {oct}
+}
+
+@inproceedings{DPP,
+ author = {Gillenwater, Jennifer A and Kulesza, Alex and Fox, Emily and Taskar, Ben},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {Z. Ghahramani and M. Welling and C. Cortes and N. Lawrence and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Expectation-Maximization for Learning Determinantal Point Processes},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/4462bf0ddbe0d0da40e1e828ebebeb11-Paper.pdf},
+ volume = {27},
+ year = {2014}
+}
+
+
+
+
+@article{tyler1987distribution,
+  title={A distribution-free {M}-estimator of multivariate scatter},
+  author={Tyler, David E},
+  journal={The annals of Statistics},
+  pages={234--251},
+  year={1987},
+  publisher={JSTOR}
+}
+
+
+
+
+@article{sparse_covariance,
+ ISSN = {00063444, 14643510},
+ URL = {http://www.jstor.org/stable/23076173},
+ abstract = {We suggest a method for estimating a covariance matrix on the basis of a sample of vectors drawn from a multivariate normal distribution. In particular, we penalize the likelihood with a lasso penalty on the entries of the covariance matrix. This penalty plays two important roles: it reduces the effective number of parameters, which is important even when the dimension of the vectors is smaller than the sample size since the number of parameters grows quadratically in the number of variables, and it produces an estimate which is sparse. In contrast to sparse inverse covariance estimation, our method's close relative, the sparsity attained here is in the covariance matrix itself rather than in the inverse matrix. Zeros in the covariance matrix correspond to marginal independencies; thus, our method performs model selection while providing a positive definite estimate of the covariance. The proposed penalized maximum likelihood problem is not convex, so we use a majorize-minimize approach in which we iteratively solve convex approximations to the original nonconvex problem. We discuss tuning parameter selection and demonstrate on a flow-cytometry dataset how our method produces an interpretable graphical display of the relationship between variables. We perform simulations that suggest that simple elementwise thresholding of the empirical covariance matrix is competitive with our method for identifying the sparsity structure. Additionally, we show how our method can be used to solve a previously studied special case in which a desired sparsity pattern is prespecified.},
+ author = {Jacob Bien and Robert J. Tibshirani},
+ journal = {Biometrika},
+ number = {4},
+ pages = {807--820},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {Sparse estimation of a covariance matrix},
+ urldate = {2023-10-04},
+ volume = {98},
+ year = {2011}
+}
+
+@inbook{geodesic_likelihood, author = {Nguyen, Viet Anh and Shafieezadeh-Abadeh, Soroosh and Yue, Man-Chung and Kuhn, Daniel and Wiesemann, Wolfram}, title = {Calculating Optimistic Likelihoods Using (Geodesically) Convex Optimization}, year = {2019}, publisher = {Curran Associates Inc.}, address = {Red Hook, NY, USA}, abstract = {A fundamental problem arising in many areas of machine learning is the evaluation of the likelihood of a given observation under different nominal distributions. Frequently, these nominal distributions are themselves estimated from data, which makes them susceptible to estimation errors. We thus propose to replace each nominal distribution with an ambiguity set containing all distributions in its vicinity and to evaluate an optimistic likelihood, that is, the maximum of the likelihood over all distributions in the ambiguity set. When the proximity of distributions is quantified by the Fisher-Rao distance or the Kullback-Leibler divergence, the emerging optimistic likelihoods can be computed efficiently using either geodesic or standard convex optimization techniques. We showcase the advantages of working with optimistic likelihoods on a classification problem using synthetic as well as empirical data.}, booktitle = {Proceedings of the 33rd International Conference on Neural Information Processing Systems}, articleno = {1249}, numpages = {12} }
+
+
+@article{BHATIA2006594,
+title = {Riemannian geometry and matrix geometric means},
+journal = {Linear Algebra and its Applications},
+volume = {413},
+number = {2},
+pages = {594-618},
+year = {2006},
+author = {Rajendra Bhatia and John Holbrook},
+}
+
+@inproceedings{Riemannian_SVRG,
+ author = {Zhang, Hongyi and J. Reddi, Sashank and Sra, Suvrit},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {D. Lee and M. Sugiyama and U. Luxburg and I. Guyon and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Riemannian SVRG: Fast Stochastic Optimization on Riemannian Manifolds},
+ volume = {29},
+ year = {2016}
+}
+
+
+@article{bien,
+ ISSN = {00063444, 14643510},
+ URL = {http://www.jstor.org/stable/23076173},
+ abstract = {We suggest a method for estimating a covariance matrix on the basis of a sample of vectors drawn from a multivariate normal distribution. In particular, we penalize the likelihood with a lasso penalty on the entries of the covariance matrix. This penalty plays two important roles: it reduces the effective number of parameters, which is important even when the dimension of the vectors is smaller than the sample size since the number of parameters grows quadratically in the number of variables, and it produces an estimate which is sparse. In contrast to sparse inverse covariance estimation, our method's close relative, the sparsity attained here is in the covariance matrix itself rather than in the inverse matrix. Zeros in the covariance matrix correspond to marginal independencies; thus, our method performs model selection while providing a positive definite estimate of the covariance. The proposed penalized maximum likelihood problem is not convex, so we use a majorize-minimize approach in which we iteratively solve convex approximations to the original nonconvex problem. We discuss tuning parameter selection and demonstrate on a flow-cytometry dataset how our method produces an interpretable graphical display of the relationship between variables. We perform simulations that suggest that simple elementwise thresholding of the empirical covariance matrix is competitive with our method for identifying the sparsity structure. Additionally, we show how our method can be used to solve a previously studied special case in which a desired sparsity pattern is prespecified.},
+ author = {JACOB BIEN and ROBERT J. TIBSHIRANI},
+ journal = {Biometrika},
+ number = {4},
+ pages = {807--820},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {Sparse estimation of a covariance matrix},
+ urldate = {2023-11-29},
+ volume = {98},
+ year = {2011}
+}
+
+@misc{karcher2014riemannian,
+      title={Riemannian Center of Mass and so called karcher mean}, 
+      author={Hermann Karcher},
+      year={2014},
+      eprint={1407.2087},
+      archivePrefix={arXiv},
+      primaryClass={math.HO}
+}
+
+@article{bures-wasserstein,
+title = {On the Bures–Wasserstein distance between positive definite matrices},
+journal = {Expositiones Mathematicae},
+volume = {37},
+number = {2},
+pages = {165-191},
+year = {2019},
+issn = {0723-0869},
+doi = {https://doi.org/10.1016/j.exmath.2018.01.002},
+url = {https://www.sciencedirect.com/science/article/pii/S0723086918300021},
+author = {Rajendra Bhatia and Tanvi Jain and Yongdo Lim},
+keywords = {Positive definite matrices, Bures distance, Wasserstein metric, Optimal transport, Coupling problem, Fidelity},
+abstract = {The metric d(A,B)=trA+trB−2tr(A1∕2BA1∕2)1∕21∕2 on the manifold of n×n positive definite matrices arises in various optimisation problems, in quantum information and in the theory of optimal transport. It is also related to Riemannian geometry. In the first part of this paper we study this metric from the perspective of matrix analysis, simplifying and unifying various proofs. Then we develop a theory of a mean of two, and a barycentre of several, positive definite matrices with respect to this metric. We explain some recent work on a fixed point iteration for computing this Wasserstein barycentre. Our emphasis is on ideas natural to matrix analysis.}
+}
+
+@article{gaussian_graphical_model,
+ ISSN = {00063444, 14643510},
+ URL = {http://www.jstor.org/stable/20441351},
+ abstract = {We propose penalized likelihood methods for estimating the concentration matrix in the Gaussian graphical model. The methods lead to a sparse and shrinkage estimator of the concentration matrix that is positive definite, and thus conduct model selection and estimation simultaneously. The implementation of the methods is nontrivial because of the positive definite constraint on the concentration matrix, but we show that the computation can be done effectively by taking advantage of the efficient maxdet algorithm developed in convex optimization. We propose a BIC-type criterion for the selection of the tuning parameter in the penalized likelihood methods. The connection between our methods and existing methods is illustrated. Simulations and real examples demonstrate the competitive performance of the new methods.},
+ author = {Ming Yuan and Yi Lin},
+ journal = {Biometrika},
+ number = {1},
+ pages = {19--35},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {Model Selection and Estimation in the Gaussian Graphical Model},
+ urldate = {2023-11-29},
+ volume = {94},
+ year = {2007}
+}
+
+@article{pca_stifel, title={Fast and Efficient MMD-Based Fair PCA via Optimization over Stiefel Manifold}, volume={36}, url={https://ojs.aaai.org/index.php/AAAI/article/view/20699}, DOI={10.1609/aaai.v36i7.20699}, abstractNote={This paper defines fair principal component analysis (PCA) as minimizing the maximum mean discrepancy (MMD) between the dimensionality-reduced conditional distributions of different protected classes. The incorporation of MMD naturally leads to an exact and tractable mathematical formulation of fairness with good statistical properties. We formulate the problem of fair PCA subject to MMD constraints as a non-convex optimization over the Stiefel manifold and solve it using the Riemannian Exact Penalty Method with Smoothing (REPMS). Importantly, we provide a local optimality guarantee and explicitly show the theoretical effect of each hyperparameter in practical settings, extending previous results. Experimental comparisons based on synthetic and UCI datasets show that our approach outperforms prior work in explained variance, fairness, and runtime.}, number={7}, journal={Proceedings of the AAAI Conference on Artificial Intelligence}, author={Lee, Junghyun and Kim, Gwangsu and Olfat, Mahbod and Hasegawa-Johnson, Mark and Yoo, Chang D.}, year={2022}, month={Jun.}, pages={7363-7371} }
+
+@misc{liu2019simple,
+      title={Simple algorithms for optimization on Riemannian manifolds with constraints}, 
+      author={Changshuo Liu and Nicolas Boumal},
+      year={2019},
+      eprint={1901.10000},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@Inbook{disciplined_cvx,
+author="Grant, Michael
+and Boyd, Stephen
+and Ye, Yinyu",
+editor="Liberti, Leo
+and Maculan, Nelson",
+title="Disciplined Convex Programming",
+bookTitle="Global Optimization: From Theory to Implementation",
+year="2006",
+publisher="Springer US",
+address="Boston, MA",
+pages="155--210",
+abstract="A new methodology for constructing convex optimization models called disciplined convex programming is introduced. The methodology enforces a set of conventions upon the models constructed, in turn allowing much of the work required to analyze and solve the models to be automated.",
+isbn="978-0-387-30528-8",
+doi="10.1007/0-387-30528-9_7",
+url="https://doi.org/10.1007/0-387-30528-9_7"
+}
+
+@inproceedings{minibatch_trajectory,
+ author = {Lee, Kiwon and Cheng, Andrew and Paquette, Elliot and Paquette, Courtney},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {36944--36957},
+ publisher = {Curran Associates, Inc.},
+ title = {Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+@misc{scieur2023strong,
+      title={Strong Convexity of Sets in Riemannian Manifolds}, 
+      author={Damien Scieur and Thomas Kerdreux and Martínez-Rubio and Alexandre d'Aspremont and Sebastian Pokutta},
+      year={2023},
+      eprint={2312.03583},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@book{Vershynin_2018, place={Cambridge}, series={Cambridge Series in Statistical and Probabilistic Mathematics}, title={High-Dimensional Probability: An Introduction with Applications in Data Science}, publisher={Cambridge University Press}, author={Vershynin, Roman}, year={2018}, collection={Cambridge Series in Statistical and Probabilistic Mathematics}} 
+
+@book{horn_matrixanalysis,
+  added-at = {2017-06-29T07:13:07.000+0200},
+  author = {Horn, Roger A. and Johnson, Charles R.},
+  biburl = {https://www.bibsonomy.org/bibtex/24c33afdd2b6ceb17537c10958d6c3f64/gdmcbain},
+  citeulike-article-id = {13501953},
+  citeulike-linkout-0 = {http://www.worldcat.org/isbn/9780521548236},
+  citeulike-linkout-1 = {http://books.google.com/books?vid=ISBN9780521548236},
+  citeulike-linkout-2 = {http://www.amazon.com/gp/search?keywords=9780521548236\&index=books\&linkCode=qs},
+  citeulike-linkout-3 = {http://www.librarything.com/isbn/9780521548236},
+  citeulike-linkout-4 = {http://www.worldcat.org/oclc/849499908},
+  edition = {Second},
+  interhash = {42e630e87524c0309673c0fd71d9c610},
+  intrahash = {4c33afdd2b6ceb17537c10958d6c3f64},
+  isbn = {9780521548236},
+  keywords = {15a15-determinants-permanents-other-special-matrix-functions, 15a23-factorization-of-matrices 15a21-canonical-forms-reductions-classification},
+  posted-at = {2015-01-27 05:36:00},
+  priority = {2},
+  publisher = {Cambridge University Press},
+  timestamp = {2021-02-18T06:02:57.000+0100},
+  title = {{Matrix analysis}},
+  url = {http://www.worldcat.org/isbn/9780521548236},
+  year = 2013
+}
+
+@article{Markowitz_portfolio,
+ ISSN = {00221082, 15406261},
+ URL = {http://www.jstor.org/stable/2975974},
+ author = {Harry Markowitz},
+ journal = {The Journal of Finance},
+ number = {1},
+ pages = {77--91},
+ publisher = {[American Finance Association, Wiley]},
+ title = {Portfolio Selection},
+ urldate = {2024-01-17},
+ volume = {7},
+ year = {1952}
+}
+
+
+
+@inproceedings{Nguyen2019CalculatingOL,
+  title={Calculating Optimistic Likelihoods Using (Geodesically) Convex Optimization},
+  author={Viet Anh Nguyen and Soroosh Shafieezadeh-Abadeh and Man-Chung Yue and Daniel Kuhn and Wolfram Wiesemann},
+  booktitle={Neural Information Processing Systems},
+  year={2019},
+  url={https://api.semanticscholar.org/CorpusID:202781139}
+}
+
+
+@misc{miyamoto2023closedform,
+      title={On Closed-Form expressions for the Fisher-Rao Distance}, 
+      author={Henrique K. Miyamoto and Fábio C. C. Meneghetti and Sueli I. R. Costa},
+      year={2023},
+      eprint={2304.14885},
+      archivePrefix={arXiv},
+      primaryClass={math.ST}
+}
+
+
+@article{fisherdistance,
+ ISSN = {0581572X},
+ URL = {http://www.jstor.org/stable/25050283},
+ abstract = {Rao (1945) proposed a method for measuring distances between distributions of a parametric family satisfying certain regularity conditions. The measure is based on a metric of a Riemannian geometry, the metric being in terms of the elements of the information matrix for the family. In this paper Rao's (1945) method is studied in some detail. The mathematical difficulties in applying it are discussed. Distances are obtained for well-known families of distributions. In so far as the method produces some well-known distance measures for particular families, it provides a unifying treatment.},
+ author = {Colin Atkinson and Ann F. S. Mitchell},
+ journal = {Sankhyā: The Indian Journal of Statistics, Series A (1961-2002)},
+ number = {3},
+ pages = {345--365},
+ publisher = {Springer},
+ title = {Rao's Distance Measure},
+ urldate = {2024-01-24},
+ volume = {43},
+ year = {1981}
+}
+
+@Article{ApproximateToeplitzMatrix,
+author={Al-Homidan, S.},
+title={Approximate Toeplitz Matrix Problem Using Semidefinite Programming},
+journal={Journal of Optimization Theory and Applications},
+year={2007},
+month={Dec},
+day={01},
+volume={135},
+number={3},
+pages={583-598},
+abstract={Given a data matrix, we find its nearest symmetric positive-semidefinite Toeplitz matrix. In this paper, we formulate the problem as an optimization problem with a quadratic objective function and semidefinite constraints. In particular, instead of solving the so-called normal equations, our algorithm eliminates the linear feasibility equations from the start to maintain exact primal and dual feasibility during the course of the algorithm. Subsequently, the search direction is found using an inexact Gauss-Newton method rather than a Newton method on a symmetrized system and is computed using a diagonal preconditioned conjugate-gradient-type method. Computational results illustrate the robustness of the algorithm.},
+issn={1573-2878},
+doi={10.1007/s10957-007-9254-5},
+url={https://doi.org/10.1007/s10957-007-9254-5}
+}
+
+@misc{criscitiello2021accelerated,
+      title={An accelerated first-order method for non-convex optimization on manifolds}, 
+      author={Christopher Criscitiello and Nicolas Boumal},
+      year={2021},
+      eprint={2008.02252},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+
+
+
+
+
+
+
+
+
+
+@article{differentialApproachtoGeometricMean,
+author = {Moakher, Maher},
+title = {A Differential Geometric Approach to the Geometric Mean of Symmetric Positive-Definite Matrices},
+journal = {SIAM Journal on Matrix Analysis and Applications},
+volume = {26},
+number = {3},
+pages = {735-747},
+year = {2005},
+doi = {10.1137/S0895479803436937},
+
+URL = { 
+    
+        https://doi.org/10.1137/S0895479803436937
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/S0895479803436937
+    
+    
+
+}
+,
+    abstract = { In this paper we introduce metric-based means for the space of positive-definite matrices. The mean associated with the Euclidean metric of the ambient space is the usual arithmetic mean. The mean associated with the Riemannian metric corresponds to the geometric mean. We discuss some invariance properties of the Riemannian mean and we use differential geometric tools to give a characterization of this mean. }
+}
+
+
+@book{HadamardOpt,
+url = {https://doi.org/10.1515/9783110361629},
+title = {Convex Analysis and Optimization in Hadamard Spaces},
+author = {Miroslav Bacak},
+publisher = {De Gruyter},
+address = {Berlin, München, Boston},
+doi = {doi:10.1515/9783110361629},
+isbn = {9783110361629},
+year = {2014},
+lastchecked = {2024-01-31}
+}
+
+
+@InProceedings{pmlr-v162-kim22k,
+  title = 	 {Accelerated Gradient Methods for Geodesically Convex Optimization: Tractable Algorithms and Convergence Analysis},
+  author =       {Kim, Jungbin and Yang, Insoon},
+  booktitle = 	 {Proceedings of the 39th International Conference on Machine Learning},
+  pages = 	 {11255--11282},
+  year = 	 {2022},
+  editor = 	 {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  volume = 	 {162},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {17--23 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v162/kim22k/kim22k.pdf},
+  url = 	 {https://proceedings.mlr.press/v162/kim22k.html},
+  abstract = 	 {We propose computationally tractable accelerated first-order methods for Riemannian optimization, extending the Nesterov accelerated gradient (NAG) method. For both geodesically convex and geodesically strongly convex objective functions, our algorithms are shown to have the same iteration complexities as those for the NAG method on Euclidean spaces, under only standard assumptions. To the best of our knowledge, the proposed scheme is the first fully accelerated method for geodesically convex optimization problems. Our convergence analysis makes use of novel metric distortion lemmas as well as carefully designed potential functions. A connection with the continuous-time dynamics for modeling Riemannian acceleration in (Alimisis et al., 2020) is also identified by letting the stepsize tend to zero. We validate our theoretical results through numerical experiments.}
+}
+
+@misc{zhang2017riemannian,
+      title={Riemannian SVRG: Fast Stochastic Optimization on Riemannian Manifolds}, 
+      author={Hongyi Zhang and Sashank J. Reddi and Suvrit Sra},
+      year={2017},
+      eprint={1605.07147},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@misc{cherian2021learning,
+      title={Learning Log-Determinant Divergences for Positive Definite Matrices}, 
+      author={Anoop Cherian and Panagiotis Stanitsas and Jue Wang and Mehrtash Harandi and Vassilios Morellas and Nikolaos Papanikolopoulos},
+      year={2021},
+      eprint={2104.06461},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@article{Vishnoi2018GeodesicCO,
+  title={Geodesic Convex Optimization: Differentiation on Manifolds, Geodesics, and Convexity},
+  author={Nisheeth K. Vishnoi},
+  journal={ArXiv},
+  year={2018},
+  volume={abs/1806.06373},
+  url={https://api.semanticscholar.org/CorpusID:49300656}
+}
+
+@book{bhatia07positivedefinitematrices,
+  added-at = {2008-03-10T13:59:27.000+0100},
+  address = {Princeton, NJ, USA},
+  author = {Bhatia, Rajendra},
+  biburl = {https://www.bibsonomy.org/bibtex/2b4024a0d41d00fa8a049704b89834da7/sb3000},
+  interhash = {5df904d609b1294edae504b06d2948a8},
+  intrahash = {b4024a0d41d00fa8a049704b89834da7},
+  keywords = {math kernel},
+  publisher = {Princeton University Press},
+  series = {Princeton Series in Applied Mathematics},
+  timestamp = {2010-10-07T14:13:58.000+0200},
+  title = {Positive Definite Matrices},
+  url = {http://press.princeton.edu/titles/8445.html},
+  year = 2007
+}
+
+@misc{sra2013sdivergence,
+      title={Positive definite matrices and the S-divergence}, 
+      author={Suvrit Sra},
+      year={2013},
+      eprint={1110.1773},
+      archivePrefix={arXiv},
+      primaryClass={math.FA}
+}
+
+
+@article{Sra_conic_geometric_Opt_SPD,
+   title={Conic Geometric Optimization on the Manifold of Positive Definite Matrices},
+   volume={25},
+   number={1},
+   journal={SIAM Journal on Optimization},
+   publisher={Society for Industrial & Applied Mathematics (SIAM)},
+   author={Sra, Suvrit and Hosseini, Reshad},
+   year={2015},
+   month=jan, pages={713–739} }
+
+@book{Boumal_2023, place={Cambridge}, title={An Introduction to Optimization on Smooth Manifolds}, publisher={Cambridge University Press}, author={Boumal, Nicolas}, year={2023}} <div></div>
+
+@inproceedings{Hosseini2015MatrixMO,
+  title={Matrix Manifold Optimization for Gaussian Mixtures},
+  author={Reshad Hosseini and Suvrit Sra},
+  booktitle={Neural Information Processing Systems},
+  year={2015},
+  url={https://api.semanticscholar.org/CorpusID:18189811}
+}
+
+@book{ECDFinance,
+author = {Gupta, Arjun and Varga, Tamas and Bodnar, Taras},
+year = {2013},
+month = {07},
+pages = {},
+title = {Elliptically Contoured Models in Statistics and Portfolio Theory},
+isbn = {978-1-4614-8153-9},
+journal = {Elliptically Contoured Models in Statistics and Portfolio Theory},
+doi = {10.1007/978-1-4614-8154-6}
+}
+
+@misc{severa2023geometry,
+      title={The geometry of the maximum likelihood of Cauchy-like distributions}, 
+      author={Pavol Ševera},
+      year={2023},
+      eprint={2311.07165},
+      archivePrefix={arXiv},
+      primaryClass={math.ST}
+}
+
+@inproceedings{
+yurtsever2022cccp,
+title={{CCCP} is Frank-Wolfe in disguise},
+author={Alp Yurtsever and Suvrit Sra},
+booktitle={Advances in Neural Information Processing Systems},
+editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+year={2022},
+url={https://openreview.net/forum?id=OGGQs4xFHrr}
+}
+
+@misc{bergmann2023difference,
+      title={The difference of convex algorithm on Hadamard manifolds}, 
+      author={Ronny Bergmann and Orizon P. Ferreira and Elianderson M. Santos and João Carlos O. Souza},
+      year={2023},
+      eprint={2112.05250},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+@inproceedings{NIPS2013_3948ead6,
+ author = {Sra, Suvrit and Hosseini, Reshad},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {C.J. Burges and L. Bottou and M. Welling and Z. Ghahramani and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Geometric optimisation on positive definite matrices for elliptically contoured distributions},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2013/file/3948ead63a9f2944218de038d8934305-Paper.pdf},
+ volume = {26},
+ year = {2013}
+}
+@article{LIM2013115,
+title = {Convex geometric means},
+journal = {Journal of Mathematical Analysis and Applications},
+volume = {404},
+number = {1},
+pages = {115-128},
+year = {2013},
+issn = {0022-247X},
+doi = {https://doi.org/10.1016/j.jmaa.2013.03.006},
+url = {https://www.sciencedirect.com/science/article/pii/S0022247X13001984},
+author = {Yongdo Lim},
+keywords = {Positive definite matrix, Geometric mean, Geometric mean majorization, Convex function, Karcher mean},
+abstract = {A class of multivariable weighted geometric means of positive definite matrices admitting Jensen-type inequalities for geodesically convex functions is considered. It is shown that there are infinitely many such geometric means including the weighted inductive, Bini–Meini–Poloni and Karcher means and each of these means provides a geometric mean majorization on the space of positive definite matrices. Some connections between our geometric mean majorizations and classical results of the standard majorization of real numbers are discussed. In particular, we establish the Hardy–Littlewood–Pólya majorization theorem and also Rado’s theorem and Schur’s convexity theorem for the weighted Karcher mean.}
+}
+
+@book{bhatia97,
+  added-at = {2013-06-15T01:58:38.000+0200},
+  author = {Bhatia, Rajendra},
+  biburl = {https://www.bibsonomy.org/bibtex/269934a372db92a018132c5880987691e/ytyoun},
+  interhash = {a52e63731d9a0e304c29b795ed54cf94},
+  intrahash = {69934a372db92a018132c5880987691e},
+  isbn = {0387948465},
+  keywords = {courant-fischer eigenvalues linear.algebra majorization matrix textbook},
+  publisher = {Springer},
+  timestamp = {2017-02-13T08:18:47.000+0100},
+  title = {Matrix Analysis},
+  volume = 169,
+  year = 1997
+}
+@misc{gcvxEM,
+      title={On a class of geodesically convex optimization problems solved via Euclidean MM methods}, 
+      author={Melanie Weber and Suvrit Sra},
+      year={2022},
+      eprint={2206.11426},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+
+
+@article{FenchelDuality-Primal-Dual,
+   title={Fenchel Duality Theory and a Primal-Dual Algorithm on Riemannian Manifolds},
+   volume={21},
+   ISSN={1615-3383},
+   url={http://dx.doi.org/10.1007/s10208-020-09486-5},
+   DOI={10.1007/s10208-020-09486-5},
+   number={6},
+   journal={Foundations of Computational Mathematics},
+   publisher={Springer Science and Business Media LLC},
+   author={Bergmann, Ronny and Herzog, Roland and Silva Louzeiro, Maurício and Tenbrinck, Daniel and Vidal-Núñez, José},
+   year={2021},
+   month=jan, pages={1465–1504} }
+
+
+@article{FenchelDuality-Separation,
+   title={Fenchel Duality and a Separation Theorem on Hadamard Manifolds},
+   volume={32},
+   ISSN={1095-7189},
+   url={http://dx.doi.org/10.1137/21M1400699},
+   DOI={10.1137/21m1400699},
+   number={2},
+   journal={SIAM Journal on Optimization},
+   publisher={Society for Industrial & Applied Mathematics (SIAM)},
+   author={Silva Louzeiro, Maurício and Bergmann, Ronny and Herzog, Roland},
+   year={2022},
+   month=may, pages={854–873} }
+
+
+
+
+@InProceedings{FisherSAM,
+  title = 	 {{F}isher {SAM}: Information Geometry and Sharpness Aware Minimisation},
+  author =       {Kim, Minyoung and Li, Da and Hu, Shell X and Hospedales, Timothy},
+  booktitle = 	 {Proceedings of the 39th International Conference on Machine Learning},
+  pages = 	 {11148--11161},
+  year = 	 {2022},
+  editor = 	 {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  volume = 	 {162},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {17--23 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v162/kim22f/kim22f.pdf},
+  url = 	 {https://proceedings.mlr.press/v162/kim22f.html},
+  abstract = 	 {Recent sharpness-aware minimisation (SAM) is known to find flat minima which is beneficial for better generalisation with improved robustness. SAM essentially modifies the loss function by the maximum loss value within the small neighborhood around the current iterate. However, it uses the Euclidean ball to define the neighborhood, which can be less accurate since loss functions for neural networks are typically defined over probability distributions (e.g., class predictive probabilities), rendering the parameter space no more Euclidean. In this paper we consider the information geometry of the model parameter space when defining the neighborhood, namely replacing SAM’s Euclidean balls with ellipsoids induced by the Fisher information. Our approach, dubbed Fisher SAM, defines more accurate neighborhood structures that conform to the intrinsic metric of the underlying statistical manifold. For instance, SAM may probe the worst-case loss value at either a too nearby or inappropriately distant point due to the ignorance of the parameter space geometry, which is avoided by our Fisher SAM. Another recent Adaptive SAM approach that stretches/shrinks the Euclidean ball in accordance with the scales of the parameter magnitudes, might be dangerous, potentially destroying the neighborhood structure even severely. We demonstrate the improved performance of the proposed Fisher SAM on several benchmark datasets/tasks.}
+}
+
+@misc{SAM-BAYES,
+      title={SAM as an Optimal Relaxation of Bayes}, 
+      author={Thomas Möllenhoff and Mohammad Emtiyaz Khan},
+      year={2023},
+      eprint={2210.01620},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+
+@inproceedings{min-max-g-cvx-Jordan,
+ author = {Jordan, Michael and Lin, Tianyi and Vlatakis-Gkaragkounis, Emmanouil-Vasileios},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {6557--6574},
+ publisher = {Curran Associates, Inc.},
+ title = {First-Order Algorithms for Min-Max Optimization in Geodesic Metric Spaces},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/2ad9a1a6ffac3dd72cc1df96019eca01-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+
+@inproceedings{
+zhang2023sions,
+title={Sion's Minimax Theorem in Geodesic Metric Spaces and a Riemannian Extragradient Algorithm},
+author={Peiyuan Zhang and Jingzhao Zhang and Suvrit Sra},
+booktitle={OPT 2023: Optimization for Machine Learning},
+year={2023},
+url={https://openreview.net/forum?id=D8WJ7gQEG1}
+}
+
+
+
+@book{VariationalAnalysisRockafellar1998,
+  title = {Variational Analysis},
+  ISBN = {9783642024313},
+  ISSN = {0072-7830},
+  url = {http://dx.doi.org/10.1007/978-3-642-02431-3},
+  DOI = {10.1007/978-3-642-02431-3},
+  journal = {Grundlehren der mathematischen Wissenschaften},
+  publisher = {Springer Berlin Heidelberg},
+  author = {Rockafellar,  R. Tyrrell and Wets,  Roger J. B.},
+  year = {1998}
+}
+
+@article{Koufany2006,
+  title = {Application of Hilbert’s Projective Metric on Symmetric Cones},
+  volume = {22},
+  ISSN = {1439-7617},
+  url = {http://dx.doi.org/10.1007/s10114-005-0755-6},
+  DOI = {10.1007/s10114-005-0755-6},
+  number = {5},
+  journal = {Acta Mathematica Sinica,  English Series},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Koufany,  Khalid},
+  year = {2006},
+  month = apr,
+  pages = {1467–1472}
+}
+
+@inproceedings{
+shah2023learning,
+title={Learning Mixtures of Gaussians Using the {DDPM} Objective},
+author={Kulin Shah and Sitan Chen and Adam Klivans},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+year={2023},
+url={https://openreview.net/forum?id=aig7sgdRfI}
+}
+
+
+@BOOK{structuredcovestimation_wiesel,
+  author={Wiesel, Ami and Zhang, Teng},
+  booktitle={Structured Robust Covariance Estimation},
+  year={2015},
+  volume={},
+  number={},
+  pages={},
+  keywords={Optimization;Statistical signal processing: classification and detection;Statistical signal processing: estimation and regression;Detection and estimation;Information theory and statistics},
+  doi={10.1561/2000000053}}
+
+@article{wiesel2012geodesic,
+  title={Geodesic convexity and covariance estimation},
+  author={Wiesel, Ami},
+  journal={IEEE transactions on signal processing},
+  volume={60},
+  number={12},
+  pages={6182--6189},
+  year={2012},
+  publisher={IEEE}
+}
+
+@article{zhang2016robust,
+  title={{Robust subspace recovery by Tyler's M-estimator}},
+  author={Zhang, Teng},
+  journal={Information and Inference: A Journal of the IMA},
+  volume={5},
+  number={1},
+  pages={1--21},
+  year={2016},
+  publisher={Oxford University Press}
+}
+
+
+
+
+
+@article{irls_fazel,
+  author  = {Karthik Mohan and Maryam Fazel},
+  title   = {Iterative Reweighted Algorithms for Matrix Rank Minimization},
+  journal = {Journal of Machine Learning Research},
+  year    = {2012},
+  volume  = {13},
+  number  = {110},
+  pages   = {3441--3473},
+  url     = {http://jmlr.org/papers/v13/mohan12a.html}
+}
+
+
+@article{lanckriet2009convergence,
+  title={On the convergence of the concave-convex procedure},
+  author={Lanckriet, Gert and Sriperumbudur, Bharath K},
+  journal={Advances in neural information processing systems},
+  volume={22},
+  year={2009}
+}
+
+@article{martinez2024convergence,
+  title={Convergence and Trade-Offs in Riemannian Gradient Descent and Riemannian Proximal Point},
+  author={Mart{\'\i}nez-Rubio, David and Roux, Christophe and Pokutta, Sebastian},
+  journal={arXiv preprint arXiv:2403.10429},
+  year={2024}
+}
+
+
+@book{Bacak+2014,
+url = {https://doi.org/10.1515/9783110361629},
+title = {Convex Analysis and Optimization in Hadamard Spaces},
+author = {Miroslav Bacak},
+publisher = {De Gruyter},
+address = {Berlin, München, Boston},
+doi = {doi:10.1515/9783110361629},
+isbn = {9783110361629},
+year = {2014},
+lastchecked = {2024-05-23}
+}
+
+@book{udriste1994convex,
+  title={Convex Functions and Optimization Methods on {R}iemannian Manifolds},
+  author={Udriste, Constantin},
+  volume={297},
+  year={1994},
+  publisher={Springer Science \& Business Media}
+}
+
+@inproceedings{zhang2016first,
+  title={First-order methods for geodesically convex optimization},
+  author={Zhang, Hongyi and Sra, Suvrit},
+  booktitle={Conference on Learning Theory},
+  pages={1617--1638},
+  year={2016}
+}
+
+@article{boumal2019global,
+  title={Global rates of convergence for nonconvex optimization on manifolds},
+  author={Boumal, Nicolas and Absil, Pierre-Antoine and Cartis, Coralia},
+  journal={IMA Journal of Numerical Analysis},
+  volume={39},
+  number={1},
+  pages={1--33},
+  year={2019},
+  publisher={Oxford University Press}
+}
+
+@article{bonnabel2013stochastic,
+  title={Stochastic gradient descent on {R}iemannian manifolds},
+  author={Bonnabel, Silvere},
+  journal={IEEE Transactions on Automatic Control},
+  volume={58},
+  number={9},
+  pages={2217--2229},
+  year={2013},
+  publisher={IEEE}
+}
+
+@article{cruzneto,
+  title={A modified proximal point method for {DC} functions on {H}adamard manifolds},
+author={Almeida, Yldenilson Torres and da Cruz Neto, Jo{\~a}o Xavier and Oliveira, Paulo Roberto and Souza, Jo{\~a}o Carlos de Oliveira},
+  journal={Computational Optimization and Applications},
+  volume={76},
+  number={3},
+  pages={649--673},
+  year={2020},
+  publisher={Springer}
+}
+
+@article{souza2015proximal,
+  title={A proximal point algorithm for {DC} fuctions on {H}adamard manifolds},
+  author={Souza, Jo{\~a}o Carlos de Oliveira and Oliveira, Paulo Roberto},
+  journal={Journal of Global Optimization},
+  volume={63},
+  number={4},
+  pages={797--810},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{ferreira2021difference,
+  title={The difference of convex algorithm on Riemannian manifolds},
+  author={Ferreira, Orizon P and Santos, Elianderson M and Souza, Jo{\~a}o Carlos O},
+  journal={arXiv preprint arXiv:2112.05250},
+  year={2021}
+}
+
+@ARTICLE{riemanniangaussianSPD,
+  author={Said, Salem and Bombrun, Lionel and Berthoumieu, Yannick and Manton, Jonathan H.},
+  journal={IEEE Transactions on Information Theory}, 
+  title={Riemannian Gaussian Distributions on the Space of Symmetric Positive Definite Matrices}, 
+  year={2017},
+  volume={63},
+  number={4},
+  pages={2153-2170},
+  keywords={Gaussian distribution;Measurement;Maximum likelihood estimation;Symmetric matrices;Probability distribution;Probability density function;Symmetric positive definite matrices;tensor;Riemannian metric;Gaussian distribution;expectation-maximisation;texture},
+  doi={10.1109/TIT.2017.2653803}}
+
+
+@article{MAL-001,
+url = {http://dx.doi.org/10.1561/2200000001},
+year = {2008},
+volume = {1},
+journal = {Foundations and Trends® in Machine Learning},
+title = {Graphical Models, Exponential Families, and Variational Inference},
+doi = {10.1561/2200000001},
+issn = {1935-8237},
+number = {1–2},
+pages = {1-305},
+author = {Martin J. Wainwright and Michael I. Jordan}
+}
+
+@misc{uhler2017gaussiangraphicalmodelsalgebraic,
+      title={Gaussian Graphical Models: An Algebraic and Geometric Perspective}, 
+      author={Caroline Uhler},
+      year={2017},
+      eprint={1707.04345},
+      archivePrefix={arXiv},
+      primaryClass={math.ST},
+      url={https://arxiv.org/abs/1707.04345}, 
+}
+
+
+@misc{cheng2024disciplinedgeodesicallyconvexprogramming,
+      title={Disciplined Geodesically Convex Programming}, 
+      author={Andrew Cheng and Vaibhav Dixit and Melanie Weber},
+      year={2024},
+      eprint={2407.05261},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      url={https://arxiv.org/abs/2407.05261}, 
+}
+
+@book{Fang2018,
+  title = {Symmetric Multivariate and Related Distributions},
+  ISBN = {9781351077040},
+  url = {http://dx.doi.org/10.1201/9781351077040},
+  DOI = {10.1201/9781351077040},
+  publisher = {Chapman and Hall/CRC},
+  author = {Fang,  Kai-Tai and Kotz,  Samuel and Ng,  Kai Wang},
+  year = {2018},
+  month = jan 
+}
+
+
+
+
+
+
+
+
+@article{lowrank_opt_bach,
+author = {Journ\'{e}e, M. and Bach, F. and Absil, P.-A. and Sepulchre, R.},
+title = {Low-Rank Optimization on the Cone of Positive Semidefinite Matrices},
+journal = {SIAM Journal on Optimization},
+volume = {20},
+number = {5},
+pages = {2327-2351},
+year = {2010},
+doi = {10.1137/080731359},
+
+URL = { 
+    
+        https://doi.org/10.1137/080731359
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/080731359
+    
+    
+
+}
+,
+    abstract = { We propose an algorithm for solving optimization problems defined on a subset of the cone of symmetric positive semidefinite matrices. This algorithm relies on the factorization \$X=YY^T\$, where the number of columns of Y fixes an upper bound on the rank of the positive semidefinite matrix X. It is thus very effective for solving problems that have a low-rank solution. The factorization \$X=YY^T\$ leads to a reformulation of the original problem as an optimization on a particular quotient manifold. The present paper discusses the geometry of that manifold and derives a second-order optimization method with guaranteed quadratic convergence. It furthermore provides some conditions on the rank of the factorization to ensure equivalence with the original problem. In contrast to existing methods, the proposed algorithm converges monotonically to the sought solution. Its numerical efficiency is evaluated on two applications: the maximal cut of a graph and the problem of sparse principal component analysis. }
+}
+
+
+
+@article{regression_pd,
+  author  = {Gilles Meyer and Silv{{\`e}}re Bonnabel and Rodolphe Sepulchre},
+  title   = {Regression on Fixed-Rank Positive Semidefinite Matrices: A Riemannian Approach},
+  journal = {Journal of Machine Learning Research},
+  year    = {2011},
+  volume  = {12},
+  number  = {18},
+  pages   = {593--625},
+  url     = {http://jmlr.org/papers/v12/meyer11a.html}
+}
+
+@article{Peel2000,
+  volume = {10},
+  ISSN = {0960-3174},
+  url = {http://dx.doi.org/10.1023/A:1008981510081},
+  DOI = {10.1023/a:1008981510081},
+  number = {4},
+  journal = {Statistics and Computing},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Peel,  D. and McLachlan,  G. J.},
+  year = {2000},
+  pages = {339–348}
+}
+
+@article{Lange1989,
+  title = {Robust Statistical Modeling Using thetDistribution},
+  volume = {84},
+  ISSN = {1537-274X},
+  url = {http://dx.doi.org/10.1080/01621459.1989.10478852},
+  DOI = {10.1080/01621459.1989.10478852},
+  number = {408},
+  journal = {Journal of the American Statistical Association},
+  publisher = {Informa UK Limited},
+  author = {Lange,  Kenneth L. and Little,  Roderick J. A. and Taylor,  Jeremy M. G.},
+  year = {1989},
+  month = dec,
+  pages = {881–896}
+}
+
+@article{Nadarajah2005,
+  title = {Mathematical Properties of the Multivariate t Distribution},
+  volume = {89},
+  ISSN = {1572-9036},
+  url = {http://dx.doi.org/10.1007/s10440-005-9003-4},
+  DOI = {10.1007/s10440-005-9003-4},
+  number = {1–3},
+  journal = {Acta Applicandae Mathematicae},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Nadarajah,  Saralees and Kotz,  Samuel},
+  year = {2005},
+  month = nov,
+  pages = {53–84}
+}
+
+@book{Kotz2004,
+  title = {Multivariate T-Distributions and Their Applications},
+  ISBN = {9780511550683},
+  url = {http://dx.doi.org/10.1017/CBO9780511550683},
+  DOI = {10.1017/cbo9780511550683},
+  publisher = {Cambridge University Press},
+  author = {Kotz,  Samuel and Nadarajah,  Saralees},
+  year = {2004},
+  month = feb 
+}
+
+@article{Jeuris2012ASA,
+  title={A survey and comparison of contemporary algorithms for computing the matrix geometric mean},
+  author={Ben Jeuris and Raf Vandebril and Bart Vandereycken},
+  journal={Electronic Transactions on Numerical Analysis},
+  year={2012},
+  volume={39},
+  pages={379-402}
+}
+
+@article{Karcher1977RiemannianCO,
+  title={Riemannian center of mass and mollifier smoothing},
+  author={Hermann Karcher},
+  journal={Communications on Pure and Applied Mathematics},
+  year={1977},
+  volume={30},
+  pages={509-541}
+}
+
+@inproceedings{Nesterov1994InteriorpointPA,
+  title={Interior-point polynomial algorithms in convex programming},
+  author={Yurii Nesterov and Arkadi Nemirovski},
+  booktitle={Siam studies in applied mathematics},
+  year={1994},
+  url={https://api.semanticscholar.org/CorpusID:117194167}
+}
+
+@INPROCEEDINGS{efficientsimilarityCherian,
+  author={Cherian, Anoop and Sra, Suvrit and Banerjee, Arindam and Papanikolopoulos, Nikolaos},
+  booktitle={2011 International Conference on Computer Vision}, 
+  title={Efficient similarity search for covariance matrices via the Jensen-Bregman LogDet Divergence}, 
+  year={2011},
+  volume={},
+  number={},
+  pages={2399-2406},
+  keywords={Covariance matrix;Measurement;Manifolds;Eigenvalues and eigenfunctions;Vectors;Accuracy;Databases},
+  doi={10.1109/ICCV.2011.6126523}}
+
+
+@inproceedings{jain2017global,
+  title={Global convergence of non-convex gradient descent for computing matrix squareroot},
+  author={Jain, Prateek and Jin, Chi and Kakade, Sham and Netrapalli, Praneeth},
+  booktitle={Artificial Intelligence and Statistics},
+  pages={479--488},
+  year={2017},
+  organization={PMLR}
+}
+
+
+@article{discriminant_analysis_sapatinas,
+    author = {Sapatinas, Theofanis},
+    title = "{Discriminant Analysis and Statistical Pattern Recognition}",
+    journal = {Journal of the Royal Statistical Society Series A: Statistics in Society},
+    volume = {168},
+    number = {3},
+    pages = {635-636},
+    year = {2005},
+    month = {06},
+    issn = {0964-1998},
+    doi = {10.1111/j.1467-985X.2005.00368_10.x},
+    url = {https://doi.org/10.1111/j.1467-985X.2005.00368\_10.x},
+    eprint = {https://academic.oup.com/jrsssa/article-pdf/168/3/635/49601531/jrsssa\_168\_3\_635.pdf}}
+
+@inproceedings{Cox1961TestsOS,
+  title={Tests of Separate Families of Hypotheses},
+  author={D. R. Cox},
+  year={1961},
+  url={https://api.semanticscholar.org/CorpusID:120201197}
+}
+
+@article{Basso2005,
+  title = {Reverse engineering of regulatory networks in human B cells},
+  volume = {37},
+  ISSN = {1546-1718},
+  url = {http://dx.doi.org/10.1038/ng1532},
+  DOI = {10.1038/ng1532},
+  number = {4},
+  journal = {Nature Genetics},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Basso,  Katia and Margolin,  Adam A and Stolovitzky,  Gustavo and Klein,  Ulf and Dalla-Favera,  Riccardo and Califano,  Andrea},
+  year = {2005},
+  month = mar,
+  pages = {382–390}
+}
+
+@article{Wille2004,
+  volume = {5},
+  ISSN = {1465-6906},
+  url = {http://dx.doi.org/10.1186/gb-2004-5-11-r92},
+  DOI = {10.1186/gb-2004-5-11-r92},
+  number = {11},
+  journal = {Genome Biology},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Wille,  Anja and Zimmermann,  Philip and Vranová,  Eva and F\"{u}rholz,  Andreas and Laule,  Oliver and Bleuler,  Stefan and Hennig,  Lars and Prelić,  Amela and von Rohr,  Peter and Thiele,  Lothar and Zitzler,  Eckart and Gruissem,  Wilhelm and B\"{u}hlmann,  Peter},
+  year = {2004},
+  pages = {R92}
+}
+
+@article{Price2017,
+  title = {Bayesian Synthetic Likelihood},
+  volume = {27},
+  ISSN = {1537-2715},
+  url = {http://dx.doi.org/10.1080/10618600.2017.1302882},
+  DOI = {10.1080/10618600.2017.1302882},
+  number = {1},
+  journal = {Journal of Computational and Graphical Statistics},
+  publisher = {Informa UK Limited},
+  author = {Price,  L. F. and Drovandi,  C. C. and Lee,  A. and Nott,  D. J.},
+  year = {2017},
+  month = jul,
+  pages = {1–11}
+}
