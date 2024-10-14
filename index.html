@@ -2,31 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Andrew Cheng's personal website" />
-    <title>Andrew Cheng</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Cheng - Portfolio</title>
+
+    <!-- CSS: Bootstrap and Custom Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 70px; /* Padding to avoid content being hidden behind navbar */
+        }
+
+        /* Fixed Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #1e1e1e; /* Dark background */
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        /* Custom Buttons for Hero Section */
+        .hero-btn {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .hero-btn.cv-btn {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .hero-btn.cv-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .hero-btn.code-btn {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .hero-btn.code-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 
     <!-- CSS: Bootstrap and Custom Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
-    <!-- Banner Section -->
-    <section id="banner" class="text-center py-5">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <header>
-                <h1>Andrew Nicholas Cheng</h1>
-                <p>Research Student, Mathematics, McGill University</p>
-            </header>
-            <div class="mt-4">
-                <a href="#aboutme" class="btn btn-primary btn-lg mx-2">About Me</a>
-                <a href="#research" class="btn btn-primary btn-lg mx-2">Research</a>
-                <a href="Research/AndrewResume_Academia.pdf" target="_blank" class="btn btn-primary btn-lg mx-2">CV</a>
+            <a class="navbar-brand" href="#">Andrew Cheng</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutme">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Research/andrewresume.pdf">CV</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
+
+
+
+
 
     <!-- Main Content Section -->
     <div id="main">
@@ -38,51 +127,97 @@
                         <img src="images/eat.jpg" alt="Andrew Cheng" class="rounded-circle img-thumbnail" />
                     </div>
                     <div class="col-sm-9">
-                        <h3>Research Interests</h3>
+                        <h3>About Me</h3>
                         <p>
-                            I am a 2nd year PhD student in Computer Science at Harvard University, advised by <a href="http://melanie-weber.com" target="_blank">Professor Melanie Weber</a>. My research focuses on the intersection of machine learning, optimization, and statistics.
+                            I am a 2nd year PhD student in Computer Science at Harvard University, advised by <a href="http://melanie-weber.com" target="_blank">Melanie Weber</a>. My research lies in the interface of machine learning, optimization, and statistics. 
+							My research includes Riemannian optimization and high-dimensional learning dynamics. Recently, I am working on feature learning of equivariant neural networks and generative models (e.g. diffusion models).	
+							My research has been supported in part by the NSERC Postgraduate Scholarship, the Harvard Dean’s Competitive Fund for Promising Scholarship, and NSF.
                         </p>
                         <p>
-                            I am also a Master's student at McGill University and the Montreal Institute of Learning Algorithms (MILA), supervised by <a href="https://cypaquette.github.io/" target="_blank">Professor Courtney Paquette</a>.
+                            Previously, I was a Master's student at McGill University and the Montreal Institute of Learning Algorithms (MILA), supervised by <a href="https://cypaquette.github.io/" target="_blank">Courtney Paquette</a> and 
+							<a href="https://elliotpaquette.github.io/" target="_blank">Elliot Paquette</a>. I completed my Bachelor's degree in Statistics and Computer Science at McGill University.
                         </p>
-                        <p>
-                            I co-organize the <a href="https://elliotpaquette.github.io/rmtmloptseminar.html" target="_blank">RMT-ML-OPT Seminar at McGill</a>.
-                        </p>
-                        <h3>Hobbies</h3>
-                        <p>
-                            I enjoy playing classical piano, automating tasks in Python, and playing basketball and soccer in my free time.
+						<p>
+                            In 2022 and 2023, I interned as a deep learning researcher at <a href="https://www.valencelabs.com" target = "_blank">ValenceLabs</a>, where I worked on generative models for drug discovery. 
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research Section -->
-        <section id="research" class="wrapper style2 py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-sm-9">
-                        <h3>Research</h3>
-                        <a href="https://openreview.net/pdf?id=z9poo2GhOh6" target="_blank">Trajectory of Mini-Batch Momentum (NeurIPS 2022)</a>
-                    </div>
-                    <div class="col-sm-3">
-                        <img src="images/ice.jpg" alt="Research" class="rounded-circle img-thumbnail" />
-                    </div>
-                </div>
-            </div>
-        </section>
+		<!-- Existing content ... -->
+
+		<!-- Timeline Section -->
+<section id="timeline" class="wrapper style3 py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Recent Events</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">December 2025</div>
+                <div class="timeline-content">
+                    <h4>Two workshop papers at <a href="https://opt-ml.org" target="_blank">NeurIPS's OPTML conference</a></h4>
+                    <p>Presented results from our papers "High Dimensional First Order Mini-Batch Algorithms on Quadratic Problems" and "Structured Regularization on the Positive Definite Manifold."</p>
+        </div>
     </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="text-center py-4">
-        <p>Andrew Cheng. All rights reserved. Design by <a href="https://templated.co" target="_blank">TEMPLATED</a>.</p>
-    </footer>
 
-    <!-- Scripts: jQuery, Bootstrap, Custom JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
-</body>
 
-</html>
+<!-- Research Section -->
+<section id="research" class="wrapper style2 py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Research</h2>
+
+        <!-- Year 2024 -->
+        <h3 class="text-center text-muted mb-4">2024</h3>
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10">
+                <h4>Structured Regularization on the Positive Definite Manifold</h4>
+                <p style="color: white;">Authors: Andrew Cheng, Melanie Weber</p> 
+                <p>
+                    We developed a framework for structured regularization on the positive definite manifold to induce sparsity in the solution or incorporate side information.  
+                    Our framework preserves properties that allow provable non-asymptotic convergence to the global optimum of non-convex problems on the SPD manifold.
+                </p>
+                <a href="Research/spd_opt.pdf" target="_blank" class="btn btn-primary mt-3">Preprint</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10">
+                <h4>Disciplined Geodesically Convex Programming</h4>
+                <p style="color: white;">Authors: Andrew Cheng, Vaibhav Dixit, Melanie Weber</p> 
+                <p>
+                    We extended the theory of disciplined convex programming to the geodesically convex setting, providing a framework for optimization on Cartan-Hadamard manifolds and focused on the symmetric positive definite manifold.
+                </p>
+                <a href="https://web3.arxiv.org/pdf/2407.05261" target="_blank" class="btn btn-primary mt-3">Preprint</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10">
+                <h4>High Dimensional First Order Mini-Batch Algorithms on Quadratic Problem</h4>
+                <p style="color: white;">Authors: Andrew Cheng, Kiwon Lee, Courtney Paquette</p> 
+                <p>
+                   We show that general mini-batch first order algorithms (Nesterov acceleration, SGD+M, etc.) under <em>any</em> quadratic statistics 
+                   \( \mathcal{R}: \mathbb{R}^d \to \mathbb{R} \) concentrates around a deterministic quantity, which is the solution of the Volterra integral equation.
+				   Examples of quadratic statistics includes but not limited to: the random features model, training loss, excess risk for empirical risk minimization (in-distribution and generalization error). By analyzing 
+				   the Volterra integral equation, we can analyze the optimal mini-batch size (i.e. critical batch size) and the optimal hyperparameters (learning rate, momentum, etc.) for the mini-batch algorithms.
+                </p>
+                <a href="Research/batch_opt.pdf" target="_blank" class="btn btn-primary mt-3">Workshop (Preprint soon)</a>
+            </div>
+        </div>
+
+        <!-- Year 2022 -->
+        <h3 class="text-center text-muted mb-4">2022</h3>
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10">
+                <h4>Trajectory of Mini-Batch Momentum</h4>
+                <p>
+                    This work, presented at <strong>NeurIPS 2022</strong>, explores the dynamics of mini-batch momentum in optimization algorithms used for machine learning. The research provides insights into the trajectory of momentum in stochastic optimization and its convergence properties.
+                </p>
+                <a href="https://openreview.net/pdf?id=z9poo2GhOh6" target="_blank" class="btn btn-primary mt-3">Read the Full Paper (NeurIPS 2022)</a>
+            </div>
+        </div>
+    </div>
+</section>
+
