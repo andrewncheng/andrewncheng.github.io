@@ -3916,3 +3916,32 @@
 			}
 
 		}
+
+		@media (max-width: 768px) {
+			/* Custom styles for tablets and mobile devices */
+			body {
+				padding-top: 50px; /* Adjust padding for smaller screens */
+			}
+		
+			/* Navbar adjustment */
+			.navbar {
+				padding: 10px 20px;
+			}
+		
+			/* Adjust other elements for mobile */
+			#hero h1 {
+				font-size: 2rem;
+			}
+			#hero p {
+				font-size: 1rem;
+			}
+		
+			.hero-btn {
+				font-size: 1rem;
+				padding: 10px 20px;
+			}
+		
+			footer {
+				padding: 10px;
+			}
+		}
