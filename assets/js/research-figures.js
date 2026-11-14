@@ -17,11 +17,19 @@
         state.figure.querySelector("[data-figure-announcement]").textContent = message;
     }
 
+    function cancelPanelSelection(state) {
+        state.selectionToken += 1;
+        if (state.pendingPanel) state.pendingPanel.removeAttribute("aria-busy");
+        state.pendingPanel = null;
+        state.figure.setAttribute("aria-busy", "false");
+    }
+
     function stopPlayback(state) {
         window.clearTimeout(state.timer);
         state.timer = null;
         state.playbackToken += 1;
         state.playbackState = "idle";
+        cancelPanelSelection(state);
         const button = state.figure.querySelector("[data-play-settings]");
         if (button) {
             button.textContent = reducedMotion.matches ? "Next setting" : "Play settings";
@@ -122,7 +130,7 @@
         }
     }
 
-    function selectPanel(state, button, shouldAnnounce = true) {
+    function commitPanel(state, button) {
         state.panels.forEach(panel => panel.setAttribute("aria-pressed", String(panel === button)));
         state.panelIndex = state.panels.indexOf(button);
         state.currentSource = button.dataset.panelSrc;
@@ -139,34 +147,36 @@
         if (seriesControls) seriesControls.hidden = true;
         state.loadToken += 1;
         enhanceSvg(state, state.currentSource, state.loadToken);
-        if (shouldAnnounce) announce(state, `Showing ${button.textContent.trim()}.`);
     }
 
-    function selectStep(state, button) {
-        const stages = state.figure.querySelector("[data-verification-stages]");
-        const explanation = state.figure.querySelector("[data-verification-explanation]");
-        const highlights = state.figure.querySelector("[data-verification-highlights]");
-        const steps = [...stages.querySelectorAll("[data-verification-step]")];
-        state.stepIndex = steps.indexOf(button);
-        stages.hidden = false;
-        explanation.hidden = false;
-        steps.forEach(step => step.setAttribute("aria-pressed", String(step === button)));
-        explanation.querySelector("[data-step-title]").textContent = `${state.stepIndex + 1} / ${steps.length} · ${button.dataset.stepLabel}`;
-        explanation.querySelector("[data-step-description]").textContent = button.dataset.stepExplanation;
-        highlights.replaceChildren();
+    async function selectPanel(state, button, options = {}) {
+        cancelPanelSelection(state);
+        const token = state.selectionToken;
+        const isCurrent = options.isCurrent || (() => true);
+        if (!isCurrent()) return false;
+        if (button.dataset.panelSrc === state.currentSource && (state.svg || (state.image.complete && state.image.naturalWidth))) return true;
+        state.pendingPanel = button;
+        state.figure.setAttribute("aria-busy", "true");
+        button.setAttribute("aria-busy", "true");
         try {
-            const rectangles = JSON.parse(button.dataset.highlight || "[]");
-            rectangles.forEach(rectangle => {
-                if (!Array.isArray(rectangle) || rectangle.length !== 4 || !rectangle.every(Number.isFinite)) return;
-                const mark = document.createElement("span");
-                mark.className = "figure-node-highlight";
-                [mark.style.left, mark.style.top, mark.style.width, mark.style.height] = rectangle.map(value => `${value}%`);
-                highlights.appendChild(mark);
-            });
+            const decoded = options.decodedImage || await preloadPanel(button.dataset.panelSrc);
+            if (token !== state.selectionToken || !isCurrent()) return false;
+            state.decodedPanel = decoded;
+            commitPanel(state, button);
+            announce(state, `Showing ${button.textContent.trim()}.`);
+            return true;
         } catch (_) {
-            // Explanations still work if optional highlight coordinates are missing.
+            if (token === state.selectionToken && isCurrent()) {
+                announce(state, `Could not load ${button.textContent.trim()}. The current figure is unchanged; try again when the connection is available.`);
+            }
+            return false;
+        } finally {
+            if (token === state.selectionToken) {
+                state.pendingPanel = null;
+                button.removeAttribute("aria-busy");
+                state.figure.setAttribute("aria-busy", "false");
+            }
         }
-        state.figure.querySelector("[data-verification-next]").textContent = state.stepIndex === steps.length - 1 ? "Start again" : "Next step";
     }
 
     async function playSettings(state) {
@@ -174,8 +184,12 @@
             stopPlayback(state);
             return;
         }
+        const panels = state.playPanels;
+        if (!panels.length) return;
+        cancelPanelSelection(state);
         if (reducedMotion.matches) {
-            selectPanel(state, state.panels[(state.panelIndex + 1) % state.panels.length]);
+            const current = panels.indexOf(state.panels[state.panelIndex]);
+            await selectPanel(state, panels[(current + 1) % panels.length]);
             return;
         }
         const button = state.figure.querySelector("[data-play-settings]");
@@ -187,7 +201,7 @@
         button.setAttribute("aria-label", "Cancel loading figure panels");
         const active = () => token === state.playbackToken && !document.hidden && !reducedMotion.matches;
         try {
-            const loadedPanels = state.loadedPanels || await Promise.all(state.panels.map(panel => preloadPanel(panel.dataset.panelSrc)));
+            const loadedPanels = state.loadedPanels || await Promise.all(panels.map(panel => preloadPanel(panel.dataset.panelSrc)));
             if (!active()) return;
             state.loadedPanels = loadedPanels;
             state.playbackState = "playing";
@@ -196,13 +210,18 @@
             button.removeAttribute("aria-label");
             const showPanel = async index => {
                 if (!active()) return;
-                selectPanel(state, state.panels[index]);
+                const selected = await selectPanel(state, panels[index], { decodedImage: loadedPanels[index], isCurrent: active });
+                if (!active()) return;
+                if (!selected) {
+                    stopPlayback(state);
+                    return;
+                }
                 try {
                     await waitForImage(state.image);
                     if (!active()) return;
                     state.timer = window.setTimeout(() => {
                         if (!active()) return;
-                        if (index + 1 < state.panels.length) showPanel(index + 1);
+                        if (index + 1 < panels.length) showPanel(index + 1);
                         else stopPlayback(state);
                     }, 2400);
                 } catch (_) {
@@ -264,22 +283,27 @@
             graphic: figure.querySelector("[data-figure-graphic]"),
             expand: figure.querySelector("[data-expand-figure]"),
             panels: [...figure.querySelectorAll("[data-panel-src]")],
+            playPanels: [...figure.querySelectorAll("[data-panel-src][data-play-panel]")],
             focusKeys: new Set([...figure.querySelectorAll("[data-focus-series]")].map(button => button.dataset.focusSeries).filter(key => key !== "all")),
             originalOpacity: new WeakMap(),
             focus: "all",
             svg: null,
             loadToken: 0,
+            selectionToken: 0,
+            pendingPanel: null,
+            decodedPanel: null,
             panelIndex: 0,
-            stepIndex: -1,
             timer: null,
             playbackToken: 0,
             playbackState: "idle",
             loadedPanels: null
         };
         state.currentSource = state.image.getAttribute("src");
+        state.panelIndex = state.panels.findIndex(panel => panel.dataset.panelSrc === state.currentSource);
+        state.panels.forEach((panel, index) => panel.setAttribute("aria-pressed", String(index === state.panelIndex)));
         explorers.set(figure, state);
         figure.querySelectorAll("[data-enhancement]").forEach(control => { control.hidden = false; });
-        if (state.panels.length) selectPanel(state, state.panels[0], false);
+        enhanceSvg(state, state.currentSource, state.loadToken);
         stopPlayback(state);
     });
 
@@ -300,11 +324,6 @@
             state.figure.querySelectorAll("[data-focus-series]").forEach(button => button.setAttribute("aria-pressed", String(button === control)));
             applySeriesFocus(state);
             announce(state, state.focus === "all" ? "Showing all original series." : `Highlighting ${control.dataset.focusLabel || control.textContent.trim()}; other series are dimmed.`);
-        } else if (control.hasAttribute("data-verification-next")) {
-            const steps = [...state.figure.querySelectorAll("[data-verification-step]")];
-            selectStep(state, steps[(state.stepIndex + 1) % steps.length]);
-        } else if (control.hasAttribute("data-verification-step")) {
-            selectStep(state, control);
         } else if (control.hasAttribute("data-play-settings")) {
             playSettings(state);
         }

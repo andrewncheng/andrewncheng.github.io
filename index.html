@@ -83,8 +83,8 @@
     <!-- CSS: Bootstrap and Custom Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/research.css" />
-    <script src="assets/js/research-figures.js" defer></script>
+    <link rel="stylesheet" href="assets/css/research.css?v=figure4" />
+    <script src="assets/js/research-figures.js?v=figure4" defer></script>
 
     <!-- MathJax for LaTeX Rendering -->
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
@@ -221,29 +221,14 @@
 
         <div class="publication-list">
             <article class="paper" aria-labelledby="paper-geodesic-title">
-                <figure class="paper-visual" data-figure-explorer="" data-figure-title="Geodesic convexity verification" data-full-src="images/research/geodesic-programming.svg" data-full-alt="Original expression tree showing symbolic curvature verification, from matrix inputs and atomic operations to a geodesically convex expression." data-full-caption="Follow the original expression tree from its inputs to a geodesic-convexity certificate." data-source="https://arxiv.org/pdf/2407.05261v2#page=22">
-                    <div class="figure-stage">
+                <figure class="paper-visual" data-figure-explorer data-figure-title="Geodesic convexity verification" data-full-src="images/research/geodesic-programming.svg" data-full-alt="Original expression tree showing symbolic curvature verification, from matrix inputs and atomic operations to a geodesically convex expression." data-full-caption="An expression tree certifying geodesic convexity through composition rules." data-source="https://arxiv.org/pdf/2407.05261v2#page=22">
+                    <a class="figure-stage figure-static-link" data-expand-figure href="images/research/geodesic-programming.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge Geodesic convexity verification">
                         <div class="figure-graphic" data-figure-graphic id="figure-geodesic">
-                            <img aria-describedby="caption-geodesic" data-figure-image="" src="images/research/geodesic-programming.svg" alt="Original expression tree showing symbolic curvature verification, from matrix inputs and atomic operations to a geodesically convex expression." width="307" height="235" loading="lazy" decoding="async" />
-                            <div class="figure-highlights" data-verification-highlights aria-hidden="true"></div>
+                            <img aria-describedby="caption-geodesic" data-figure-image src="images/research/geodesic-programming.svg" alt="Original expression tree showing symbolic curvature verification, from matrix inputs and atomic operations to a geodesically convex expression." width="307" height="235" loading="lazy" decoding="async" />
                         </div>
-                    </div>
-                    <div class="figure-tools">
-                        <button type="button" class="figure-button figure-action" data-verification-next data-enhancement hidden>Follow verification <span aria-hidden="true">→</span></button>
-                        <div class="figure-options figure-steps" role="group" aria-label="Verification stage" data-verification-stages hidden>
-                            <button type="button" class="figure-button" data-verification-step="0" data-step-label="Inputs" data-step-explanation="Start with matrix variables X, the given matrix A, and a scalar constant." data-highlight="[[35.4,90.1,5.7,8],[66.5,90.1,5.6,8],[88.8,90.1,10,8],[1.3,63,7.4,8.5]]" aria-label="Step 1: Inputs" aria-pressed="false" aria-controls="figure-geodesic">1</button>
-                            <button type="button" class="figure-button" data-verification-step="1" data-step-label="Atoms" data-step-explanation="Use the known curvature properties of log-determinant and conjugation atoms." data-highlight="[[25,60.7,26.5,12.8],[67.8,60.7,27.5,12.8]]" aria-label="Step 2: Atoms" aria-pressed="false" aria-controls="figure-geodesic">2</button>
-                            <button type="button" class="figure-button" data-verification-step="2" data-step-label="Composition" data-step-explanation="Propagate curvature through multiplication and log-determinant composition." data-highlight="[[7.8,31.3,27.6,13.2],[67.8,31.3,27.5,13.2]]" aria-label="Step 3: Composition" aria-pressed="false" aria-controls="figure-geodesic">3</button>
-                            <button type="button" class="figure-button" data-verification-step="3" data-step-label="Certificate" data-step-explanation="The composition rules certify that the complete expression is geodesically convex." data-highlight="[[37.4,1.9,28.5,13.5]]" aria-label="Step 4: Certificate" aria-pressed="false" aria-controls="figure-geodesic">4</button>
-                        </div>
-                        <a class="figure-expand" data-expand-figure href="images/research/geodesic-programming.svg" target="_blank" rel="noopener noreferrer" aria-label="Expand Geodesic convexity verification">Expand <span aria-hidden="true">↗</span></a>
-                    </div>
-                    <div class="figure-step-explanation" data-verification-explanation aria-live="polite" aria-atomic="true" hidden>
-                        <strong data-step-title></strong>
-                        <p data-step-description></p>
-                    </div>
+                    </a>
                     <figcaption id="caption-geodesic">
-                        <p data-figure-caption>Follow the original expression tree from its inputs to a geodesic-convexity certificate.</p>
+                        <p data-figure-caption>An expression tree certifying geodesic convexity through composition rules.</p>
                         <a class="figure-source" href="https://arxiv.org/pdf/2407.05261v2#page=22" target="_blank" rel="noopener noreferrer">Figure 2 · source paper <span aria-hidden="true">↗</span></a>
                     </figcaption>
                     <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
@@ -262,30 +247,14 @@
             </article>
 
             <article class="paper" aria-labelledby="paper-structured-title">
-                <figure class="paper-visual" data-figure-explorer="" data-figure-title="Regularization with side information" data-full-src="images/research/structured-regularization.svg" data-full-alt="Both original Gaussian optimistic-likelihood plots, comparing distance to the true covariance against time for two dataset sizes and four regularization strengths." data-full-caption="Both dataset sizes from the published Gaussian optimistic-likelihood experiment. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance." data-source="https://arxiv.org/pdf/2410.09660v1#page=40" data-inline-svg="">
-                    <div class="figure-stage">
+                <figure class="paper-visual" data-figure-explorer data-figure-title="Regularization with side information" data-full-src="images/research/structured-regularization-small.svg" data-full-alt="Original Gaussian optimistic-likelihood plot for n = 100 and d = 30, comparing four regularization strengths. Distance to the true covariance is plotted against time." data-full-caption="Gaussian optimistic likelihood with side information, n = 100 and d = 30. Larger β pulls toward the supplied estimate, which need not be the true covariance." data-source="https://arxiv.org/pdf/2410.09660v1#page=40">
+                    <a class="figure-stage figure-static-link" data-expand-figure href="images/research/structured-regularization-small.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge Regularization with side information">
                         <div class="figure-graphic" data-figure-graphic id="figure-structured">
-                            <img aria-describedby="caption-structured" data-figure-image="" src="images/research/structured-regularization-small.svg" alt="Original Gaussian optimistic-likelihood plot for n = 100 and d = 30. The y-axis is distance to the true covariance and the x-axis is time in seconds." width="864" height="648" loading="lazy" decoding="async" />
+                            <img aria-describedby="caption-structured" data-figure-image src="images/research/structured-regularization-small.svg" alt="Original Gaussian optimistic-likelihood plot for n = 100 and d = 30, comparing four regularization strengths. Distance to the true covariance is plotted against time." width="864" height="648" loading="lazy" decoding="async" />
                         </div>
-                    </div>
-                    <div class="figure-tools">
-                        <div class="figure-options" role="group" aria-label="Dataset size" data-enhancement hidden>
-                            <span class="figure-control-label">Dataset size</span>
-                            <button type="button" class="figure-button" data-panel-src="images/research/structured-regularization-small.svg" data-panel-alt="Original Gaussian optimistic-likelihood plot for n = 100 and d = 30. The y-axis is distance to the true covariance and the x-axis is time in seconds." data-panel-width="864" data-panel-height="648" data-panel-caption="Gaussian optimistic likelihood, n = 100 and d = 30. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance." aria-pressed="true" aria-controls="figure-structured">n = 100, d = 30</button>
-                            <button type="button" class="figure-button" data-panel-src="images/research/structured-regularization-large.svg" data-panel-alt="Original Gaussian optimistic-likelihood plot for n = 1500 and d = 100. The y-axis is distance to the true covariance and the x-axis is time in seconds." data-panel-width="864" data-panel-height="648" data-panel-caption="Gaussian optimistic likelihood, n = 1500 and d = 100. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance." aria-pressed="false" aria-controls="figure-structured">n = 1500, d = 100</button>
-                        </div>
-                        <a class="figure-expand" data-expand-figure href="images/research/structured-regularization.svg" target="_blank" rel="noopener noreferrer" aria-label="Expand Regularization with side information">Expand <span aria-hidden="true">↗</span></a>
-                    </div>
-                    <div class="figure-options figure-series-options" role="group" aria-label="Highlight β" data-series-controls hidden>
-                        <span class="figure-control-label">Highlight β</span>
-                        <button type="button" class="figure-button" data-focus-series="all" data-focus-label="all regularization strengths" aria-label="Highlight all regularization strengths" aria-pressed="true" aria-controls="figure-structured">All</button>
-                        <button type="button" class="figure-button" data-focus-series="beta-0" data-focus-label="β = 0" aria-label="Highlight β = 0" aria-pressed="false" aria-controls="figure-structured">0</button>
-                        <button type="button" class="figure-button" data-focus-series="beta-1" data-focus-label="β = 1" aria-label="Highlight β = 1" aria-pressed="false" aria-controls="figure-structured">1</button>
-                        <button type="button" class="figure-button" data-focus-series="beta-2" data-focus-label="β = 2" aria-label="Highlight β = 2" aria-pressed="false" aria-controls="figure-structured">2</button>
-                        <button type="button" class="figure-button" data-focus-series="beta-10" data-focus-label="β = 10" aria-label="Highlight β = 10" aria-pressed="false" aria-controls="figure-structured">10</button>
-                    </div>
+                    </a>
                     <figcaption id="caption-structured">
-                        <p data-figure-caption>Gaussian optimistic likelihood, n = 100 and d = 30. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance.</p>
+                        <p data-figure-caption>Gaussian optimistic likelihood with side information, n = 100 and d = 30. Larger β pulls toward the supplied estimate, which need not be the true covariance.</p>
                         <a class="figure-source" href="https://arxiv.org/pdf/2410.09660v1#page=40" target="_blank" rel="noopener noreferrer">Figure 7 · source paper <span aria-hidden="true">↗</span></a>
                     </figcaption>
                     <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
@@ -347,33 +316,7 @@
                 </div>
             </article>
 
-            <article class="paper" aria-labelledby="paper-momentum-title">
-                <figure class="paper-visual" data-figure-explorer="" data-figure-title="Momentum across batch fractions" data-full-src="images/research/momentum.svg" data-full-alt="The six original parameter-space panels from Figure 4. Horizontal axes show momentum Δ and vertical axes show learning rate γ; color scales and axis ranges differ by panel." data-full-caption="All six published panels. Horizontal axis: momentum Δ. Vertical axis: learning rate γ. Axes and color scales vary by setting." data-source="https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf#page=7">
-                    <div class="figure-stage">
-                        <div class="figure-graphic" data-figure-graphic id="figure-momentum">
-                            <img aria-describedby="caption-momentum" data-figure-image="" src="images/research/momentum-085.svg" alt="Original parameter-space panel for batch fraction 0.85. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." width="134" height="99" loading="lazy" decoding="async" />
-                        </div>
-                    </div>
-                    <div class="figure-tools">
-                        <div class="figure-options" role="group" aria-label="Batch fraction" data-enhancement hidden>
-                            <span class="figure-control-label">Batch fraction</span>
-                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-085.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.85. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="134" data-panel-height="99" data-panel-caption="Batch fraction 0.85. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="true" aria-controls="figure-momentum">0.85</button>
-                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-070.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.70. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="133" data-panel-height="100" data-panel-caption="Batch fraction 0.70. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="false" aria-controls="figure-momentum">0.70</button>
-                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-050.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.50. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="133" data-panel-height="100" data-panel-caption="Batch fraction 0.50. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="false" aria-controls="figure-momentum">0.50</button>
-                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-025.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.25. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="134" data-panel-height="100" data-panel-caption="Batch fraction 0.25. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="false" aria-controls="figure-momentum">0.25</button>
-                        </div>
-                        <a class="figure-expand" data-expand-figure href="images/research/momentum.svg" target="_blank" rel="noopener noreferrer" aria-label="Expand Momentum across batch fractions">Expand <span aria-hidden="true">↗</span></a>
-                    </div>
-                    <div class="figure-playback" data-enhancement hidden>
-                        <button type="button" class="figure-button figure-action" data-play-settings aria-pressed="false">Play settings</button>
-                        <span class="figure-control-note">Four original panels</span>
-                    </div>
-                    <figcaption id="caption-momentum">
-                        <p data-figure-caption>Batch fraction 0.85. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting.</p>
-                        <a class="figure-source" href="https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf#page=7" target="_blank" rel="noopener noreferrer">Figure 4 · source paper <span aria-hidden="true">↗</span></a>
-                    </figcaption>
-                    <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
-                </figure>
+            <article class="paper paper-feature" aria-labelledby="paper-momentum-title">
                 <div class="paper-content">
                     <p class="paper-meta"><span class="paper-status" data-status="published">NeurIPS</span><time datetime="2022">2022</time></p>
                     <h3 id="paper-momentum-title">Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions</h3>
@@ -383,6 +326,35 @@
                         <a class="paper-link" href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/efcb76ac1df9231a24893a957fcb9001-Abstract-Conference.html" target="_blank" rel="noopener noreferrer" aria-label="Read Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions">Read paper <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
+                <figure class="paper-visual momentum-visual" data-figure-explorer data-figure-title="Figure 4 · Momentum and batch size" data-full-src="images/research/momentum-figure4.png" data-full-alt="Complete original Figure 4: six heatmaps of momentum and learning rate, showing the spectral component, Malthusian component, and convergence rates at different batch fractions." data-full-caption="The complete Figure 4. Horizontal axes: momentum Δ; vertical axes: learning rate γ. Axis ranges and color scales differ across panels." data-source="https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf#page=7">
+                    <div class="momentum-toolbar">
+                        <div class="figure-options momentum-views" role="group" aria-label="Figure 4 view and batch fraction" data-enhancement hidden>
+                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-figure4.png" data-panel-alt="Complete original Figure 4: six heatmaps of momentum and learning rate, showing the spectral component, Malthusian component, and convergence rates at different batch fractions." data-panel-width="3200" data-panel-height="1584" data-panel-caption="The complete Figure 4. Horizontal axes: momentum Δ; vertical axes: learning rate γ. Axis ranges and color scales differ across panels." aria-pressed="true" aria-controls="figure-momentum">Full Figure 4</button>
+                            <button type="button" class="figure-button" data-play-panel data-panel-src="images/research/momentum-085.png" data-panel-alt="Original Figure 4 convergence-rate panel for batch fraction 0.85. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="1608" data-panel-height="1188" data-panel-caption="Batch fraction 0.85 · convergence rate. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Axis ranges and color scales differ across settings." aria-label="Batch fraction 0.85" aria-pressed="false" aria-controls="figure-momentum">0.85</button>
+                            <button type="button" class="figure-button" data-play-panel data-panel-src="images/research/momentum-070.png" data-panel-alt="Original Figure 4 convergence-rate panel for batch fraction 0.70. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="1596" data-panel-height="1200" data-panel-caption="Batch fraction 0.70 · convergence rate. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Axis ranges and color scales differ across settings." aria-label="Batch fraction 0.70" aria-pressed="false" aria-controls="figure-momentum">0.70</button>
+                            <button type="button" class="figure-button" data-play-panel data-panel-src="images/research/momentum-050.png" data-panel-alt="Original Figure 4 convergence-rate panel for batch fraction 0.50. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="1596" data-panel-height="1200" data-panel-caption="Batch fraction 0.50 · convergence rate. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Axis ranges and color scales differ across settings." aria-label="Batch fraction 0.50" aria-pressed="false" aria-controls="figure-momentum">0.50</button>
+                            <button type="button" class="figure-button" data-play-panel data-panel-src="images/research/momentum-025.png" data-panel-alt="Original Figure 4 convergence-rate panel for batch fraction 0.25. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="1608" data-panel-height="1200" data-panel-caption="Batch fraction 0.25 · convergence rate. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Axis ranges and color scales differ across settings." aria-label="Batch fraction 0.25" aria-pressed="false" aria-controls="figure-momentum">0.25</button>
+                        </div>
+                        <button type="button" class="figure-button figure-action" data-play-settings data-enhancement aria-pressed="false" hidden>Play settings</button>
+                        <a class="figure-expand" data-expand-figure href="images/research/momentum-figure4.png" target="_blank" rel="noopener noreferrer" aria-label="Expand Figure 4">Expand <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="figure-stage momentum-stage">
+                        <div class="figure-graphic" data-figure-graphic id="figure-momentum">
+                            <img aria-describedby="caption-momentum" data-figure-image src="images/research/momentum-figure4.png" alt="Complete original Figure 4: six heatmaps of momentum and learning rate, showing the spectral component, Malthusian component, and convergence rates at different batch fractions." width="3200" height="1584" loading="lazy" decoding="async" />
+                        </div>
+                    </div>
+                    <figcaption id="caption-momentum" class="momentum-caption">
+                        <div>
+                            <p data-figure-caption>The complete Figure 4. Horizontal axes: momentum Δ; vertical axes: learning rate γ. Axis ranges and color scales differ across panels.</p>
+                            <div class="momentum-legend" aria-label="Parameter markers">
+                                <span><i class="parameter-marker" aria-hidden="true"></i>Polyak parameters</span>
+                                <span><i class="parameter-marker parameter-marker-filled" aria-hidden="true"></i>Average-case optimum</span>
+                            </div>
+                        </div>
+                        <a class="figure-source" href="https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf#page=7" target="_blank" rel="noopener noreferrer">Figure 4 · source paper <span aria-hidden="true">↗</span></a>
+                    </figcaption>
+                    <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
+                </figure>
             </article>
         </div>
     </div>

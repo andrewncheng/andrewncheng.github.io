@@ -134,17 +134,14 @@
     transition: opacity 160ms ease;
 }
 
-#research .figure-highlights {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+#research .figure-static-link {
+    display: block;
+    cursor: zoom-in;
+    transition: border-color 160ms ease;
 }
 
-#research .figure-node-highlight {
-    position: absolute;
-    border: 1.5px solid #bb6b3e;
-    border-radius: 4px;
-    background: rgba(216, 155, 91, 0.15);
+#research .figure-static-link:hover {
+    border-color: #a4b3a4;
 }
 
 #research .figure-tools {
@@ -186,7 +183,8 @@
     border-radius: 4px;
     box-shadow: none;
     background: transparent;
-    color: var(--research-muted);
+    /* Override the template's global white !important button text. */
+    color: var(--research-muted) !important;
     font-family: inherit;
     font-size: 11px;
     font-weight: 500;
@@ -203,20 +201,20 @@
 #research .figure-button:active {
     border-color: #d9ddd5;
     background: #eef0e9;
-    color: var(--research-ink);
+    color: var(--research-ink) !important;
 }
 
 #research .figure-button[aria-pressed="true"] {
     border-color: #c5cec2;
     background: #e7ece3;
-    color: #284736;
+    color: #284736 !important;
     font-weight: 650;
 }
 
 #research .figure-action {
     padding-left: 0;
     padding-right: 7px;
-    color: var(--research-ink);
+    color: var(--research-ink) !important;
     font-weight: 600;
 }
 
@@ -269,26 +267,6 @@
     color: var(--research-muted);
     font-size: 12px;
     line-height: 1.6;
-}
-
-#research .figure-step-explanation {
-    margin-top: 8px;
-    padding: 10px 12px;
-    border-left: 2px solid #b56b45;
-    background: #f0eee5;
-    color: var(--research-muted);
-    font-size: 12px;
-    line-height: 1.6;
-}
-
-#research .figure-step-explanation strong {
-    color: var(--research-ink);
-    font-size: 11px;
-    font-weight: 600;
-}
-
-#research .figure-step-explanation p {
-    margin: 3px 0 0;
 }
 
 #research .figure-announcement {
@@ -485,6 +463,112 @@
     margin-bottom: 7px;
 }
 
+#research .paper-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+}
+
+#research .paper-feature .paper-content {
+    max-width: 900px;
+}
+
+#research .paper-feature h3 {
+    max-width: 36ch;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.2;
+}
+
+#research .paper-feature .paper-description {
+    max-width: 90ch;
+}
+
+#research .momentum-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
+    margin-bottom: 14px;
+}
+
+#research .momentum-views {
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid var(--research-line);
+    border-radius: 7px;
+    background: #eeefe8;
+}
+
+#research .momentum-views .figure-button {
+    min-width: 64px;
+    padding-inline: 14px;
+    font-size: 12px;
+}
+
+#research .momentum-views .figure-button[aria-pressed="true"] {
+    border-color: #d0d8cc;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(32, 45, 45, 0.06);
+}
+
+#research .momentum-stage {
+    padding: clamp(12px, 2.4vw, 28px);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(32, 45, 45, 0.035);
+}
+
+#research .momentum-stage .figure-graphic {
+    height: clamp(260px, 45vw, 550px);
+}
+
+#research .momentum-stage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#research .momentum-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px 32px;
+    margin-top: 15px;
+}
+
+#research .momentum-caption .figure-source {
+    flex-shrink: 0;
+}
+
+#research .momentum-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    color: var(--research-muted);
+    font-size: 11px;
+}
+
+#research .momentum-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#research .parameter-marker {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #ff8c00;
+    border-radius: 50%;
+}
+
+#research .parameter-marker-filled {
+    background: #ff8c00;
+}
+
+#research [data-figure-explorer][aria-busy="true"] .figure-stage {
+    border-color: #b29461;
+    cursor: progress;
+}
+
 @media (max-width: 760px) {
     #research .research-inner {
         width: calc(100% - 40px);
@@ -517,6 +601,25 @@
     #research .paper-description,
     #research .paper-details p {
         font-size: 15px;
+    }
+
+    #research .momentum-toolbar {
+        gap: 6px 16px;
+    }
+
+    #research .momentum-views {
+        width: 100%;
+    }
+
+    #research .momentum-views .figure-button {
+        flex: 1;
+        min-width: 40px;
+        padding-inline: 7px;
+    }
+
+    #research .momentum-caption {
+        flex-direction: column;
+        gap: 12px;
     }
 
     #research .figure-stage {

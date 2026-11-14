@@ -267,5 +267,91 @@
   "source_urls": {
     "minibatch.pdf": "https://opt-ml.org/papers/2024/paper25.pdf",
     "momentum.pdf": "https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf"
+  },
+  "momentum_browser_exports": {
+    "source_pdf": "momentum.pdf",
+    "source_sha256": "b1662cf8430c0c9a63c51178d8ed0511fc761b3dcc76e6c2275448b97380e3bc",
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf",
+    "page_number": 7,
+    "figure_number": 4,
+    "method": "Direct PyMuPDF rasterization of unchanged source PDF crop; no redraw, interpolation of scientific values, recoloring, or image generation. PNG compression is lossless.",
+    "pymupdf_version": "1.28.2",
+    "assets": [
+      {
+        "file": "momentum-figure4.png",
+        "description": "Complete original six-panel Figure 4",
+        "crop_points_top_left": [
+          107,
+          70,
+          507,
+          268
+        ],
+        "scale_pixels_per_pdf_point": 8,
+        "width": 3200,
+        "height": 1584,
+        "bytes": 727454,
+        "sha256": "e9ea559ef4561f4b2c688053aaec78439945bd6c38fe389137f6d3995f2735cd"
+      },
+      {
+        "file": "momentum-085.png",
+        "description": "Top-right: convergence rate, batch fraction 0.85",
+        "crop_points_top_left": [
+          373,
+          70,
+          507,
+          169
+        ],
+        "scale_pixels_per_pdf_point": 12,
+        "width": 1608,
+        "height": 1188,
+        "bytes": 190208,
+        "sha256": "f9cce5d55bff8b30c8f2a8c40fa508f46c1dd30825b2b8a61de225917c8e357f"
+      },
+      {
+        "file": "momentum-070.png",
+        "description": "Bottom-left: convergence rate, batch fraction 0.70",
+        "crop_points_top_left": [
+          107,
+          168,
+          240,
+          268
+        ],
+        "scale_pixels_per_pdf_point": 12,
+        "width": 1596,
+        "height": 1200,
+        "bytes": 197910,
+        "sha256": "a443008b13bf160f28e3af4d3c327fe579ac440163f5d896172c51d1163c8129"
+      },
+      {
+        "file": "momentum-050.png",
+        "description": "Bottom-middle: convergence rate, batch fraction 0.50",
+        "crop_points_top_left": [
+          240,
+          168,
+          373,
+          268
+        ],
+        "scale_pixels_per_pdf_point": 12,
+        "width": 1596,
+        "height": 1200,
+        "bytes": 173580,
+        "sha256": "e3efd9b761d816846301db0403f78f48c4eedc93bfc41365a88d3aaf2959257a"
+      },
+      {
+        "file": "momentum-025.png",
+        "description": "Bottom-right: convergence rate, batch fraction 0.25",
+        "crop_points_top_left": [
+          373,
+          168,
+          507,
+          268
+        ],
+        "scale_pixels_per_pdf_point": 12,
+        "width": 1608,
+        "height": 1200,
+        "bytes": 150197,
+        "sha256": "10b3eff15460291177d76e40210efe398b7915a10a22057d8b45cfbee3f4c6a4"
+      }
+    ]
   }
 }
