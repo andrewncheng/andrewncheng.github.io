@@ -372,6 +372,24 @@ summary:focus-visible {
     min-height: 56px;
 }
 
+.about-details .affiliation-period {
+    margin: 0;
+    color: var(--site-muted);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.035em;
+    font-variant-numeric: tabular-nums;
+}
+
+.about-details .affiliation-period + p {
+    margin-top: 4px;
+}
+
+.affiliation-status {
+    color: var(--site-accent);
+}
+
 .affiliation-wordmark-wide img {
     width: 120px;
 }
