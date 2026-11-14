@@ -360,6 +360,16 @@ summary:focus-visible {
     margin-top: 20px;
 }
 
+.about-sidebar {
+    display: grid;
+    align-content: start;
+    gap: 30px;
+}
+
+.affiliation-wordmark-wide img {
+    width: 130px;
+}
+
 .site-footer {
     display: flex;
     flex-wrap: wrap;

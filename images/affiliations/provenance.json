@@ -69,6 +69,61 @@
         "external_image_or_script_dependencies": false,
         "preview_note": "PyMuPDF ignores the source CSS class; the temporary preview gives paths the exact declared #0032a1 fill explicitly. Repository SVG is byte-identical to the official source."
       }
+    },
+    {
+      "institution": "The Voleon Group",
+      "filename": "voleon-logo.png",
+      "format": "image/png",
+      "dimensions": [
+        300,
+        140
+      ],
+      "source_url": "https://voleon.com/assets/site-images/tvglogo-300x140.png",
+      "source_page": "https://voleon.com/",
+      "modifications": "None; official homepage artwork copied byte-for-byte.",
+      "usage_note": "Official company website identifies the name and logo as trademarks/property of Voleon Capital Management LP. Preserve colors, proportions and clear space; use for factual affiliation identification.",
+      "sha256": "a6d34fc759d0c80e1180bd41c41830a15d9009007fa968d218746bf0b7c58cf1",
+      "bytes": 10887,
+      "alpha_bounds": [
+        28,
+        23,
+        268,
+        112
+      ],
+      "retrieved_on": "2026-11-14",
+      "validation": {
+        "decode": "passed",
+        "external_image_or_script_dependencies": false,
+        "visual_preview": "reviewed in /private/tmp/andrew-affiliation-assets/company-final-preview.png"
+      }
+    },
+    {
+      "institution": "Voloridge",
+      "filename": "voloridge-logo.png",
+      "format": "image/png",
+      "dimensions": [
+        48,
+        48
+      ],
+      "source_url": "https://www.voloridge.com/themes/custom/voloridge/favicon.ico",
+      "source_page": "https://www.voloridge.com/voloridge",
+      "modifications": "Largest original 48\u00d748 RGBA favicon frame exported losslessly from ICO to PNG. No cropping, recoloring, resampling or recreation; decoded pixels are identical.",
+      "source_sha256": "4b1c7a4bfdab3e754b0ba79300e499b6fb292a0bb7d424bfe5b8354a25a5aa4b",
+      "usage_note": "Official blue symbol used with the company name in adjacent text. Current full wordmarks use white/gold lettering unsuitable for a warm light background. Preserve proportions; recommended display width 24\u201340 CSS pixels, maximum native width 48 pixels.",
+      "sha256": "a5e13fd0e4187473a4f65f596fcdea3246ce053178c29a7566c601b36cce5581",
+      "bytes": 1053,
+      "alpha_bounds": [
+        0,
+        11,
+        48,
+        36
+      ],
+      "retrieved_on": "2026-11-14",
+      "validation": {
+        "decode": "passed",
+        "external_image_or_script_dependencies": false,
+        "visual_preview": "reviewed in /private/tmp/andrew-affiliation-assets/company-final-preview.png"
+      }
     }
   ]
 }
