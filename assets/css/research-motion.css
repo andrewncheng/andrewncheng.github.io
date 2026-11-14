@@ -1,0 +1,147 @@
+/* Small research illustrations beside the biography. */
+.intro-aside {
+    min-width: 0;
+    margin-top: 7px;
+}
+
+.intro-aside .intro-portrait {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.research-motion {
+    margin-top: 20px;
+}
+
+.motion-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.motion-figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.motion-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 17 / 13;
+}
+
+.motion-frame img,
+.motion-frame canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.motion-figure figcaption {
+    margin-top: 5px;
+    color: var(--site-muted);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.motion-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+}
+
+.motion-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 5px 2px;
+    border: 0;
+    background: transparent;
+    color: var(--site-muted);
+    font-size: 10px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.motion-toggle:hover {
+    color: var(--site-accent);
+}
+
+.motion-toggle svg {
+    width: 11px;
+    height: 11px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+}
+
+.motion-toggle .motion-play,
+.motion-toggle[data-paused="true"] .motion-pause {
+    display: none;
+}
+
+.motion-toggle[data-paused="true"] .motion-play {
+    display: block;
+}
+
+.research-motion [hidden] {
+    display: none !important;
+}
+
+@media (max-width: 760px) {
+    .intro-aside {
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        align-items: center;
+        gap: 28px;
+        width: 100%;
+        max-width: 600px;
+        margin-top: 0;
+    }
+
+    .research-motion {
+        margin-top: 0;
+    }
+
+    .motion-toggle {
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .intro-aside {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-aside {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .motion-pair {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .motion-frame {
+        aspect-ratio: 17 / 11;
+    }
+
+    .motion-controls {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .motion-figure figcaption {
+        margin-top: 0;
+        font-size: 10px;
+    }
+}

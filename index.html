@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="assets/css/site.css?v=intro2026">
     <link rel="stylesheet" href="assets/css/research.css?v=figure1">
     <link rel="stylesheet" href="assets/css/rfm-figure.css?v=figure1">
+    <link rel="stylesheet" href="assets/css/research-motion.css?v=motion1">
     <script src="assets/js/research-figures.js?v=figure1" defer></script>
     <script src="assets/js/rfm-figure.js?v=figure1" defer></script>
+    <script src="assets/js/motion-manifold.js?v=motion1" defer></script>
+    <script src="assets/js/motion-decisions.js?v=motion1" defer></script>
+    <script src="assets/js/research-motion.js?v=motion1" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body id="top">
@@ -41,9 +45,35 @@
                     <a href="Research/andrewresume.pdf" target="_blank" rel="noopener noreferrer">Curriculum vitae <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
-            <figure class="intro-portrait">
-                <img src="images/cafe.jpg" alt="Andrew Cheng seated at a café" width="1200" height="1600" decoding="async" fetchpriority="high">
-            </figure>
+            <div class="intro-aside">
+                <figure class="intro-portrait">
+                    <img src="images/cafe.jpg" alt="Andrew Cheng seated at a café" width="1200" height="1600" decoding="async" fetchpriority="high">
+                </figure>
+                <div class="research-motion" data-research-motion role="group" aria-label="Research illustrations">
+                    <div class="motion-pair">
+                        <figure class="motion-figure">
+                            <div class="motion-frame">
+                                <img data-motion-fallback src="images/motion/manifold.svg" width="170" height="130" alt="Illustration of gradient descent following a curved surface to its minimum." loading="lazy" decoding="async">
+                                <canvas data-motion-scene="manifold" width="340" height="260" role="img" aria-label="Illustration of gradient descent following a curved surface to its minimum." hidden></canvas>
+                            </div>
+                            <figcaption>Manifold descent</figcaption>
+                        </figure>
+                        <figure class="motion-figure">
+                            <div class="motion-frame">
+                                <img data-motion-fallback src="images/motion/decisions.svg" width="170" height="130" alt="Schematic of tokens passing through model representations to a decision." loading="lazy" decoding="async">
+                                <canvas data-motion-scene="decisions" width="340" height="260" role="img" aria-label="Schematic of tokens passing through model representations to a decision." hidden></canvas>
+                            </div>
+                            <figcaption>Fast decisions</figcaption>
+                        </figure>
+                    </div>
+                    <div class="motion-controls">
+                        <button class="motion-toggle" data-motion-toggle data-paused="false" aria-label="Pause research animations" type="button" hidden>
+                            <svg viewBox="0 0 12 12" aria-hidden="true"><path class="motion-pause" d="M4 2v8M8 2v8"/><path class="motion-play" d="m3 2 6 4-6 4z"/></svg>
+                            <span data-motion-label>Pause motion</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <div class="about-details">
                 <section class="about-background" aria-labelledby="background-heading">
                     <h2 id="background-heading">Background</h2>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="130" viewBox="0 0 170 130" fill="none" role="img" aria-labelledby="decisions-title decisions-description">
+  <title id="decisions-title">From information to a decision</title>
+  <desc id="decisions-description">An abstract schematic: text strokes enter three layered representations, then flow toward three possible branches. The middle outcome is selected in rust.</desc>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#c4cdc4" stroke-width="1">
+      <path d="M44 65H60M106 65C123 65 128 38 148 38M106 65H148M106 65C123 65 128 92 148 92"/>
+    </g>
+    <g stroke="#8c9c94" stroke-width="2.1">
+      <path d="M12 51H27M31 51H39M12 63H21M25 63H42M12 75H31M35 75H40"/>
+    </g>
+    <g stroke="#536c60" stroke-width="2.1" opacity=".6">
+      <path d="M12 51H27M31 51H39M12 63H21M25 63H42M12 75H31M35 75H40"/>
+    </g>
+    <g transform="matrix(1 .3076923077 0 1 80 30)">
+      <path d="M0 0H26V44H0Z" fill="#dfe5dd"/>
+      <path d="M17.333333 11H26V22H17.333333ZM8.666667 33H17.333333V44H8.666667Z" fill="#d4ded2"/>
+      <path d="M17.333333 11H26V22H17.333333ZM8.666667 33H17.333333V44H8.666667Z" fill="#7e9686" opacity=".455"/>
+      <path d="M8.666667 0V44M17.333333 0V44M0 11H26M0 22H26M0 33H26" stroke="#b8c3b9" stroke-width=".55"/>
+      <path d="M0 0H26V44H0Z" stroke="#9eada4" stroke-width=".9"/>
+      <path d="M0 0H26V44H0Z" stroke="#536c60" stroke-width=".9" opacity=".455"/>
+    </g>
+    <g transform="matrix(1 .3076923077 0 1 70 36)">
+      <path d="M0 0H26V44H0Z" fill="#e8ede7"/>
+      <path d="M17.333333 0H26V11H17.333333ZM17.333333 22H26V33H17.333333Z" fill="#d4ded2"/>
+      <path d="M17.333333 0H26V11H17.333333ZM17.333333 22H26V33H17.333333Z" fill="#7e9686" opacity=".455"/>
+      <path d="M8.666667 0V44M17.333333 0V44M0 11H26M0 22H26M0 33H26" stroke="#b8c3b9" stroke-width=".55"/>
+      <path d="M0 0H26V44H0Z" stroke="#9eada4" stroke-width=".9"/>
+      <path d="M0 0H26V44H0Z" stroke="#536c60" stroke-width=".9" opacity=".455"/>
+    </g>
+    <g transform="matrix(1 .3076923077 0 1 60 42)">
+      <path d="M0 0H26V44H0Z" fill="#f2f5ef"/>
+      <path d="M0 11H8.666667V22H0ZM8.666667 22H17.333333V33H8.666667ZM17.333333 0H26V11H17.333333Z" fill="#d4ded2"/>
+      <path d="M0 11H8.666667V22H0ZM8.666667 22H17.333333V33H8.666667ZM17.333333 0H26V11H17.333333Z" fill="#7e9686" opacity=".455"/>
+      <path d="M8.666667 0V44M17.333333 0V44M0 11H26M0 22H26M0 33H26" stroke="#b8c3b9" stroke-width=".55"/>
+      <path d="M0 0H26V44H0Z" stroke="#9eada4" stroke-width=".9"/>
+      <path d="M0 0H26V44H0Z" stroke="#536c60" stroke-width=".9" opacity=".455"/>
+    </g>
+    <g fill="#faf9f6" stroke="#9eada4" stroke-width="1">
+      <circle cx="153" cy="38" r="4.6"/>
+      <circle cx="153" cy="65" r="4.6"/>
+      <circle cx="153" cy="92" r="4.6"/>
+    </g>
+    <path d="M107 65H148" stroke="#984c36" stroke-width="1.25"/>
+    <circle cx="153" cy="65" r="6.2" fill="#faf9f6" stroke="#984c36" stroke-width="1"/>
+    <circle cx="153" cy="65" r="2.7" fill="#984c36"/>
+  </g>
+</svg>
