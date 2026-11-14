@@ -449,5 +449,76 @@
       ],
       "figure_notes": "The card preserves the original top-left panel: median maximum predictor discrepancy over iterations 0–10, 20 datasets per sample size, 10th–90th percentile band. The complete figure retains all three panels. No data or colors were regenerated."
     }
+  },
+  "figure1_revision": {
+    "date": "2026-11-13",
+    "reason": "User requested Figure 1 for both new preprints. Earlier exports retained for provenance; not displayed.",
+    "linear_rfm": {
+      "figure_number": 1,
+      "page_number": 13,
+      "source_url": "https://arxiv.org/pdf/2610.09196v1#page=13",
+      "source_sha256": "ca27e35239bff9cee59f9b526bba08b738cc3a1092099cda29b079b89fb8571d",
+      "method": "Direct rasterization of the unchanged PDF; no recreated values, axes, colors, or artwork. Panel C words are also transcribed verbatim into an accessible checkpoint table.",
+      "assets": [
+        {
+          "file": "linear-rfm-figure1.png",
+          "crop_points_top_left": [
+            98,
+            202,
+            508,
+            444
+          ],
+          "pixels_per_pdf_point": 8,
+          "width": 3280,
+          "height": 1936,
+          "bytes": 422415,
+          "sha256": "d38496ceb4f05acd4946fd8ffff9009dfd9bff8be1b9dc8033d8e55d208647bb"
+        },
+        {
+          "file": "linear-rfm-figure1-plots.png",
+          "crop_points_top_left": [
+            98,
+            218,
+            260,
+            443
+          ],
+          "pixels_per_pdf_point": 8,
+          "width": 1296,
+          "height": 1800,
+          "bytes": 131178,
+          "sha256": "e8b67236ca1fc828236186b2432de903e4e5a73ea73981f4b3b7acd1d9ac06dc"
+        }
+      ],
+      "panel_meanings": {
+        "A": "Stable rank of the floor-subtracted feature matrix versus iteration; not literal rank or accuracy.",
+        "B": "Maximum operator-norm discrepancy over iterations 1 through 5 relative to the 10^9-example trajectory, with median and 10-90% band over eight trials.",
+        "C": "Selected cosine-neighbor lists at iterations 1 and 5; iteration 0 contains randomly selected baseline words, not learned neighbors."
+      }
+    },
+    "inner_jev": {
+      "file": "inner-jev-figure1.png",
+      "title": "Releasing the Inner Jev: A Simple Recipe for Open Decision Models",
+      "source_url": "https://arxiv.org/pdf/2610.17205v1#page=2",
+      "source_pdf": "jev.pdf",
+      "source_sha256": "29d0ec68f72620c0b27da61f5a5d2bd21f9f2d870fdddc2601e20531073e952f",
+      "figure_number": 1,
+      "page_number": 2,
+      "crop_points_top_left": [
+        54,
+        64,
+        543,
+        179
+      ],
+      "pixels_per_pdf_point": 8,
+      "width": 3912,
+      "height": 920,
+      "bytes": 211906,
+      "sha256": "5294a0c9437b8ea0e044d58a6b1a2923986bafc701c531355b5b8f0f4a24adc9",
+      "method": "Direct original PDF crop rendered by PyMuPDF; lossless PNG compression; original colors, labels, arrows, legend and architecture preserved. No caption, redraw, or generated art.",
+      "pymupdf_version": "1.28.2",
+      "caption": "A decision request becomes probabilities over its options in one forward pass.",
+      "alt": "Original architecture diagram: a state, question and options enter an LLM; its final hidden state feeds a decision head and softmax, producing option probabilities and a typed answer. The diagram identifies trained LoRA adapters and head corrections alongside frozen weights.",
+      "display_note": "Very wide original figure (489:115, about 4.25:1). Preserve aspect ratio and use contain, not cover; text needs generous display width."
+    }
   }
 }

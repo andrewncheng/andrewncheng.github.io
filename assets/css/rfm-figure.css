@@ -1,0 +1,161 @@
+/* A small, source-faithful checkpoint table beside the original RFM plots. */
+#research .rfm-figure-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: clamp(24px, 4vw, 48px);
+}
+
+#research .rfm-figure-grid > * {
+    min-width: 0;
+}
+
+#research .rfm-word-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    min-height: 44px;
+    margin-bottom: 10px;
+}
+
+#research .rfm-stage-label {
+    margin: 0;
+    color: var(--research-ink);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#research .rfm-checkpoints {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    flex-shrink: 0;
+}
+
+#research .rfm-checkpoints button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 38px;
+    margin: 0;
+    padding: 7px 9px;
+    appearance: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--research-muted);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#research .rfm-checkpoints button:hover {
+    border-color: #d9ddd5;
+    background: #eef0e9;
+    color: var(--research-ink);
+}
+
+#research .rfm-checkpoints button[aria-pressed="true"] {
+    border-color: #c5cec2;
+    background: #e7ece3;
+    color: #284736;
+    font-weight: 650;
+}
+
+#research .rfm-checkpoints button:focus-visible {
+    outline: 2px solid var(--research-accent);
+    outline-offset: 3px;
+}
+
+#research .rfm-word-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: var(--research-ink);
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#research .rfm-word-table th,
+#research .rfm-word-table td {
+    height: 60px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--research-line);
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+#research .rfm-word-table th:first-child {
+    width: 100px;
+    padding-right: 12px;
+}
+
+#research .rfm-word-table thead th {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 10px;
+    color: var(--research-muted);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+#research .rfm-word-table tbody th {
+    font-weight: 600;
+}
+
+#research .rfm-word-table td {
+    color: var(--site-text, #48534c);
+}
+
+#research .rfm-stage-note {
+    min-height: 3em;
+    margin: 12px 0 0;
+    color: var(--research-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+    #research .rfm-figure-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    #research .rfm-checkpoints button {
+        min-height: 44px;
+    }
+
+    #research .rfm-word-table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #research .rfm-word-heading {
+        gap: 8px 10px;
+    }
+
+    #research .rfm-word-table th:first-child {
+        width: 86px;
+        padding-right: 10px;
+    }
+
+    /* Reserve room for three wrapped lines at 320px, across all checkpoints. */
+    #research .rfm-word-table tbody th,
+    #research .rfm-word-table td {
+        height: 74px;
+    }
+
+    #research .rfm-stage-note {
+        min-height: 4.5em;
+    }
+}

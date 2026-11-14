@@ -9,8 +9,10 @@
     <link rel="canonical" href="https://andrewncheng.github.io/">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/site.css?v=research2026">
-    <link rel="stylesheet" href="assets/css/research.css?v=research2026">
-    <script src="assets/js/research-figures.js?v=figure4" defer></script>
+    <link rel="stylesheet" href="assets/css/research.css?v=figure1">
+    <link rel="stylesheet" href="assets/css/rfm-figure.css?v=figure1">
+    <script src="assets/js/research-figures.js?v=figure1" defer></script>
+    <script src="assets/js/rfm-figure.js?v=figure1" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body id="top">
@@ -66,16 +68,19 @@
         </header>
 
         <div class="publication-list">
-            <article class="paper" aria-labelledby="paper-inner-jev-title">
-                <figure class="paper-visual" data-figure-explorer data-figure-title="Open language models for decision-making" data-full-src="images/research/inner-jev.png" data-full-alt="Original bar chart comparing zero-shot and trained OpenDecisions capability scores for four open language models. Circles mark training seeds; horizontal lines mark Jev and Eikos-27B." data-full-caption="OpenDecisions capability before and after training. Blue bars average three training seeds; circles show individual runs." data-source="https://arxiv.org/pdf/2610.17205v1#page=5">
-                    <a class="figure-stage figure-static-link" data-expand-figure href="images/research/inner-jev.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge Open language models for decision-making">
-                        <div class="figure-graphic" data-figure-graphic id="figure-inner-jev">
-                            <img aria-describedby="caption-inner-jev" data-figure-image src="images/research/inner-jev.png" alt="Original bar chart comparing zero-shot and trained OpenDecisions capability scores for four open language models. Circles mark training seeds; horizontal lines mark Jev and Eikos-27B." width="1428" height="984" loading="lazy" decoding="async">
-                        </div>
-                    </a>
+            <article class="paper paper-wide" aria-labelledby="paper-inner-jev-title">
+                <figure class="paper-visual architecture-figure" data-figure-explorer data-figure-title="From a decision request to option probabilities" data-full-src="images/research/inner-jev-figure1.png" data-full-alt="Original architecture diagram: a state, question and options enter an LLM; its final hidden state feeds a decision head and softmax, producing option probabilities and a typed answer. Trainable LoRA adapters and head corrections are distinguished from frozen weights." data-full-caption="A decision request becomes probabilities over its options in one forward pass." data-source="https://arxiv.org/pdf/2610.17205v1#page=2">
+                    <div class="architecture-scroll" tabindex="0" role="region" aria-label="Decision model architecture; scroll horizontally on narrow screens">
+                        <a class="figure-stage figure-static-link architecture-stage" data-expand-figure href="images/research/inner-jev-figure1.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the decision model architecture">
+                            <div class="figure-graphic" data-figure-graphic id="figure-inner-jev">
+                                <img aria-describedby="caption-inner-jev" data-figure-image src="images/research/inner-jev-figure1.png" alt="Original architecture diagram: a state, question and options enter an LLM; its final hidden state feeds a decision head and softmax, producing option probabilities and a typed answer. Trainable LoRA adapters and head corrections are distinguished from frozen weights." width="3912" height="920" loading="lazy" decoding="async">
+                            </div>
+                        </a>
+                    </div>
                     <figcaption id="caption-inner-jev">
-                        <p data-figure-caption>OpenDecisions capability before and after training. Blue bars average three training seeds; circles show individual runs.</p>
-                        <a class="figure-source" href="https://arxiv.org/pdf/2610.17205v1#page=5" target="_blank" rel="noopener noreferrer">Figure 2 · source paper <span aria-hidden="true">↗</span></a>
+                        <p data-figure-caption>A decision request becomes probabilities over its options in one forward pass.</p>
+                        <p class="figure-scroll-hint">Scroll across the diagram, or tap to enlarge.</p>
+                        <a class="figure-source" href="https://arxiv.org/pdf/2610.17205v1#page=2" target="_blank" rel="noopener noreferrer">Figure 1 · source paper <span aria-hidden="true">↗</span></a>
                     </figcaption>
                     <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
                 </figure>
@@ -93,16 +98,46 @@
                 </div>
             </article>
 
-            <article class="paper" aria-labelledby="paper-linear-rfm-title">
-                <figure class="paper-visual" data-figure-explorer data-figure-title="Finite-sample trajectory recovery" data-full-src="images/research/linear-rfm-complete.png" data-full-alt="Complete original Figure 3 showing sample complexity, convergence to a numerical endpoint, and covariance effects on estimated contraction rates." data-full-caption="Trajectory recovery, convergence to a finite-dataset numerical endpoint, and covariance effects in simulated linear regression. Larger contraction factors indicate slower convergence." data-source="https://arxiv.org/pdf/2610.09196v1#page=15">
-                    <a class="figure-stage figure-static-link" data-expand-figure href="images/research/linear-rfm-complete.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge Finite-sample trajectory recovery">
-                        <div class="figure-graphic" data-figure-graphic id="figure-linear-rfm">
-                            <img aria-describedby="caption-linear-rfm" data-figure-image src="images/research/linear-rfm.png" alt="Original sample-complexity panel showing maximum predictor discrepancy across iterations zero through ten versus sample size, with a shaded uncertainty band and an inverse-square-root reference." width="1416" height="1064" loading="lazy" decoding="async">
+            <article class="paper paper-wide" aria-labelledby="paper-linear-rfm-title">
+                <figure class="paper-visual rfm-figure" data-figure-explorer data-initial-view="full" data-figure-title="Feature evolution on OpenWebText" data-full-src="images/research/linear-rfm-figure1.png" data-full-alt="Original Figure 1: stable rank across RFM iterations, trajectory discrepancy against a high-sample reference, and word neighborhoods at iterations 0, 1 and 5. Iteration 0 contains randomly selected baseline words." data-full-caption="Feature evolution on OpenWebText: spectral concentration, agreement with a high-sample reference, and selected word neighborhoods." data-source="https://arxiv.org/pdf/2610.09196v1#page=13">
+                    <div class="rfm-figure-heading">
+                        <p>OpenWebText <span>10⁹ training examples</span></p>
+                        <a class="figure-source" data-expand-figure href="images/research/linear-rfm-figure1.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge complete Figure 1, Feature evolution on OpenWebText">Full Figure 1 <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="rfm-figure-grid">
+                        <a class="figure-stage figure-static-link rfm-plots" data-expand-figure href="images/research/linear-rfm-figure1.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge original OpenWebText plots and word neighborhoods">
+                            <div class="figure-graphic" data-figure-graphic id="figure-linear-rfm">
+                                <img aria-describedby="caption-linear-rfm" data-figure-image src="images/research/linear-rfm-figure1-plots.png" alt="Original panels A and B: stable rank of the floor-subtracted feature matrix versus iteration, and maximum operator-norm discrepancy over iterations 1 through 5 relative to a billion-example reference trajectory versus sample size." width="1296" height="1800" loading="lazy" decoding="async">
+                            </div>
+                        </a>
+                        <div class="rfm-words" data-rfm-words>
+                            <div class="rfm-word-heading">
+                                <p class="rfm-stage-label" data-rfm-stage-label>After 5 updates</p>
+                                <div class="rfm-checkpoints" data-rfm-checkpoints hidden role="group" aria-label="RFM iteration">
+                                    <button type="button" data-rfm-checkpoint="0" aria-pressed="false" aria-controls="rfm-word-neighbors">t = 0</button>
+                                    <button type="button" data-rfm-checkpoint="1" aria-pressed="false" aria-controls="rfm-word-neighbors">t = 1</button>
+                                    <button type="button" data-rfm-checkpoint="5" aria-pressed="true" aria-controls="rfm-word-neighbors">t = 5</button>
+                                </div>
+                            </div>
+                            <table class="rfm-word-table" id="rfm-word-neighbors" aria-label="Selected words from Figure 1 panel C">
+                                <thead><tr><th scope="col">Query</th><th scope="col">Selected words</th></tr></thead>
+                                <tbody>
+                                    <tr data-rfm-query="democracy"><th scope="row">democracy</th><td data-rfm-neighbors>authoritarian, dictatorship, political, legitimacy, revolution</td></tr>
+                                    <tr data-rfm-query="bank"><th scope="row">bank</th><td data-rfm-neighbors>deposits, fargo, deposit, central, banks</td></tr>
+                                    <tr data-rfm-query="moose"><th scope="row">moose</th><td data-rfm-neighbors>deer, hunters, wolves, elephants, turtle</td></tr>
+                                    <tr data-rfm-query="translates"><th scope="row">translates</th><td data-rfm-neighbors>phrases, implies, dictionary, meaning, translated</td></tr>
+                                    <tr data-rfm-query="converting"><th scope="row">converting</th><td data-rfm-neighbors>convert, converted, conversion, generates, storing</td></tr>
+                                    <tr data-rfm-query="kidnapping"><th scope="row">kidnapping</th><td data-rfm-neighbors>charged, pleaded, convicted, counts, felony</td></tr>
+                                    <tr data-rfm-query="influx"><th scope="row">influx</th><td data-rfm-neighbors>migrants, migration, refugees, asylum, refugee</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="rfm-stage-note" data-rfm-stage-note>Selected cosine neighbors from the learned embedding at t = 5.</p>
+                            <span class="figure-announcement" data-rfm-announcement aria-live="polite" aria-atomic="true"></span>
                         </div>
-                    </a>
+                    </div>
                     <figcaption id="caption-linear-rfm">
-                        <p data-figure-caption>Predictor discrepancy over the first 10 updates: median and 10–90% band over 20 datasets.</p>
-                        <a class="figure-source" href="https://arxiv.org/pdf/2610.09196v1#page=15" target="_blank" rel="noopener noreferrer">Figure 3, detail · source paper <span aria-hidden="true">↗</span></a>
+                        <p data-figure-caption>Original plots and word lists from Figure 1. Stable rank measures spectral concentration; trajectory error is relative to a 10⁹-example reference.</p>
+                        <a class="figure-source" href="https://arxiv.org/pdf/2610.09196v1#page=13" target="_blank" rel="noopener noreferrer">Figure 1 · source paper <span aria-hidden="true">↗</span></a>
                     </figcaption>
                     <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
                 </figure>

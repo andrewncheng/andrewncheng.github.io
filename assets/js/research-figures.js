@@ -265,7 +265,8 @@
 
     function openFigure(state, trigger) {
         explorers.forEach(stopPlayback);
-        expanded = { state, trigger, view: "selected", zoom: "fit" };
+        const initialView = state.figure.dataset.initialView === "full" ? "full" : "selected";
+        expanded = { state, trigger, view: initialView, zoom: "fit" };
         dialog.querySelector("[data-dialog-title]").textContent = state.figure.dataset.figureTitle;
         dialog.querySelector("[data-dialog-caption]").textContent = state.figure.querySelector("[data-figure-caption]").textContent;
         const source = dialog.querySelector("[data-dialog-source]");
@@ -273,7 +274,7 @@
         dialog.querySelector("[data-dialog-views]").hidden = state.currentSource === state.figure.dataset.fullSrc;
         dialog.querySelectorAll("[data-dialog-zoom]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.dialogZoom === "fit")));
         dialog.showModal();
-        showDialogView("selected");
+        showDialogView(initialView);
     }
 
     research.querySelectorAll("[data-figure-explorer]").forEach(figure => {
