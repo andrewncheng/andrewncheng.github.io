@@ -1,74 +1,87 @@
-/* An illustrative graph manifold, independent of the published paper figures.
- * f(x,y) = .20 x² + .42 y² + .055 sin²(1.1 x + .65 y).
- * The surface is (x,y,f(x,y)); the objective is its height f.
- * Hessian(f) >= (.40 - .11 * (1.1² + .65²)) I > .2204 I,
- * so the origin is the unique global minimum. The induced metric is
- * G = I + grad(f) grad(f)^T. Iterates use G^-1 grad(f), graph retraction,
- * and Armijo backtracking. Animation interpolates the accepted coordinates
- * and lifts every displayed point back to the graph.
+/* An illustrative sculpted valley, independent of the published paper figures.
+ * r(u,v) = (u, v + .80 sin(1.45u), .13u² + .60v²).
+ * The horizontal map is a global diffeomorphism with inverse
+ * u=x, v=y-.80 sin(1.45x); the height has its unique zero at u=v=0.
+ * G = (Dr)^T Dr is the induced metric. Actual descent uses G^-1 grad(F)
+ * for F(u,v)=.13u²+.60v², coordinate retraction, and Armijo backtracking.
+ * Animation interpolates accepted (u,v) coordinates and embeds them using r,
+ * so every moving point stays on the surface. A directional-derivative check
+ * guarantees height decreases along the complete interpolated segments too.
  * No clocks, observers, event listeners, or animation loops are owned here.
  */
 (function (root) {
     'use strict';
 
-    const RX = 1.95;
-    const RY = 1.38;
-    const CAMERA = 0.58;
+    const RX = 2.05;
+    const RY = 0.96;
+    const CAMERA = 0.38;
     const ORBIT = 0.018;
     const DURATION = 11.4;
     const TAU = Math.PI * 2;
     const clamp = (value, lo, hi) => Math.max(lo, Math.min(hi, value));
     const smooth = value => value * value * (3 - 2 * value);
 
-    function objective(x, y) {
-        const wave = Math.sin(1.1 * x + 0.65 * y);
-        return 0.20 * x * x + 0.42 * y * y + 0.055 * wave * wave;
+    function objective(u, v) {
+        return 0.13 * u * u + 0.60 * v * v;
     }
 
-    function gradient(x, y) {
-        const wave = 0.055 * Math.sin(2 * (1.1 * x + 0.65 * y));
-        return [0.40 * x + 1.1 * wave, 0.84 * y + 0.65 * wave];
+    function gradient(u, v) {
+        return [0.26 * u, 1.20 * v];
     }
 
-    function graphPoint(x, y) {
-        return { x, y, z: objective(x, y) };
+    function warp(u) {
+        return 0.80 * Math.sin(1.45 * u);
     }
 
-    function inducedMetric(x, y) {
-        const [gx, gy] = gradient(x, y);
-        return [[1 + gx * gx, gx * gy], [gx * gy, 1 + gy * gy]];
+    function graphPoint(u, v) {
+        return { u, v, x: u, y: v + warp(u), z: objective(u, v) };
     }
 
-    function riemannianGradient(x, y) {
-        const [gx, gy] = gradient(x, y);
-        const denominator = 1 + gx * gx + gy * gy;
-        return [gx / denominator, gy / denominator];
+    function graphHeight(x, y) {
+        return objective(x, y - warp(x));
     }
 
-    function descent(start = [-1.55, -0.75]) {
-        let [x, y] = start;
-        const points = [{ ...graphPoint(x, y), step: 0, backtracks: 0 }];
-        for (let iteration = 0; iteration < 160; iteration += 1) {
-            const [gx, gy] = gradient(x, y);
+    function tangentBasis(u, v) {
+        return [[1, 1.16 * Math.cos(1.45 * u), 0.26 * u], [0, 1, 1.20 * v]];
+    }
+
+    function inducedMetric(u, v) {
+        const [du, dv] = tangentBasis(u, v);
+        const dot = (a, b) => a.reduce((sum, value, i) => sum + value * b[i], 0);
+        return [[dot(du, du), dot(du, dv)], [dot(du, dv), dot(dv, dv)]];
+    }
+
+    function riemannianGradient(u, v) {
+        const [gu, gv] = gradient(u, v);
+        const [[a, b], [, c]] = inducedMetric(u, v);
+        const determinant = a * c - b * b;
+        return [(c * gu - b * gv) / determinant, (a * gv - b * gu) / determinant];
+    }
+
+    function descent(start = [-1.72, 0.40]) {
+        let [u, v] = start;
+        const points = [{ ...graphPoint(u, v), step: 0, backtracks: 0 }];
+        for (let iteration = 0; iteration < 800; iteration += 1) {
+            const [gx, gy] = gradient(u, v);
             if (Math.hypot(gx, gy) < 1e-9) break;
-            const [vx, vy] = riemannianGradient(x, y);
+            const [vx, vy] = riemannianGradient(u, v);
             const normSquared = gx * vx + gy * vy;
-            let step = 1.4;
+            let step = 0.55;
             let backtracks = 0;
             let next;
             while (backtracks < 40) {
-                next = graphPoint(x - step * vx, y - step * vy);
-                const [nx, ny] = gradient(next.x, next.y);
+                next = graphPoint(u - step * vx, v - step * vy);
+                const [nx, ny] = gradient(next.u, next.v);
                 // The second condition also keeps each interpolated segment
                 // descending: convexity makes its directional derivative monotone.
-                if (next.z <= objective(x, y) - 1e-4 * step * normSquared &&
+                if (next.z <= objective(u, v) - 1e-4 * step * normSquared &&
                     nx * vx + ny * vy >= 0) break;
                 step *= 0.5;
                 backtracks += 1;
             }
             if (backtracks === 40) throw new Error('Manifold descent did not find a valid step.');
-            x = next.x;
-            y = next.y;
+            u = next.u;
+            v = next.v;
             points.push({ ...next, step, backtracks });
         }
         return points;
@@ -78,7 +91,7 @@
         const c = Math.cos(azimuth);
         const s = Math.sin(azimuth);
         const depth = s * point.x + c * point.y;
-        return { x: c * point.x - s * point.y, y: 0.70 * depth - 1.28 * point.z, depth };
+        return { x: c * point.x - s * point.y, y: 0.75 * depth - 1.52 * point.z, depth };
     }
 
     function buildGeometry() {
@@ -120,9 +133,10 @@
                 return;
             }
             const previous = iterates[index - 1];
-            for (let j = 1; j <= 14; j += 1) {
-                const t = j / 14;
-                const next = graphPoint(previous.x + t * (point.x - previous.x), previous.y + t * (point.y - previous.y));
+            const subdivisions = Math.max(1, Math.ceil(Math.hypot(point.x - previous.x, point.y - previous.y, point.z - previous.z) / 0.025));
+            for (let j = 1; j <= subdivisions; j += 1) {
+                const t = j / subdivisions;
+                const next = graphPoint(previous.u + t * (point.u - previous.u), previous.v + t * (point.v - previous.v));
                 const last = trail[trail.length - 1];
                 distance += Math.hypot(next.x - last.x, next.y - last.y, next.z - last.z);
                 trail.push({ ...next, distance });
@@ -155,7 +169,7 @@
         const a = model.trail[lo];
         const b = model.trail[hi];
         const t = b.distance > a.distance ? (target - a.distance) / (b.distance - a.distance) : 0;
-        return { point: graphPoint(a.x + t * (b.x - a.x), a.y + t * (b.y - a.y)), index: lo };
+        return { point: graphPoint(a.u + t * (b.u - a.u), a.v + t * (b.v - a.v)), index: lo };
     }
 
     const MODEL = buildGeometry();
@@ -200,7 +214,7 @@
             addPath(visible, { stroke: '#faf9f6', lineWidth: 3.4 * unit, opacity: 0.84 * fade });
             addPath(visible, { stroke: '#b8764f', lineWidth: 1.55 * unit, opacity: 0.85 * fade });
         }
-        // The converged numerical endpoint is < 3e-9 from the exact origin.
+        // The converged numerical endpoint is visually indistinguishable from zero.
         const position = progress === 1 ? origin : map(sampled.point);
         commands.push({ kind: 'circle', x: position[0], y: position[1], radius: 8 * unit, fill: '#c68559', opacity: 0.10 * fade });
         commands.push({ kind: 'circle', x: position[0], y: position[1], radius: 3.25 * unit, fill: '#b96d43', opacity: fade });
@@ -254,9 +268,9 @@
         };
     }
 
-    function toSVG(width = 340, height = 260) {
+    function toSVG(width = 340, height = 260, elapsedSeconds = 0, staticMode = true) {
         const number = value => Number(value.toFixed(3));
-        const elements = scene(width, height, 0, true).map(command => {
+        const elements = scene(width, height, elapsedSeconds, staticMode).map(command => {
             const style = ` fill="${command.fill || 'none'}" opacity="${number(command.opacity)}"` +
                 (command.stroke ? ` stroke="${command.stroke}" stroke-width="${number(command.lineWidth)}" stroke-linecap="round" stroke-linejoin="round"` : '');
             if (command.kind === 'path') {
@@ -266,7 +280,7 @@
             if (command.kind === 'ellipse') return `<ellipse cx="${number(command.x)}" cy="${number(command.y)}" rx="${number(command.rx)}" ry="${number(command.ry)}"${style}/>`;
             return `<circle cx="${number(command.x)}" cy="${number(command.y)}" r="${number(command.radius)}"${style}/>`;
         });
-        return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="manifold-title"><title id="manifold-title">Gradient descent on a curved surface</title>${elements.join('')}</svg>\n`;
+        return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="manifold-title"><title id="manifold-title">Gradient descent through a sculpted valley</title>${elements.join('')}</svg>\n`;
     }
 
     if (root) {
@@ -274,6 +288,6 @@
         root.ResearchMotion.manifold = { create };
     }
     if (typeof module !== 'undefined' && module.exports) {
-        module.exports = { objective, gradient, graphPoint, inducedMetric, riemannianGradient, descent, project, buildGeometry, sampleTrajectory, scene, toSVG, create, duration: DURATION };
+        module.exports = { objective, gradient, warp, graphPoint, graphHeight, tangentBasis, inducedMetric, riemannianGradient, descent, project, buildGeometry, sampleTrajectory, scene, toSVG, create, duration: DURATION };
     }
 }(typeof window !== 'undefined' ? window : null));
