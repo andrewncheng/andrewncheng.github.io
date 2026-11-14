@@ -9,6 +9,21 @@
     const duration = 9.6;
     const smooth = value => value * value * (3 - 2 * value);
 
+    // Seek along the three visual crossfades, without visiting the reset fade
+    // or inventing intermediate data. Endpoints select exact checkpoints.
+    function timeAtProgress(value) {
+        const progress = Number.isFinite(value) ? Math.max(0, Math.min(1, value)) : 0;
+        const index = progress * 3;
+        if (index === 0) return 0;
+        if (index === 1) return 2.55;
+        if (index === 2) return 5.1;
+        if (index === 3) return 7.65;
+        const stage = Math.floor(index);
+        const fraction = index - stage;
+        const inverseSmooth = 0.5 - Math.sin(Math.asin(1 - 2 * fraction) / 3);
+        return [0.35, 2.9, 5.45][stage] + 2.2 * inverseSmooth;
+    }
+
     function state(elapsedSeconds, staticMode = false) {
         if (staticMode) return { weights: [0, 0, 0, 1], label: 'n = 4096', opacity: 1, progress: 1 };
         const time = Number.isFinite(elapsedSeconds) ? elapsedSeconds : 0;
@@ -57,7 +72,7 @@
         return { weights, label, opacity, progress };
     }
 
-    const growth = Object.freeze({ levels, duration, state });
+    const growth = Object.freeze({ levels, duration, state, timeAtProgress });
     if (root) {
         root.ResearchMotion = root.ResearchMotion || {};
         root.ResearchMotion.growth = growth;

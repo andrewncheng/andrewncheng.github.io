@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="assets/css/site.css?v=affiliations2">
     <link rel="stylesheet" href="assets/css/research.css?v=figure1">
     <link rel="stylesheet" href="assets/css/rfm-figure.css?v=figure1">
-    <link rel="stylesheet" href="assets/css/research-motion.css?v=motion5">
+    <link rel="stylesheet" href="assets/css/research-motion.css?v=motion6">
     <script src="assets/js/research-figures.js?v=figure1" defer></script>
     <script src="assets/js/rfm-figure.js?v=figure1" defer></script>
     <script src="assets/js/motion-manifold.js?v=motion2" defer></script>
     <script src="assets/js/motion-decisions.js?v=motion2" defer></script>
-    <script src="assets/js/motion-growth.js?v=motion5" defer></script>
+    <script src="assets/js/motion-growth.js?v=motion6" defer></script>
     <script src="assets/js/motion-spectrum.js?v=motion5" defer></script>
     <script src="assets/js/motion-volterra.js?v=motion5" defer></script>
-    <script src="assets/js/research-motion.js?v=motion5" defer></script>
+    <script src="assets/js/research-motion.js?v=motion6" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body id="top">
@@ -114,15 +114,20 @@
                             <div class="motion-highdim-pair">
                                 <div class="motion-frame">
                                     <img data-motion-fallback src="images/motion/spectrum.svg?v=motion5" width="170" height="130" alt="Four seeded Gaussian sample spectra at n = 64, 256, 1024, and 4096, with p/n fixed at one half, compared with a stationary Marchenko–Pastur law. Rust stems mark the two largest sample eigenvalues; faint guides mark their asymptotic limits. This is an illustrative model." loading="lazy" decoding="async">
-                                    <canvas data-motion-scene="spectrum" width="340" height="260" role="img" aria-label="Four seeded Gaussian sample spectra at n = 64, 256, 1024, and 4096, with p/n fixed at one half, compared with a stationary Marchenko–Pastur law. Rust stems mark the two largest sample eigenvalues; faint guides mark their asymptotic limits. This is an illustrative model." hidden></canvas>
+                                    <canvas id="highdim-spectrum" data-motion-scene="spectrum" width="340" height="260" role="img" aria-label="Four seeded Gaussian sample spectra at n = 64, 256, 1024, and 4096, with p/n fixed at one half, compared with a stationary Marchenko–Pastur law. Rust stems mark the two largest sample eigenvalues; faint guides mark their asymptotic limits. This is an illustrative model." hidden></canvas>
                                 </div>
                                 <div class="motion-frame">
                                     <img data-motion-fallback src="images/motion/volterra.svg?v=motion5" width="170" height="130" alt="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." loading="lazy" decoding="async">
-                                    <canvas data-motion-scene="volterra" width="340" height="260" role="img" aria-label="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." hidden></canvas>
+                                    <canvas id="highdim-volterra" data-motion-scene="volterra" width="340" height="260" role="img" aria-label="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." hidden></canvas>
                                 </div>
                             </div>
-                            <p class="motion-growth"><span data-growth-status>n = 4096</span><span> · d/n fixed</span></p>
-                            <span class="motion-growth-track" data-growth-track aria-hidden="true" hidden><span data-growth-marker></span></span>
+                            <p class="motion-growth" id="highdim-size"><span data-growth-status>n = 4096</span><span> · d/n fixed</span></p>
+                            <div class="motion-growth-controls" data-growth-controls hidden>
+                                <input class="motion-growth-slider" data-growth-slider type="range" min="0" max="3" step="0.01" value="3" aria-label="High-dimensional sample size" aria-valuetext="n = 4096" aria-describedby="highdim-size" aria-controls="highdim-spectrum highdim-volterra" disabled>
+                                <button class="motion-growth-resume" data-growth-resume type="button" aria-label="Resume high-dimensional animation" title="Resume high-dimensional animation" hidden>
+                                    <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m3 1 8 5-8 5z"/></svg>
+                                </button>
+                            </div>
                         </div>
                         <figcaption>High-dimensional learning dynamics</figcaption>
                     </figure>

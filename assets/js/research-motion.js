@@ -9,8 +9,10 @@
     const toggle = group.querySelector("[data-motion-toggle]");
     const label = toggle && toggle.querySelector("[data-motion-label]");
     const growthStatus = group.querySelector("[data-growth-status]");
-    const growthTrack = group.querySelector("[data-growth-track]");
-    const growthMarker = group.querySelector("[data-growth-marker]");
+    const growthControls = group.querySelector("[data-growth-controls]");
+    const growthSlider = group.querySelector("[data-growth-slider]");
+    const growthResume = group.querySelector("[data-growth-resume]");
+    const growth = window.ResearchMotion && window.ResearchMotion.growth;
     const growthNames = new Set(["spectrum", "volterra"]);
     const growthViews = [];
     const scenes = [];
@@ -18,6 +20,9 @@
     let motionOptIn = false;
     let visible = !("IntersectionObserver" in window);
     let elapsed = 0;
+    let growthElapsed = 0;
+    let growthManual = false;
+    let growthOptIn = false;
     let request = null;
     let previousTime = null;
     let lastPaint = null;
@@ -46,9 +51,17 @@
         return motionPreference.matches && !motionOptIn;
     }
 
+    function growthStaticMode() {
+        return !growthManual && staticMode() && !growthOptIn;
+    }
+
+    function isGrowth(scene) {
+        return growthNames.has(scene.canvas.dataset.motionScene);
+    }
+
     function updateControl() {
         if (!toggle) return;
-        const stopped = paused || staticMode();
+        const stopped = paused || !canAnimate();
         toggle.hidden = !scenes.length;
         toggle.dataset.paused = String(stopped);
         if (label) label.textContent = stopped ? "Play motion" : "Pause motion";
@@ -69,24 +82,32 @@
             });
         }
         if (growthStatus) {
-            const growth = window.ResearchMotion && window.ResearchMotion.growth;
-            const state = paired && growth ? growth.state(elapsed, staticMode()) :
+            const state = paired && growth ? growth.state(growthElapsed, growthStaticMode()) :
                 { label: "n = 4096", opacity: 1, progress: 1 };
             if (growthStatus.textContent !== state.label) growthStatus.textContent = state.label;
             growthStatus.parentElement.style.opacity = String(state.opacity);
-            if (growthTrack) {
-                growthTrack.hidden = !paired;
-                growthTrack.style.opacity = String(state.opacity);
+            if (growthControls) growthControls.hidden = !paired;
+            if (growthSlider) {
+                growthSlider.disabled = !paired;
+                growthSlider.value = String(state.progress * 3);
+                growthSlider.setAttribute("aria-valuetext", state.label.includes("→") ?
+                    "Transition: " + state.label.replace("→", "to") : state.label);
             }
-            if (growthMarker) growthMarker.style.left = `${state.progress * 100}%`;
+            if (growthResume) {
+                growthResume.hidden = !paired || (!growthManual && !growthStaticMode());
+                growthResume.disabled = paused;
+            }
         }
     }
 
-    function paint() {
+    function paint(onlyGrowth = false) {
         for (let index = scenes.length - 1; index >= 0; index -= 1) {
             const scene = scenes[index];
+            const highdim = isGrowth(scene);
+            if (onlyGrowth && !highdim) continue;
             try {
-                scene.renderer.render(elapsed, staticMode());
+                scene.renderer.render(highdim ? growthElapsed : elapsed,
+                    highdim ? growthStaticMode() : staticMode());
             } catch (_) {
                 scene.canvas.hidden = true;
                 scene.fallback.hidden = false;
@@ -97,8 +118,13 @@
         updateControl();
     }
 
+    function canAnimate() {
+        return scenes.some(scene =>
+            isGrowth(scene) ? !growthManual && !growthStaticMode() : !staticMode());
+    }
+
     function active() {
-        return scenes.length > 0 && visible && !document.hidden && !paused && !staticMode();
+        return visible && !document.hidden && !paused && canAnimate();
     }
 
     function stop() {
@@ -111,7 +137,11 @@
     function frame(timestamp) {
         request = null;
         if (!active()) return;
-        if (previousTime !== null) elapsed += Math.min(timestamp - previousTime, 100) / 1000;
+        if (previousTime !== null) {
+            const delta = Math.min(timestamp - previousTime, 100) / 1000;
+            if (!staticMode()) elapsed += delta;
+            if (!growthManual && !growthStaticMode()) growthElapsed += delta;
+        }
         previousTime = timestamp;
         // The illustrations need only 30 paints/second, even on faster displays.
         if (lastPaint === null || timestamp - lastPaint >= 1000 / 30) {
@@ -129,16 +159,48 @@
 
     if (toggle && label) {
         toggle.addEventListener("click", () => {
-            if (staticMode()) {
+            if (!paused && canAnimate()) {
+                paused = true;
+            } else if (!canAnimate() && staticMode()) {
                 // Respect the system preference initially, while allowing
                 // the visitor to explicitly start this illustration.
                 motionOptIn = true;
                 paused = false;
                 elapsed = 0;
+                if (!growthManual) growthElapsed = 0;
             } else {
-                paused = !paused;
+                paused = false;
             }
             sync();
+        });
+    }
+
+    if (growthSlider && growth && typeof growth.timeAtProgress === "function") {
+        const seek = () => {
+            if (growthSlider.disabled) return;
+            const value = Number(growthSlider.value);
+            if (!Number.isFinite(value)) return;
+            growthManual = true;
+            growthElapsed = growth.timeAtProgress(value / 3);
+            // Neither the other renderers nor their running clock are touched.
+            paint(true);
+        };
+        growthSlider.addEventListener("pointerdown", seek);
+        growthSlider.addEventListener("input", seek);
+    }
+
+    if (growthResume) {
+        growthResume.addEventListener("click", () => {
+            if (growthResume.disabled) return;
+            if (growthStaticMode()) growthElapsed = growth.timeAtProgress(1);
+            growthManual = false;
+            growthOptIn = true;
+            paint(true);
+            if (request === null && active()) {
+                previousTime = null;
+                lastPaint = null;
+                request = window.requestAnimationFrame(frame);
+            }
         });
     }
 
@@ -156,12 +218,14 @@
             if (!document.hidden) paint();
         }).observe(group);
     } else {
-        window.addEventListener("resize", paint);
+        window.addEventListener("resize", () => paint());
     }
 
     document.addEventListener("visibilitychange", sync);
     motionPreference.addEventListener("change", () => {
         motionOptIn = false;
+        growthOptIn = false;
+        growthManual = false;
         sync();
     });
     sync();

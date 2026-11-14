@@ -142,7 +142,8 @@
     ],
     "maximum_dpr": 2,
     "progress_marker": "A shared marker tracks weighted checkpoint index. It represents presentation progress, not an intermediate computed sample size.",
-    "reduced_motion": "Initially show the largest-size still, with an explicit Play motion opt-in. Pausing after opt-in freezes the dynamic phase."
+    "reduced_motion": "Initially show the largest-size still, with an explicit Play motion opt-in. Pausing after opt-in freezes the dynamic phase.",
+    "interactive_control": "Native slider independently seeks the spectral and Volterra pair through the existing four checkpoints and their opacity crossfades. Seeking holds only this pair; its local Play control resumes its own clock. Manifold and decision scenes retain their clocks and play states. Between-checkpoint positions are labeled transitions, not new sample sizes."
   },
   "verification": {
     "source_normalized_vertices": "exact",
