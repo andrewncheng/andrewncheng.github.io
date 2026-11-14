@@ -1,7 +1,7 @@
 /* Research topics paired with quiet illustrations beside the heading. */
 #research .research-header {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
     align-items: center;
     gap: 40px;
 }
@@ -17,13 +17,13 @@
 
 .research-motion {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     justify-self: end;
 }
 
 .motion-pair {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.35fr);
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr) minmax(0, 1.35fr);
     align-items: stretch;
     gap: 16px;
 }
@@ -35,6 +35,12 @@
     min-width: 0;
     margin: 0;
     row-gap: 8px;
+}
+
+.motion-highdim-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
 }
 
 .motion-figure figcaption {
@@ -135,6 +141,11 @@
         grid-template-columns: 128px minmax(0, 1fr);
         grid-template-rows: auto;
         column-gap: 20px;
+    }
+
+    .motion-highdim-pair {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 6px;
     }
 
     .motion-decisions .motion-frame {

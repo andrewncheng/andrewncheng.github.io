@@ -1,0 +1,124 @@
+{
+  "title": "High Dimensional First Order Mini-Batch Algorithms on Quadratic Problems",
+  "source_url": "https://opt-ml.org/papers/2024/paper25.pdf#page=5",
+  "source_pdf_sha256": "5e61d6c1b7f98c6fcfeeff0e911c3e21e432fd6861bd6fecc0324ac3fe867fc1",
+  "source_figure": 1,
+  "source_pdf_page": 5,
+  "source_panel": "SGD + momentum",
+  "source_svg": "images/research/minibatch-momentum.svg",
+  "source_svg_sha256": "998e9962518127a73617bfec69461fb55a0e13acedb593d0b236839a97b67270",
+  "original_pdf_crop_points": [
+    83,
+    91,
+    278,
+    218
+  ],
+  "original_plot_bounds": [
+    144,
+    79.2,
+    1036.8,
+    633.60006
+  ],
+  "extraction": "Exact original SVG polygon/polyline vertices. Affine normalization x=(X-144)/892.8 and y=(633.60006-Y)/554.40006; no fitted curve, smoothing, simulation, or invented data.",
+  "axes": {
+    "x_label": "Iterations",
+    "x_scale": "linear",
+    "drawn_iterations": [
+      0,
+      24
+    ],
+    "labeled_ticks": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25
+    ],
+    "y_label": "Function Values",
+    "y_scale": "log10",
+    "major_ticks": [
+      0.1,
+      1
+    ],
+    "raw_y_at_0.1": 242.44124,
+    "raw_y_at_1": 597.1532,
+    "approx_log10_limits": [
+      -1.4602078824745575,
+      0.10275058106301242
+    ]
+  },
+  "semantics": {
+    "problem": "Gaussian random least squares",
+    "statistic": "training loss L(x_t)",
+    "bands": "The source caption calls these the 90th percentile confidence interval. Exact quantile endpoints and number of replicates are not specified here.",
+    "sample_sizes": [
+      64,
+      256,
+      1024,
+      4096
+    ],
+    "dimension": "d/n is fixed; its numeric value is not stated in this caption.",
+    "momentum": 0.8,
+    "learning_rate": 0.5,
+    "batch_fraction": 0.5,
+    "prediction": "One original Volterra prediction is drawn for all four n values within each method. The predictions differ between the two methods.",
+    "caution": "The original bands need not be nested, symmetric, centered on the prediction, or contain it at every iteration. They are confidence bands, not individual trajectories."
+  },
+  "shape_counts": {
+    "prediction_vertices": 25,
+    "confidence_band_vertices": {
+      "64": 51,
+      "256": 51,
+      "1024": 51,
+      "4096": 51
+    }
+  },
+  "presentation": {
+    "code": "assets/js/motion-volterra.js",
+    "fallback": "images/motion/volterra.svg",
+    "palette": "Original geometry recolored warm sage for bands and rust for the fixed prediction; stroke styling is adapted for the small header.",
+    "animation": "Opacity-only crossfades and holds between the four original confidence polygons in n=64,256,1024,4096 order, followed by a fade/reset. No intermediate sample sizes or coordinate interpolation between bands.",
+    "static": "All four original bands at restrained opacity plus the unchanged prediction.",
+    "scale": "Original plot aspect ratio and logarithmic vertical-coordinate mapping are retained.",
+    "period_seconds": 12,
+    "default_canvas": [
+      170,
+      130
+    ],
+    "maximum_dpr": 2
+  },
+  "verification": {
+    "source_normalized_vertices": "exact",
+    "original_vs_reconstructed_geometry_pixel_difference": 0,
+    "mapped_vertex_error_px": 0,
+    "finite_framing_checked_at": [
+      [
+        80,
+        60
+      ],
+      [
+        100,
+        77
+      ],
+      [
+        125,
+        96
+      ],
+      [
+        170,
+        130
+      ],
+      [
+        200,
+        140
+      ],
+      [
+        340,
+        260
+      ]
+    ],
+    "reproducible_extraction": "/Users/andrewcheng/mambaforge/bin/python /private/tmp/andrew-site-motion-v3/extract-volterra.py",
+    "reproducible_renderer_check": "node /private/tmp/andrew-site-motion-v3/check-volterra.cjs /Users/andrewcheng/Documents/andrew-website/andrewncheng.github.io"
+  }
+}

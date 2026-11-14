@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="assets/css/site.css?v=intro2026">
     <link rel="stylesheet" href="assets/css/research.css?v=figure1">
     <link rel="stylesheet" href="assets/css/rfm-figure.css?v=figure1">
-    <link rel="stylesheet" href="assets/css/research-motion.css?v=motion2">
+    <link rel="stylesheet" href="assets/css/research-motion.css?v=motion3">
     <script src="assets/js/research-figures.js?v=figure1" defer></script>
     <script src="assets/js/rfm-figure.js?v=figure1" defer></script>
     <script src="assets/js/motion-manifold.js?v=motion2" defer></script>
     <script src="assets/js/motion-decisions.js?v=motion2" defer></script>
-    <script src="assets/js/motion-spectrum.js?v=motion2" defer></script>
+    <script src="assets/js/motion-spectrum.js?v=motion3" defer></script>
+    <script src="assets/js/motion-volterra.js?v=motion3" defer></script>
     <script src="assets/js/research-motion.js?v=motion1" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -72,10 +73,16 @@
             </div>
             <div class="research-motion" data-research-motion role="group" aria-label="Research topics">
                 <div class="motion-pair">
-                    <figure class="motion-figure">
-                        <div class="motion-frame">
-                            <img data-motion-fallback src="images/motion/spectrum.svg?v=motion2" width="170" height="130" alt="Marchenko–Pastur law for sample covariance eigenvalues of independent unit-variance features. The dimension-to-sample ratio p/n varies from 0.15 to 0.8; the rust tick marks the mean at 1." loading="lazy" decoding="async">
-                            <canvas data-motion-scene="spectrum" width="340" height="260" role="img" aria-label="Marchenko–Pastur law for sample covariance eigenvalues of independent unit-variance features. The dimension-to-sample ratio p/n varies from 0.15 to 0.8; the rust tick marks the mean at 1." hidden></canvas>
+                    <figure class="motion-figure motion-highdim">
+                        <div class="motion-highdim-pair">
+                            <div class="motion-frame">
+                                <img data-motion-fallback src="images/motion/spectrum.svg?v=motion3" width="170" height="130" alt="Marchenko–Pastur bulk with two signal outliers from a spiked covariance model. As p/n varies from 0.15 to 0.8, rust stems mark asymptotic sample eigenvalue locations outside the bulk; stem heights do not represent probability mass." loading="lazy" decoding="async">
+                                <canvas data-motion-scene="spectrum" width="340" height="260" role="img" aria-label="Marchenko–Pastur bulk with two signal outliers from a spiked covariance model. As p/n varies from 0.15 to 0.8, rust stems mark asymptotic sample eigenvalue locations outside the bulk; stem heights do not represent probability mass." hidden></canvas>
+                            </div>
+                            <div class="motion-frame">
+                                <img data-motion-fallback src="images/motion/volterra.svg?v=motion3" width="170" height="130" alt="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." loading="lazy" decoding="async">
+                                <canvas data-motion-scene="volterra" width="340" height="260" role="img" aria-label="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." hidden></canvas>
+                            </div>
                         </div>
                         <figcaption>High-dimensional learning dynamics</figcaption>
                     </figure>
