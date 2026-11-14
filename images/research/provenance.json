@@ -353,5 +353,101 @@
         "sha256": "10b3eff15460291177d76e40210efe398b7915a10a22057d8b45cfbee3f4c6a4"
       }
     ]
+  },
+  "added_preprints": {
+    "inner_jev": {
+      "title": "Releasing the Inner Jev: A Simple Recipe for Open Decision Models",
+      "authors": [
+        "Jonathan Geuter",
+        "Andrew Cheng",
+        "David Alvarez-Melis"
+      ],
+      "equal_contribution": [
+        "Jonathan Geuter",
+        "Andrew Cheng"
+      ],
+      "status": "arXiv preprint",
+      "submitted": "2026-10-12",
+      "source_url": "https://arxiv.org/pdf/2610.17205v1",
+      "source_sha256": "29d0ec68f72620c0b27da61f5a5d2bd21f9f2d870fdddc2601e20531073e952f",
+      "links": {
+        "paper": "https://arxiv.org/abs/2610.17205",
+        "code": "https://github.com/j-geuter/Jeff",
+        "models": "https://huggingface.co/collections/jgeuter/jeff-10",
+        "dataset": "https://huggingface.co/datasets/jgeuter/OpenDecisions"
+      },
+      "figure": {
+        "figure_number": 2,
+        "page_number": 5,
+        "crop_points_top_left": [
+          305,
+          67,
+          543,
+          231
+        ],
+        "png": {
+          "file": "jev-figure2.png",
+          "width": 1428,
+          "height": 984,
+          "bytes": 95126,
+          "sha256": "793f13e5364a53a5d21d06cf8a737c1ee338d60a96b77633bc17fa251605acee"
+        },
+        "method": "Unchanged original PDF crop. PNG is direct source rasterization at 6 pixels per point with lossless compression. SVG contains original vector objects and text converted to paths; IDs prefixed for safety. No values, labels, or colors recreated.",
+        "asset": "inner-jev.png"
+      }
+    },
+    "linear_rfm": {
+      "title": "Exact Dynamics and Finite-Sample Trajectory Recovery of Linear Recursive Feature Machines",
+      "authors": [
+        "Andrew Cheng",
+        "Bobak T. Kiani",
+        "Yue M. Lu",
+        "Adityanarayanan Radhakrishnan"
+      ],
+      "arxiv_id": "2610.09196v1",
+      "metadata_url": "https://arxiv.org/abs/2610.09196",
+      "pdf_url": "https://arxiv.org/pdf/2610.09196v1",
+      "submitted_utc": "2026-10-06T22:45:58Z",
+      "source_pdf_sha256": "ca27e35239bff9cee59f9b526bba08b738cc3a1092099cda29b079b89fb8571d",
+      "figure": 3,
+      "source_pdf_page_one_based": 15,
+      "status": "arXiv preprint",
+      "assets": [
+        {
+          "sha256": "afd84505b559e20c18bea7b002ee81633856d84724a75c540ee5a0da97ae5f4d",
+          "bytes": 136363,
+          "crop_rect_points": [
+            98,
+            136,
+            523,
+            394
+          ],
+          "format": "png",
+          "dimensions_pixels": [
+            1700,
+            1032
+          ],
+          "asset": "linear-rfm-complete.png"
+        },
+        {
+          "sha256": "290b81dcadbbfdf1f58c3cb6ae71aef6ca942d0536fd25b4994143cad11fb4d2",
+          "bytes": 72676,
+          "crop_rect_points": [
+            98,
+            136,
+            275,
+            269
+          ],
+          "format": "png",
+          "dimensions_pixels": [
+            1416,
+            1064
+          ],
+          "render_pixels_per_point": 8,
+          "asset": "linear-rfm.png"
+        }
+      ],
+      "figure_notes": "The card preserves the original top-left panel: median maximum predictor discrepancy over iterations 0–10, 20 datasets per sample size, 10th–90th percentile band. The complete figure retains all three panels. No data or colors were regenerated."
+    }
   }
 }
