@@ -222,6 +222,10 @@ summary:focus-visible {
     text-wrap: pretty;
 }
 
+.intro-summary + .intro-summary {
+    margin-top: 16px;
+}
+
 .intro-links {
     display: flex;
     flex-wrap: wrap;
