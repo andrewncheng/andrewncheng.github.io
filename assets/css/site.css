@@ -349,6 +349,10 @@ summary:focus-visible {
     height: auto;
 }
 
+.affiliation-wordmark-mila img {
+    width: 94px;
+}
+
 .affiliation-symbol {
     flex: 0 0 28px;
     width: 28px;

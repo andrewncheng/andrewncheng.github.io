@@ -144,6 +144,23 @@
         "external_image_or_script_dependencies": false,
         "visual_preview": "Original icon inspected. The full wordmark was not used: its mask/pattern cannot be accurately previewed by the available SVG renderers."
       }
+    },
+    {
+      "institution": "Mila",
+      "filename": "mila-logo.svg",
+      "format": "image/svg+xml",
+      "view_box": "0 0 169.82 50.02",
+      "source_url": "https://mila.quebec/sites/default/themes/mila_v1/logo.svg",
+      "source_page": "https://mila.quebec/en",
+      "modifications": "None; official original copied byte-for-byte.",
+      "sha256": "89fc4145ed3b739c3eaf8b05753835a4653aec706129dce9df268611824dd007",
+      "bytes": 11153,
+      "retrieved_on": "2026-11-14",
+      "validation": {
+        "parse": "passed",
+        "external_image_or_script_dependencies": false,
+        "visual_preview": "Reviewed beside McGill at proportional display sizes in /private/tmp/andrew-site-mila/paired-preview.png"
+      }
     }
   ]
 }
