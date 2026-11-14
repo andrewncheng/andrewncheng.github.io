@@ -187,7 +187,7 @@
             paths.join('') + '</svg>\n';
     }
 
-    const api = { create, scene, paint, toSVG, width: WIDTH, height: HEIGHT, duration: growth ? growth.duration : 16 };
+    const api = { create, scene, paint, toSVG, width: WIDTH, height: HEIGHT, duration: growth ? growth.duration : 9.6 };
     if (root) {
         root.ResearchMotion = root.ResearchMotion || {};
         root.ResearchMotion.spectrum = api;

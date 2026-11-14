@@ -181,6 +181,19 @@ summary:focus-visible {
     text-transform: uppercase;
 }
 
+.intro-affiliation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.intro-affiliation img {
+    flex: 0 0 auto;
+    width: 26px;
+    height: 30px;
+    object-fit: contain;
+}
+
 .intro-copy h1 {
     margin-bottom: 27px;
     color: var(--site-ink);
@@ -296,6 +309,55 @@ summary:focus-visible {
 
 .about-details p + p {
     margin-top: 12px;
+}
+
+.background-affiliations {
+    display: grid;
+    gap: 22px;
+}
+
+.background-affiliation h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 8px;
+    color: var(--site-ink);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.background-affiliation h3 a {
+    text-decoration: none;
+}
+
+.background-affiliation h3 a:hover {
+    text-decoration: underline;
+}
+
+.background-affiliation h3 span {
+    color: var(--site-muted);
+    font-weight: 400;
+}
+
+.affiliation-wordmark {
+    flex-shrink: 0;
+}
+
+.affiliation-wordmark img {
+    width: 110px;
+    height: auto;
+}
+
+.affiliation-symbol {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.about-details .background-experience {
+    margin-top: 20px;
 }
 
 .site-footer {

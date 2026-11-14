@@ -61,6 +61,26 @@
     white-space: nowrap;
 }
 
+.motion-growth-track {
+    display: block;
+    position: relative;
+    width: 64px;
+    height: 1px;
+    margin: 6px auto 3px;
+    background: var(--site-line);
+}
+
+.motion-growth-track > span {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--site-accent);
+    transform: translate(-50%, -50%);
+}
+
 .motion-figure figcaption {
     min-height: 2.9em;
     color: var(--site-text);

@@ -9,10 +9,13 @@
     const toggle = group.querySelector("[data-motion-toggle]");
     const label = toggle && toggle.querySelector("[data-motion-label]");
     const growthStatus = group.querySelector("[data-growth-status]");
+    const growthTrack = group.querySelector("[data-growth-track]");
+    const growthMarker = group.querySelector("[data-growth-marker]");
     const growthNames = new Set(["spectrum", "volterra"]);
     const growthViews = [];
     const scenes = [];
     let paused = false;
+    let motionOptIn = false;
     let visible = !("IntersectionObserver" in window);
     let elapsed = 0;
     let request = null;
@@ -28,7 +31,7 @@
             if (typeof canvas.getContext !== "function" || !canvas.getContext("2d")) return;
             const renderer = factory.create(canvas);
             canvas.hidden = false;
-            renderer.render(0, motionPreference.matches);
+            renderer.render(0, staticMode());
             fallback.hidden = true;
             scenes.push({ canvas, fallback, renderer });
         } catch (_) {
@@ -38,6 +41,19 @@
     });
 
     if (!scenes.length) return;
+
+    function staticMode() {
+        return motionPreference.matches && !motionOptIn;
+    }
+
+    function updateControl() {
+        if (!toggle) return;
+        const stopped = paused || staticMode();
+        toggle.hidden = !scenes.length;
+        toggle.dataset.paused = String(stopped);
+        if (label) label.textContent = stopped ? "Play motion" : "Pause motion";
+        toggle.setAttribute("aria-label", stopped ? "Play research animations" : "Pause research animations");
+    }
 
     function updateGrowthStatus() {
         const paired = growthViews.length === 2 && growthViews.every(view =>
@@ -54,10 +70,15 @@
         }
         if (growthStatus) {
             const growth = window.ResearchMotion && window.ResearchMotion.growth;
-            const state = paired && growth ? growth.state(elapsed, motionPreference.matches) :
-                { label: "n = 4096", opacity: 1 };
-            growthStatus.textContent = state.label;
+            const state = paired && growth ? growth.state(elapsed, staticMode()) :
+                { label: "n = 4096", opacity: 1, progress: 1 };
+            if (growthStatus.textContent !== state.label) growthStatus.textContent = state.label;
             growthStatus.parentElement.style.opacity = String(state.opacity);
+            if (growthTrack) {
+                growthTrack.hidden = !paired;
+                growthTrack.style.opacity = String(state.opacity);
+            }
+            if (growthMarker) growthMarker.style.left = `${state.progress * 100}%`;
         }
     }
 
@@ -65,7 +86,7 @@
         for (let index = scenes.length - 1; index >= 0; index -= 1) {
             const scene = scenes[index];
             try {
-                scene.renderer.render(elapsed, motionPreference.matches);
+                scene.renderer.render(elapsed, staticMode());
             } catch (_) {
                 scene.canvas.hidden = true;
                 scene.fallback.hidden = false;
@@ -73,11 +94,11 @@
             }
         }
         updateGrowthStatus();
-        if (toggle) toggle.hidden = !scenes.length || motionPreference.matches;
+        updateControl();
     }
 
     function active() {
-        return scenes.length > 0 && visible && !document.hidden && !paused && !motionPreference.matches;
+        return scenes.length > 0 && visible && !document.hidden && !paused && !staticMode();
     }
 
     function stop() {
@@ -107,12 +128,16 @@
     }
 
     if (toggle && label) {
-        toggle.hidden = motionPreference.matches;
         toggle.addEventListener("click", () => {
-            paused = !paused;
-            toggle.dataset.paused = String(paused);
-            label.textContent = paused ? "Play motion" : "Pause motion";
-            toggle.setAttribute("aria-label", paused ? "Play research animations" : "Pause research animations");
+            if (staticMode()) {
+                // Respect the system preference initially, while allowing
+                // the visitor to explicitly start this illustration.
+                motionOptIn = true;
+                paused = false;
+                elapsed = 0;
+            } else {
+                paused = !paused;
+            }
             sync();
         });
     }
@@ -135,6 +160,9 @@
     }
 
     document.addEventListener("visibilitychange", sync);
-    motionPreference.addEventListener("change", sync);
+    motionPreference.addEventListener("change", () => {
+        motionOptIn = false;
+        sync();
+    });
     sync();
 })();

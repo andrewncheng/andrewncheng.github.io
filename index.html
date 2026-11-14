@@ -8,18 +8,18 @@
     <title>Andrew Cheng · Machine Learning &amp; Optimization</title>
     <link rel="canonical" href="https://andrewncheng.github.io/">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/site.css?v=intro2026">
+    <link rel="stylesheet" href="assets/css/site.css?v=affiliations1">
     <link rel="stylesheet" href="assets/css/research.css?v=figure1">
     <link rel="stylesheet" href="assets/css/rfm-figure.css?v=figure1">
-    <link rel="stylesheet" href="assets/css/research-motion.css?v=motion4">
+    <link rel="stylesheet" href="assets/css/research-motion.css?v=motion5">
     <script src="assets/js/research-figures.js?v=figure1" defer></script>
     <script src="assets/js/rfm-figure.js?v=figure1" defer></script>
     <script src="assets/js/motion-manifold.js?v=motion2" defer></script>
     <script src="assets/js/motion-decisions.js?v=motion2" defer></script>
-    <script src="assets/js/motion-growth.js?v=motion4" defer></script>
-    <script src="assets/js/motion-spectrum.js?v=motion4" defer></script>
-    <script src="assets/js/motion-volterra.js?v=motion4" defer></script>
-    <script src="assets/js/research-motion.js?v=motion4" defer></script>
+    <script src="assets/js/motion-growth.js?v=motion5" defer></script>
+    <script src="assets/js/motion-spectrum.js?v=motion5" defer></script>
+    <script src="assets/js/motion-volterra.js?v=motion5" defer></script>
+    <script src="assets/js/research-motion.js?v=motion5" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body id="top">
@@ -37,7 +37,7 @@
     <main id="main">
         <section id="aboutme" class="about-section site-shell" aria-labelledby="intro-title">
             <div class="intro-copy">
-                <p class="site-eyebrow">Computer Science · Harvard University</p>
+                <p class="site-eyebrow intro-affiliation"><img src="images/affiliations/harvard-shield.png" alt="" width="192" height="192" decoding="async"><span>Computer Science · Harvard University</span></p>
                 <h1 id="intro-title">Andrew Cheng</h1>
                 <p class="intro-lead">I’m a PhD student at <a href="https://www.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard University</a>, advised by <a href="https://lu.seas.harvard.edu/" target="_blank" rel="noopener noreferrer">Yue Lu</a>.</p>
                 <p class="intro-summary">My research connects machine learning, optimization, and statistics. My recent work focuses on enabling fast decision-making for foundation models on unstructured data.</p>
@@ -54,8 +54,23 @@
             <div class="about-details">
                 <section class="about-background" aria-labelledby="background-heading">
                     <h2 id="background-heading">Background</h2>
-                    <p>Previously, I was a master’s student at McGill University and Mila, advised by <a href="https://cypaquette.github.io/" target="_blank" rel="noopener noreferrer">Courtney Paquette</a> and <a href="https://elliotpaquette.github.io/" target="_blank" rel="noopener noreferrer">Elliot Paquette</a>. I completed my bachelor’s in Statistics and Computer Science at McGill.</p>
-                    <p>Since May 2025, I have worked with Lawrence Livermore National Laboratory on interpretable learning for energy applications. In 2022 and 2023, I interned at <a href="https://www.valencelabs.com/" target="_blank" rel="noopener noreferrer">ValenceLabs</a>, developing generative models for drug discovery.</p>
+                    <div class="background-affiliations">
+                        <section class="background-affiliation" aria-label="McGill University and Mila">
+                            <h3 class="affiliation-heading">
+                                <a class="affiliation-wordmark" href="https://www.mcgill.ca/" target="_blank" rel="noopener noreferrer"><img src="images/affiliations/mcgill-logo.svg" alt="McGill University" width="166" height="44" loading="lazy" decoding="async"></a>
+                                <span>· Mila</span>
+                            </h3>
+                            <p>During my master’s, I was advised by <a href="https://cypaquette.github.io/" target="_blank" rel="noopener noreferrer">Courtney Paquette</a> and <a href="https://elliotpaquette.github.io/" target="_blank" rel="noopener noreferrer">Elliot Paquette</a>. I also completed my bachelor’s in Statistics and Computer Science at McGill.</p>
+                        </section>
+                        <section class="background-affiliation" aria-labelledby="llnl-affiliation">
+                            <h3 class="affiliation-heading" id="llnl-affiliation">
+                                <img class="affiliation-symbol" src="images/affiliations/llnl-mark.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
+                                <a href="https://www.llnl.gov/" target="_blank" rel="noopener noreferrer">Lawrence Livermore National Laboratory</a>
+                            </h3>
+                            <p>Since May 2025, I have worked on interpretable learning for energy applications.</p>
+                        </section>
+                    </div>
+                    <p class="background-experience">In 2022 and 2023, I interned at <a href="https://www.valencelabs.com/" target="_blank" rel="noopener noreferrer">ValenceLabs</a>, developing generative models for drug discovery.</p>
                 </section>
                 <section class="about-support" aria-labelledby="support-heading">
                     <h2 id="support-heading">Research support</h2>
@@ -78,15 +93,16 @@
                         <div class="motion-highdim-visual">
                             <div class="motion-highdim-pair">
                                 <div class="motion-frame">
-                                    <img data-motion-fallback src="images/motion/spectrum.svg?v=motion4" width="170" height="130" alt="Four seeded Gaussian sample spectra at n = 64, 256, 1024, and 4096, with p/n fixed at one half, compared with a stationary Marchenko–Pastur law. Rust stems mark the two largest sample eigenvalues; faint guides mark their asymptotic limits. This is an illustrative model." loading="lazy" decoding="async">
+                                    <img data-motion-fallback src="images/motion/spectrum.svg?v=motion5" width="170" height="130" alt="Four seeded Gaussian sample spectra at n = 64, 256, 1024, and 4096, with p/n fixed at one half, compared with a stationary Marchenko–Pastur law. Rust stems mark the two largest sample eigenvalues; faint guides mark their asymptotic limits. This is an illustrative model." loading="lazy" decoding="async">
                                     <canvas data-motion-scene="spectrum" width="340" height="260" role="img" aria-label="Four seeded Gaussian sample spectra at n = 64, 256, 1024, and 4096, with p/n fixed at one half, compared with a stationary Marchenko–Pastur law. Rust stems mark the two largest sample eigenvalues; faint guides mark their asymptotic limits. This is an illustrative model." hidden></canvas>
                                 </div>
                                 <div class="motion-frame">
-                                    <img data-motion-fallback src="images/motion/volterra.svg?v=motion4" width="170" height="130" alt="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." loading="lazy" decoding="async">
+                                    <img data-motion-fallback src="images/motion/volterra.svg?v=motion5" width="170" height="130" alt="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." loading="lazy" decoding="async">
                                     <canvas data-motion-scene="volterra" width="340" height="260" role="img" aria-label="Original SGD-with-momentum training-loss bands from Figure 1, on a logarithmic scale. Bands for n = 64, 256, 1024, and 4096 at fixed d/n are shown around the Volterra prediction." hidden></canvas>
                                 </div>
                             </div>
                             <p class="motion-growth"><span data-growth-status>n = 4096</span><span> · d/n fixed</span></p>
+                            <span class="motion-growth-track" data-growth-track aria-hidden="true" hidden><span data-growth-marker></span></span>
                         </div>
                         <figcaption>High-dimensional learning dynamics</figcaption>
                     </figure>

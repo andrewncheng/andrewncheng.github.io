@@ -1,0 +1,74 @@
+{
+  "retrieved_on": "2026-11-14",
+  "purpose": "Small factual affiliation marks for Andrew Cheng\u2019s personal academic website. These are original institution-hosted assets, not recreated logos.",
+  "assets": [
+    {
+      "institution": "Harvard University",
+      "filename": "harvard-shield.png",
+      "format": "image/png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "source_url": "https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed.png?w=192",
+      "source_page": "https://www.harvard.edu/",
+      "usage_note": "Official website icon. Preserve colors, proportions and clear space; use to identify the affiliation without implying institutional endorsement.",
+      "sha256": "2cb61f339af6d378bccaba83fe1636151c5d7e421a720f7781305f9171a4eff8",
+      "bytes": 7239,
+      "modifications": "None; downloaded artwork copied byte-for-byte.",
+      "alpha_bounds": [
+        31,
+        19,
+        161,
+        173
+      ],
+      "validation": {
+        "parse_or_decode": "passed",
+        "visual_preview": "reviewed separately in /private/tmp/andrew-affiliation-assets/final-preview.png",
+        "external_image_or_script_dependencies": false
+      }
+    },
+    {
+      "institution": "McGill University",
+      "filename": "mcgill-logo.svg",
+      "format": "image/svg+xml",
+      "dimensions": [
+        165.667,
+        43.5
+      ],
+      "view_box": "0 0 165.667 43.5",
+      "source_url": "https://www.mcgill.ca/visual-identity/sites/all/themes/moriarty/images/logo-red.svg",
+      "source_page": "https://www.mcgill.ca/visual-identity/download-mcgill-logo",
+      "discovery_url": "https://www.mcgill.ca/visual-identity/files/visual-identity/css/css_LC0rPQV735pKqgdiUdgzMGdiRg_NN0fFpD1bTjKZ_rU.css",
+      "usage_note": "Complete official logo retained because the visual identity guide normally requires shield and wordmark together. Guide calls for clear space of half the shield width, shield width at least 0.25 inches and generally wordmark width at least 1 inch. The public download page asks third parties to request permission; source availability is not a license.",
+      "usage_reference": "https://www.mcgill.ca/visual-identity/visual-identity-guide",
+      "sha256": "5bf61dd962fc131ba5ceeec9391777ec98cd3c09864af8b2e2089a3e074b3774",
+      "bytes": 15675,
+      "modifications": "None; downloaded artwork copied byte-for-byte.",
+      "validation": {
+        "parse_or_decode": "passed",
+        "visual_preview": "reviewed separately in /private/tmp/andrew-affiliation-assets/final-preview.png",
+        "external_image_or_script_dependencies": false
+      }
+    },
+    {
+      "institution": "Lawrence Livermore National Laboratory",
+      "filename": "llnl-mark.svg",
+      "format": "image/svg+xml",
+      "dimensions": null,
+      "view_box": "0 0 406.1 401.6",
+      "source_url": "https://software.llnl.gov/assets/images/logomark-llnl.svg",
+      "source_page": "https://software.llnl.gov/",
+      "usage_note": "Official Software Portal SVG icon, blue #0032a1. No explicit standalone reuse license was found on the source page; preserve the mark and use for factual affiliation identification.",
+      "sha256": "e04787a3c306a9fcc7331a66b4e46a7d4a44d2e45969cdf51471a4f3a380b322",
+      "bytes": 838,
+      "modifications": "None; downloaded artwork copied byte-for-byte.",
+      "validation": {
+        "parse_or_decode": "passed",
+        "visual_preview": "reviewed separately in /private/tmp/andrew-affiliation-assets/final-preview.png",
+        "external_image_or_script_dependencies": false,
+        "preview_note": "PyMuPDF ignores the source CSS class; the temporary preview gives paths the exact declared #0032a1 fill explicitly. Repository SVG is byte-identical to the official source."
+      }
+    }
+  ]
+}

@@ -64,7 +64,7 @@
     "batch_fraction": 0.5,
     "prediction": "One original Volterra prediction is drawn for all four n values within each method. The predictions differ between the two methods.",
     "caution": "The original bands need not be nested, symmetric, centered on the prediction, or contain it at every iteration. They are confidence bands, not individual trajectories.",
-    "neighboring_spectrum": "The neighboring Marchenko–Pastur spectrum is a separate finite-dimensional illustration with its own specified covariance and aspect ratio. Sharing the sample-size presentation clock does not identify it with the experiment that generated these paper bands."
+    "neighboring_spectrum": "The neighboring Marchenko\u2013Pastur spectrum is a separate finite-dimensional illustration with its own specified covariance and aspect ratio. Sharing the sample-size presentation clock does not identify it with the experiment that generated these paper bands."
   },
   "shape_counts": {
     "prediction_vertices": 25,
@@ -83,31 +83,73 @@
     "animation": "Smoothstep opacity-only crossfades and holds between the four original confidence polygons in n=64,256,1024,4096 order. Each band opacity is proportional only to its shared-clock weight; inactive bands have exactly zero opacity. The original prediction stays visible throughout the fade/reset. No intermediate sample sizes or coordinate interpolation between bands.",
     "static": "Only the original n=4096 confidence polygon plus the unchanged prediction; all other bands have zero opacity.",
     "scale": "Original plot aspect ratio and logarithmic vertical-coordinate mapping are retained.",
-    "period_seconds": 16,
+    "period_seconds": 9.6,
     "timeline_seconds": [
-      { "from": 0, "to": 0.6, "action": "fade in n=64" },
-      { "from": 0.6, "to": 3.2, "action": "hold n=64" },
-      { "from": 3.2, "to": 4.4, "action": "crossfade n=64 to n=256" },
-      { "from": 4.4, "to": 7, "action": "hold n=256" },
-      { "from": 7, "to": 8.2, "action": "crossfade n=256 to n=1024" },
-      { "from": 8.2, "to": 10.8, "action": "hold n=1024" },
-      { "from": 10.8, "to": 12, "action": "crossfade n=1024 to n=4096" },
-      { "from": 12, "to": 14.6, "action": "hold n=4096" },
-      { "from": 14.6, "to": 15.4, "action": "fade out n=4096" },
-      { "from": 15.4, "to": 16, "action": "all confidence bands invisible; prediction remains visible; reset label is n=64" }
+      {
+        "from": 0,
+        "to": 0.35,
+        "action": "hold n=64"
+      },
+      {
+        "from": 0.35,
+        "to": 2.55,
+        "action": "crossfade n=64 to n=256"
+      },
+      {
+        "from": 2.55,
+        "to": 2.9,
+        "action": "hold n=256"
+      },
+      {
+        "from": 2.9,
+        "to": 5.1,
+        "action": "crossfade n=256 to n=1024"
+      },
+      {
+        "from": 5.1,
+        "to": 5.45,
+        "action": "hold n=1024"
+      },
+      {
+        "from": 5.45,
+        "to": 7.65,
+        "action": "crossfade n=1024 to n=4096"
+      },
+      {
+        "from": 7.65,
+        "to": 8.5,
+        "action": "hold n=4096"
+      },
+      {
+        "from": 8.5,
+        "to": 9,
+        "action": "fade out n=4096"
+      },
+      {
+        "from": 9,
+        "to": 9.5,
+        "action": "fade in n=64"
+      },
+      {
+        "from": 9.5,
+        "to": 9.6,
+        "action": "hold n=64 across loop boundary"
+      }
     ],
     "default_canvas": [
       170,
       130
     ],
-    "maximum_dpr": 2
+    "maximum_dpr": 2,
+    "progress_marker": "A shared marker tracks weighted checkpoint index. It represents presentation progress, not an intermediate computed sample size.",
+    "reduced_motion": "Initially show the largest-size still, with an explicit Play motion opt-in. Pausing after opt-in freezes the dynamic phase."
   },
   "verification": {
     "source_normalized_vertices": "exact",
     "original_vs_reconstructed_geometry_pixel_difference": 0,
     "mapped_vertex_error_px": 0,
     "shared_clock_weight_samples_checked": 16001,
-    "shared_clock_explicit_stage_cases_checked": 21,
+    "shared_clock_explicit_stage_cases_checked": 22,
     "inactive_band_opacity": "exactly zero",
     "static_final_band_only": true,
     "finite_framing_checked_at": [
@@ -137,6 +179,7 @@
       ]
     ],
     "reproducible_extraction": "/Users/andrewcheng/mambaforge/bin/python /private/tmp/andrew-site-motion-v3/extract-volterra.py",
-    "reproducible_renderer_check": "node /private/tmp/andrew-site-motion-v4/check-growth-volterra.cjs /Users/andrewcheng/Documents/andrew-website/andrewncheng.github.io"
+    "reproducible_renderer_check": "node /private/tmp/andrew-site-motion-v5/check-growth-volterra.cjs /Users/andrewcheng/Documents/andrew-website/andrewncheng.github.io",
+    "shared_progress_marker": "finite, normalized, monotonic across checkpoint growth; fades out before loop reset"
   }
 }
