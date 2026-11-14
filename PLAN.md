@@ -86,3 +86,8 @@ Original SVGs and source hashes/crop coordinates are recorded in images/research
 - The nine existing transactional panel/playback checks still pass; both scripts pass syntax checks. HTML IDs/ARIA/local assets, CSS parsing, whitespace, and all new source-image hashes passed.
 - Chrome visually confirmed the full-width Inner Jev architecture, and the page accessibility state exposed the RFM random-baseline table and selected t=0 control. Further native interaction attempts were interrupted by concurrent window changes and one tool timeout. Do not describe this Figure 1 revision as fully visually checked on mobile; the preceding whole-site 390x844 check remains valid for that earlier revision.
 - The preceding whole-site update was published as f7d4386214c33a36be5b03e1cb583d9a5727dd38; GitHub Pages reported built, and all 11 checked live assets matched local hashes. Evidence: /private/tmp/andrew-website-papers/qa/portfolio-deployment.json. Verify this Figure 1 revision independently after push, recording /private/tmp/andrew-website-papers/qa/figure1-deployment.json.
+
+## Revision — Plain-language Exact Dynamics description, 2026-11-14
+- At the user's request, rewrote the Exact Dynamics paper description around alternating ridge regression and AGOP feature updates, followed by feature evolution and sample requirements. Used the paper's term "multi-output regression."
+- Checked the mechanism and scope against the original PDF abstract and introduction (pages 1–2). This is an explanation of the analyzed method, not a claim of a new algorithm. Figure captions, plots, and interactions are unchanged.
+- Verified the exact text replacement and CRLF-aware whitespace; publish and verify the live HTML.
