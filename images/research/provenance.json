@@ -1,0 +1,271 @@
+{
+  "note": "Source figure geometry is preserved. Only identifiers and data-series metadata were added for website interaction; no scientific values were generated or interpolated.",
+  "asset_mapping": {
+    "geodesic-programming.svg": "dgcp-expression-tree.svg",
+    "structured-regularization.svg": "spd-gaussian-likelihood-both.svg",
+    "structured-regularization-small.svg": "spd-gaussian-likelihood-n100-d30.svg",
+    "structured-regularization-large.svg": "spd-gaussian-likelihood-n1500-d100.svg",
+    "minibatch-dynamics.svg": "minibatch-figure1.svg",
+    "minibatch-momentum.svg": "minibatch-sgd.svg",
+    "minibatch-nesterov.svg": "minibatch-nesterov.svg",
+    "momentum.svg": "momentum-figure4.svg",
+    "momentum-085.svg": "momentum-batch-085.svg",
+    "momentum-070.svg": "momentum-batch-070.svg",
+    "momentum-050.svg": "momentum-batch-050.svg",
+    "momentum-025.svg": "momentum-batch-025.svg"
+  },
+  "geometry_papers": {
+    "dgcp_expression_tree": {
+      "source": "dgcp-2407.05261.pdf",
+      "source_url": "https://arxiv.org/pdf/2407.05261v2",
+      "page_1_based": 22,
+      "figure": 2,
+      "crop_points": [
+        152,
+        65,
+        459,
+        300
+      ],
+      "svg": "dgcp-expression-tree.svg",
+      "sha256": "db58bffc7ec1435cd701c743074c731f158d053f99a99d56a5a6ec0c548ba8f4",
+      "caption_summary": "Expression tree for the Brascamp-Lieb objective; atomic properties propagate upward and certify the root as GConvex.",
+      "source_tex": "dgcp-source/arxiv_v2.tex",
+      "source_tex_lines": [
+        817,
+        860
+      ],
+      "interaction": "Highlight inputs, atomic operations, composed branches, then the root; this illustrates symbolic verification rather than a live optimizer.",
+      "accuracy_constraint": "Do not make a universal positivity claim for logdet based on the source schematic sign labels."
+    },
+    "spd_gaussian_likelihood": {
+      "source_url": "https://arxiv.org/pdf/2410.09660v1",
+      "page_1_based": 40,
+      "figure": 7,
+      "panels": [
+        {
+          "source": "Research/spd_arxiv/figuresV2/Gaussian_MLE/cccp_gaussianMLE_30.pdf",
+          "source_page_1_based": 1,
+          "n": 100,
+          "d": 30,
+          "crop_points": [
+            0.0,
+            0.0,
+            864.0,
+            648.0
+          ],
+          "svg": "spd-gaussian-likelihood-n100-d30.svg",
+          "sha256": "b205676fc512a9a4390356263f383607da116a545c623d559d461c1df866201d",
+          "raster_images": 0,
+          "vector_drawings": 445
+        },
+        {
+          "source": "Research/spd_arxiv/figuresV2/Gaussian_MLE/cccp_gaussianMLE_100.pdf",
+          "source_page_1_based": 1,
+          "n": 1500,
+          "d": 100,
+          "crop_points": [
+            0.0,
+            0.0,
+            864.0,
+            648.0
+          ],
+          "svg": "spd-gaussian-likelihood-n1500-d100.svg",
+          "sha256": "e02a421cb3f382e4c762bc32ba7ff1d2204d27d795069d415ffcf3dd0544be63",
+          "raster_images": 0,
+          "vector_drawings": 334
+        }
+      ],
+      "caption_summary": "Gaussian optimistic likelihood with regularization strength beta; left n=100,d=30; right n=1500,d=100; initialized at the supplied covariance estimate.",
+      "series_colors": {
+        "beta_0": "#1f77b4",
+        "beta_1": "#ff7f0e",
+        "beta_2": "#2ca02c",
+        "beta_10": "#d62728",
+        "sample_covariance": "#ff0000",
+        "estimated_covariance": "#0000ff"
+      },
+      "axes": {
+        "x": "Time (s)",
+        "y": "Distance to true covariance (logarithmic)"
+      },
+      "table_2_columns": [
+        "beta",
+        "Frobenius distance to sample covariance S",
+        "Frobenius distance to supplied estimate Sigma_hat"
+      ],
+      "table_2": {
+        "n100_d30": [
+          [
+            0,
+            0.149,
+            412.009
+          ],
+          [
+            1,
+            116.545,
+            296.022
+          ],
+          [
+            2,
+            178.14,
+            234.583
+          ],
+          [
+            10,
+            316.485,
+            96.094
+          ]
+        ],
+        "n1500_d100": [
+          [
+            0,
+            21.741,
+            780.233
+          ],
+          [
+            1,
+            231.662,
+            566.262
+          ],
+          [
+            2,
+            351.602,
+            446.663
+          ],
+          [
+            10,
+            617.255,
+            180.798
+          ]
+        ]
+      },
+      "interpretation_constraint": "Higher beta pulls toward the supplied estimate, not necessarily toward truth. Time horizons differ; do not equate x coordinates across panels. Table2 distances are to S and Sigma_hat, not the truth-error y-axis."
+    }
+  },
+  "dynamics_papers": [
+    {
+      "asset": "minibatch-figure1",
+      "source": "minibatch.pdf",
+      "source_sha256": "5e61d6c1b7f98c6fcfeeff0e911c3e21e432fd6861bd6fecc0324ac3fe867fc1",
+      "page_index": 4,
+      "page_number": 5,
+      "crop_points_top_left": [
+        83,
+        91,
+        519,
+        218
+      ],
+      "svg_bytes": 76947,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    },
+    {
+      "asset": "minibatch-sgd",
+      "source": "minibatch.pdf",
+      "source_sha256": "5e61d6c1b7f98c6fcfeeff0e911c3e21e432fd6861bd6fecc0324ac3fe867fc1",
+      "page_index": 4,
+      "page_number": 5,
+      "crop_points_top_left": [
+        83,
+        91,
+        278,
+        218
+      ],
+      "svg_bytes": 39189,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    },
+    {
+      "asset": "minibatch-nesterov",
+      "source": "minibatch.pdf",
+      "source_sha256": "5e61d6c1b7f98c6fcfeeff0e911c3e21e432fd6861bd6fecc0324ac3fe867fc1",
+      "page_index": 4,
+      "page_number": 5,
+      "crop_points_top_left": [
+        324,
+        91,
+        519,
+        218
+      ],
+      "svg_bytes": 43653,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    },
+    {
+      "asset": "momentum-figure4",
+      "source": "momentum.pdf",
+      "source_sha256": "b1662cf8430c0c9a63c51178d8ed0511fc761b3dcc76e6c2275448b97380e3bc",
+      "page_index": 6,
+      "page_number": 7,
+      "crop_points_top_left": [
+        107,
+        70,
+        507,
+        268
+      ],
+      "svg_bytes": 2294657,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    },
+    {
+      "asset": "momentum-batch-085",
+      "source": "momentum.pdf",
+      "source_sha256": "b1662cf8430c0c9a63c51178d8ed0511fc761b3dcc76e6c2275448b97380e3bc",
+      "page_index": 6,
+      "page_number": 7,
+      "crop_points_top_left": [
+        373,
+        70,
+        507,
+        169
+      ],
+      "svg_bytes": 463772,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    },
+    {
+      "asset": "momentum-batch-070",
+      "source": "momentum.pdf",
+      "source_sha256": "b1662cf8430c0c9a63c51178d8ed0511fc761b3dcc76e6c2275448b97380e3bc",
+      "page_index": 6,
+      "page_number": 7,
+      "crop_points_top_left": [
+        107,
+        168,
+        240,
+        268
+      ],
+      "svg_bytes": 453968,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    },
+    {
+      "asset": "momentum-batch-050",
+      "source": "momentum.pdf",
+      "source_sha256": "b1662cf8430c0c9a63c51178d8ed0511fc761b3dcc76e6c2275448b97380e3bc",
+      "page_index": 6,
+      "page_number": 7,
+      "crop_points_top_left": [
+        240,
+        168,
+        373,
+        268
+      ],
+      "svg_bytes": 382950,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    },
+    {
+      "asset": "momentum-batch-025",
+      "source": "momentum.pdf",
+      "source_sha256": "b1662cf8430c0c9a63c51178d8ed0511fc761b3dcc76e6c2275448b97380e3bc",
+      "page_index": 6,
+      "page_number": 7,
+      "crop_points_top_left": [
+        373,
+        168,
+        507,
+        268
+      ],
+      "svg_bytes": 298219,
+      "description": "Direct crop of original PDF drawing objects; no curves, axes, colors, or values regenerated."
+    }
+  ],
+  "source_urls": {
+    "minibatch.pdf": "https://opt-ml.org/papers/2024/paper25.pdf",
+    "momentum.pdf": "https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf"
+  }
+}

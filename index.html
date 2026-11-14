@@ -83,14 +83,16 @@
     <!-- CSS: Bootstrap and Custom Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/research.css" />
+    <script src="assets/js/research-figures.js" defer></script>
 
     <!-- MathJax for LaTeX Rendering -->
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJHtvGhmr9F3bdeFk8zr8K+U2K2eEt4ybuVxX1rt/TxUpPEsmf9vYsmXKp4YLvo4" crossorigin="anonymous"></script>
+<script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -206,61 +208,207 @@
 
 
 <!-- Research Section -->
-<section id="research" class="wrapper style2 py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Research</h2>
-
-        <!-- Year 2024 -->
-        <h3 class="text-center text-muted mb-4">2024</h3>
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-10">
-                <h4>Structured Regularization on the Positive Definite Manifold</h4>
-                <p style="color: white;">Authors: Andrew Cheng, Melanie Weber</p> 
-                <p>
-                    We developed a framework for structured regularization on the positive definite manifold to induce sparsity in the solution or incorporate side information.  
-                    Our framework preserves properties that allow provable non-asymptotic convergence to the global optimum of non-convex problems on the SPD manifold.
-                </p>
-                <a href="https://arxiv.org/pdf/2410.09660" target="_blank" class="btn btn-primary mt-3">Under Review</a>
+<section id="research" aria-labelledby="research-heading">
+    <div class="research-inner">
+        <header class="research-header">
+            <div>
+                <p class="research-eyebrow">Papers &amp; preprints</p>
+                <h2 id="research-heading">Research</h2>
+                <p class="research-intro">Geometry, optimization, and learning dynamics.</p>
             </div>
-        </div>
+            <a class="research-scholar" href="https://scholar.google.com/citations?user=csPvpukAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+        </header>
 
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-10">
-                <h4>Disciplined Geodesically Convex Programming</h4>
-                <p style="color: white;">Authors: Andrew Cheng, Vaibhav Dixit, Melanie Weber</p> 
-                <p>
-                    We extended the theory of disciplined convex programming to the geodesically convex setting, providing a framework for optimization on Cartan-Hadamard manifolds and focused on the symmetric positive definite manifold.
-                </p>
-                <a href="https://web3.arxiv.org/pdf/2407.05261" target="_blank" class="btn btn-primary mt-3">Under Review</a>
-            </div>
-        </div>
+        <div class="publication-list">
+            <article class="paper" aria-labelledby="paper-geodesic-title">
+                <figure class="paper-visual" data-figure-explorer="" data-figure-title="Geodesic convexity verification" data-full-src="images/research/geodesic-programming.svg" data-full-alt="Original expression tree showing symbolic curvature verification, from matrix inputs and atomic operations to a geodesically convex expression." data-full-caption="Follow the original expression tree from its inputs to a geodesic-convexity certificate." data-source="https://arxiv.org/pdf/2407.05261v2#page=22">
+                    <div class="figure-stage">
+                        <div class="figure-graphic" data-figure-graphic id="figure-geodesic">
+                            <img aria-describedby="caption-geodesic" data-figure-image="" src="images/research/geodesic-programming.svg" alt="Original expression tree showing symbolic curvature verification, from matrix inputs and atomic operations to a geodesically convex expression." width="307" height="235" loading="lazy" decoding="async" />
+                            <div class="figure-highlights" data-verification-highlights aria-hidden="true"></div>
+                        </div>
+                    </div>
+                    <div class="figure-tools">
+                        <button type="button" class="figure-button figure-action" data-verification-next data-enhancement hidden>Follow verification <span aria-hidden="true">→</span></button>
+                        <div class="figure-options figure-steps" role="group" aria-label="Verification stage" data-verification-stages hidden>
+                            <button type="button" class="figure-button" data-verification-step="0" data-step-label="Inputs" data-step-explanation="Start with matrix variables X, the given matrix A, and a scalar constant." data-highlight="[[35.4,90.1,5.7,8],[66.5,90.1,5.6,8],[88.8,90.1,10,8],[1.3,63,7.4,8.5]]" aria-label="Step 1: Inputs" aria-pressed="false" aria-controls="figure-geodesic">1</button>
+                            <button type="button" class="figure-button" data-verification-step="1" data-step-label="Atoms" data-step-explanation="Use the known curvature properties of log-determinant and conjugation atoms." data-highlight="[[25,60.7,26.5,12.8],[67.8,60.7,27.5,12.8]]" aria-label="Step 2: Atoms" aria-pressed="false" aria-controls="figure-geodesic">2</button>
+                            <button type="button" class="figure-button" data-verification-step="2" data-step-label="Composition" data-step-explanation="Propagate curvature through multiplication and log-determinant composition." data-highlight="[[7.8,31.3,27.6,13.2],[67.8,31.3,27.5,13.2]]" aria-label="Step 3: Composition" aria-pressed="false" aria-controls="figure-geodesic">3</button>
+                            <button type="button" class="figure-button" data-verification-step="3" data-step-label="Certificate" data-step-explanation="The composition rules certify that the complete expression is geodesically convex." data-highlight="[[37.4,1.9,28.5,13.5]]" aria-label="Step 4: Certificate" aria-pressed="false" aria-controls="figure-geodesic">4</button>
+                        </div>
+                        <a class="figure-expand" data-expand-figure href="images/research/geodesic-programming.svg" target="_blank" rel="noopener noreferrer" aria-label="Expand Geodesic convexity verification">Expand <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="figure-step-explanation" data-verification-explanation aria-live="polite" aria-atomic="true" hidden>
+                        <strong data-step-title></strong>
+                        <p data-step-description></p>
+                    </div>
+                    <figcaption id="caption-geodesic">
+                        <p data-figure-caption>Follow the original expression tree from its inputs to a geodesic-convexity certificate.</p>
+                        <a class="figure-source" href="https://arxiv.org/pdf/2407.05261v2#page=22" target="_blank" rel="noopener noreferrer">Figure 2 · source paper <span aria-hidden="true">↗</span></a>
+                    </figcaption>
+                    <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
+                </figure>
+                <div class="paper-content">
+                    <p class="paper-meta"><span class="paper-status" data-status="published">Mathematical Programming Computation</span><time datetime="2026">2026</time></p>
+                    <h3 id="paper-geodesic-title">Disciplined Geodesically Convex Programming: A Symbolic Framework for Verifying Geodesic Convexity</h3>
+                    <p class="paper-authors"><strong>Andrew N. Cheng</strong>, Vaibhav Dixit, Melanie Weber</p>
+                    <p class="paper-description">A symbolic framework for checking geodesic convexity on Hadamard manifolds. We identify composition rules and matrix-valued building blocks, and implement automated verification in the Julia package SymbolicAnalysis.jl.</p>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://doi.org/10.1007/s12532-026-00325-2" target="_blank" rel="noopener noreferrer" aria-label="Read Disciplined Geodesically Convex Programming: A Symbolic Framework for Verifying Geodesic Convexity">Read paper <span aria-hidden="true">↗</span></a>
+                        <a class="paper-link" href="https://arxiv.org/abs/2407.05261" target="_blank" rel="noopener noreferrer" aria-label="Read the preprint of Disciplined Geodesically Convex Programming">Preprint <span aria-hidden="true">↗</span></a>
+                        <a class="paper-link" href="https://github.com/Vaibhavdixit02/SymbolicAnalysis.jl" target="_blank" rel="noopener noreferrer" aria-label="View the code for Disciplined Geodesically Convex Programming">Code <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
 
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-10">
-                <h4>High Dimensional First Order Mini-Batch Algorithms on Quadratic Problem</h4>
-                <p style="color: white;">Authors: Andrew Cheng, Kiwon Lee, Courtney Paquette</p> 
-                <p>
-                   We show that general mini-batch first order algorithms (Nesterov acceleration, SGD+M, etc.) under <em>any</em> quadratic statistics 
-                   \( \mathcal{R}: \mathbb{R}^d \to \mathbb{R} \) concentrates around a deterministic quantity, which is the solution of the Volterra integral equation.
-				   Examples of quadratic statistics includes but not limited to: the random features model, training loss and excess risk for empirical risk minimization (in-distribution and generalization error) for ridge regression. By analyzing 
-				   the Volterra integral equation, we can analyze the optimal mini-batch size (i.e. critical batch size) and the optimal hyperparameters (learning rate, momentum, etc.) for the mini-batch algorithms.
-                </p>
-                <a href="Research/batch_opt.pdf" target="_blank" class="btn btn-primary mt-3">Workshop (Preprint soon)</a>
-            </div>
-        </div>
+            <article class="paper" aria-labelledby="paper-structured-title">
+                <figure class="paper-visual" data-figure-explorer="" data-figure-title="Regularization with side information" data-full-src="images/research/structured-regularization.svg" data-full-alt="Both original Gaussian optimistic-likelihood plots, comparing distance to the true covariance against time for two dataset sizes and four regularization strengths." data-full-caption="Both dataset sizes from the published Gaussian optimistic-likelihood experiment. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance." data-source="https://arxiv.org/pdf/2410.09660v1#page=40" data-inline-svg="">
+                    <div class="figure-stage">
+                        <div class="figure-graphic" data-figure-graphic id="figure-structured">
+                            <img aria-describedby="caption-structured" data-figure-image="" src="images/research/structured-regularization-small.svg" alt="Original Gaussian optimistic-likelihood plot for n = 100 and d = 30. The y-axis is distance to the true covariance and the x-axis is time in seconds." width="864" height="648" loading="lazy" decoding="async" />
+                        </div>
+                    </div>
+                    <div class="figure-tools">
+                        <div class="figure-options" role="group" aria-label="Dataset size" data-enhancement hidden>
+                            <span class="figure-control-label">Dataset size</span>
+                            <button type="button" class="figure-button" data-panel-src="images/research/structured-regularization-small.svg" data-panel-alt="Original Gaussian optimistic-likelihood plot for n = 100 and d = 30. The y-axis is distance to the true covariance and the x-axis is time in seconds." data-panel-width="864" data-panel-height="648" data-panel-caption="Gaussian optimistic likelihood, n = 100 and d = 30. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance." aria-pressed="true" aria-controls="figure-structured">n = 100, d = 30</button>
+                            <button type="button" class="figure-button" data-panel-src="images/research/structured-regularization-large.svg" data-panel-alt="Original Gaussian optimistic-likelihood plot for n = 1500 and d = 100. The y-axis is distance to the true covariance and the x-axis is time in seconds." data-panel-width="864" data-panel-height="648" data-panel-caption="Gaussian optimistic likelihood, n = 1500 and d = 100. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance." aria-pressed="false" aria-controls="figure-structured">n = 1500, d = 100</button>
+                        </div>
+                        <a class="figure-expand" data-expand-figure href="images/research/structured-regularization.svg" target="_blank" rel="noopener noreferrer" aria-label="Expand Regularization with side information">Expand <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="figure-options figure-series-options" role="group" aria-label="Highlight β" data-series-controls hidden>
+                        <span class="figure-control-label">Highlight β</span>
+                        <button type="button" class="figure-button" data-focus-series="all" data-focus-label="all regularization strengths" aria-label="Highlight all regularization strengths" aria-pressed="true" aria-controls="figure-structured">All</button>
+                        <button type="button" class="figure-button" data-focus-series="beta-0" data-focus-label="β = 0" aria-label="Highlight β = 0" aria-pressed="false" aria-controls="figure-structured">0</button>
+                        <button type="button" class="figure-button" data-focus-series="beta-1" data-focus-label="β = 1" aria-label="Highlight β = 1" aria-pressed="false" aria-controls="figure-structured">1</button>
+                        <button type="button" class="figure-button" data-focus-series="beta-2" data-focus-label="β = 2" aria-label="Highlight β = 2" aria-pressed="false" aria-controls="figure-structured">2</button>
+                        <button type="button" class="figure-button" data-focus-series="beta-10" data-focus-label="β = 10" aria-label="Highlight β = 10" aria-pressed="false" aria-controls="figure-structured">10</button>
+                    </div>
+                    <figcaption id="caption-structured">
+                        <p data-figure-caption>Gaussian optimistic likelihood, n = 100 and d = 30. Increasing β pulls the solution toward the supplied estimate, which need not be the true covariance.</p>
+                        <a class="figure-source" href="https://arxiv.org/pdf/2410.09660v1#page=40" target="_blank" rel="noopener noreferrer">Figure 7 · source paper <span aria-hidden="true">↗</span></a>
+                    </figcaption>
+                    <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
+                </figure>
+                <div class="paper-content">
+                    <p class="paper-meta"><span class="paper-status" data-status="published">IMA Journal of Numerical Analysis</span><time datetime="2026">2026</time></p>
+                    <h3 id="paper-structured-title">Structured regularization for constrained optimization on the SPD manifold</h3>
+                    <p class="paper-authors"><strong>Andrew Cheng</strong>, Melanie Weber</p>
+                    <p class="paper-description">We design regularizers from symmetric gauge functions to handle constraints on positive definite matrices. These regularizers can preserve convexity or difference-of-convex structure, enabling efficient unconstrained optimization on the manifold.</p>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://doi.org/10.1093/imanum/drag010" target="_blank" rel="noopener noreferrer" aria-label="Read Structured regularization for constrained optimization on the SPD manifold">Read paper <span aria-hidden="true">↗</span></a>
+                        <a class="paper-link" href="https://arxiv.org/abs/2410.09660" target="_blank" rel="noopener noreferrer" aria-label="Read the preprint of Structured regularization for constrained optimization on the SPD manifold">Preprint <span aria-hidden="true">↗</span></a>
+                        <a class="paper-link" href="https://doi.org/10.1109/Allerton63246.2024.10735290" target="_blank" rel="noopener noreferrer">Related Allerton paper <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Year 2022 -->
-        <h3 class="text-center text-muted mb-4">2022</h3>
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-10">
-                <h4>Trajectory of Mini-Batch Momentum</h4>
-				<p style="color: white;">Authors: Kiwon Lee, Andrew Cheng, Elliot Paquette, Courtney Paquette</p> 
-                <p>
-                    This work, presented at <strong>NeurIPS 2022</strong>, explores the dynamics of mini-batch momentum in optimization algorithms used for machine learning. The research provides insights into the trajectory of momentum in stochastic optimization and its convergence properties.
-                </p>
-                <a href="https://openreview.net/pdf?id=z9poo2GhOh6" target="_blank" class="btn btn-primary mt-3">Read the Full Paper (NeurIPS 2022)</a>
-            </div>
+            <article class="paper" aria-labelledby="paper-minibatch-title">
+                <figure class="paper-visual" data-figure-explorer="" data-figure-title="Mini-batch dynamics and deterministic predictions" data-full-src="images/research/minibatch-dynamics.svg" data-full-alt="Both original mini-batch learning-dynamics panels, for SGD with momentum and Nesterov, with 90% bands for four sample sizes and the deterministic Volterra prediction." data-full-caption="Both published methods: 90% bands for n = 64, 256, 1024, and 4096 around the deterministic Volterra prediction." data-source="https://opt-ml.org/papers/2024/paper25.pdf#page=5" data-inline-svg="">
+                    <div class="figure-stage">
+                        <div class="figure-graphic" data-figure-graphic id="figure-minibatch">
+                            <img aria-describedby="caption-minibatch" data-figure-image="" src="images/research/minibatch-momentum.svg" alt="Original SGD-with-momentum learning-dynamics panel, with 90% bands for n = 64, 256, 1024, and 4096 and a deterministic Volterra prediction." width="195" height="127" loading="lazy" decoding="async" />
+                        </div>
+                    </div>
+                    <div class="figure-tools">
+                        <div class="figure-options" role="group" aria-label="Method" data-enhancement hidden>
+                            <span class="figure-control-label">Method</span>
+                            <button type="button" class="figure-button" data-panel-src="images/research/minibatch-momentum.svg" data-panel-alt="Original SGD-with-momentum learning-dynamics panel, with 90% bands for n = 64, 256, 1024, and 4096 and a deterministic Volterra prediction." data-panel-width="195" data-panel-height="127" data-panel-caption="SGD + momentum: published 90% bands for n = 64, 256, 1024, and 4096 around the deterministic Volterra prediction." aria-pressed="true" aria-controls="figure-minibatch">SGD + momentum</button>
+                            <button type="button" class="figure-button" data-panel-src="images/research/minibatch-nesterov.svg" data-panel-alt="Original stochastic-Nesterov learning-dynamics panel, with 90% bands for n = 64, 256, 1024, and 4096 and a deterministic Volterra prediction." data-panel-width="195" data-panel-height="127" data-panel-caption="Nesterov: published 90% bands for n = 64, 256, 1024, and 4096 around the deterministic Volterra prediction." aria-pressed="false" aria-controls="figure-minibatch">Nesterov</button>
+                        </div>
+                        <a class="figure-expand" data-expand-figure href="images/research/minibatch-dynamics.svg" target="_blank" rel="noopener noreferrer" aria-label="Expand Mini-batch dynamics and deterministic predictions">Expand <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="figure-options figure-series-options" role="group" aria-label="Highlight n" data-series-controls hidden>
+                        <span class="figure-control-label">Highlight n</span>
+                        <button type="button" class="figure-button" data-focus-series="all" data-focus-label="all sample sizes" aria-label="Highlight all sample sizes" aria-pressed="true" aria-controls="figure-minibatch">All</button>
+                        <button type="button" class="figure-button" data-focus-series="n-64" data-focus-label="n = 64" aria-label="Highlight n = 64" aria-pressed="false" aria-controls="figure-minibatch">64</button>
+                        <button type="button" class="figure-button" data-focus-series="n-256" data-focus-label="n = 256" aria-label="Highlight n = 256" aria-pressed="false" aria-controls="figure-minibatch">256</button>
+                        <button type="button" class="figure-button" data-focus-series="n-1024" data-focus-label="n = 1024" aria-label="Highlight n = 1024" aria-pressed="false" aria-controls="figure-minibatch">1024</button>
+                        <button type="button" class="figure-button" data-focus-series="n-4096" data-focus-label="n = 4096" aria-label="Highlight n = 4096" aria-pressed="false" aria-controls="figure-minibatch">4096</button>
+                    </div>
+                    <figcaption id="caption-minibatch">
+                        <p data-figure-caption>SGD + momentum: published 90% bands for n = 64, 256, 1024, and 4096 around the deterministic Volterra prediction.</p>
+                        <a class="figure-source" href="https://opt-ml.org/papers/2024/paper25.pdf#page=5" target="_blank" rel="noopener noreferrer">Figure 1 · source paper <span aria-hidden="true">↗</span></a>
+                    </figcaption>
+                    <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
+                </figure>
+                <div class="paper-content">
+                    <p class="paper-meta"><span class="paper-status" data-status="workshop">NeurIPS OPT Workshop</span><time datetime="2024">2024</time></p>
+                    <h3 id="paper-minibatch-title">High Dimensional First Order Mini-Batch Algorithms on Quadratic Problems</h3>
+                    <p class="paper-authors"><strong>Andrew Cheng</strong>, Kiwon Lee, Courtney Paquette</p>
+                    <p class="paper-description">We characterize high-dimensional mini-batch learning dynamics for regularized least squares. A deterministic discrete Volterra equation describes quadratic statistics of SGD, stochastic Nesterov, and momentum methods.</p>
+                    <details class="paper-details">
+                        <summary>Technical details</summary>
+                        <p>Under the assumptions in the paper, quadratic statistics \( \mathcal{R}: \mathbb{R}^d \to \mathbb{R} \), including training loss and excess risk, concentrate around deterministic predictions as sample size and dimension grow. The analysis concerns \( \ell_2 \)-regularized least-squares problems.</p>
+                    </details>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://opt-ml.org/papers/2024/paper25.pdf" target="_blank" rel="noopener noreferrer" aria-label="Read High Dimensional First Order Mini-Batch Algorithms on Quadratic Problems">Read paper <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="paper" aria-labelledby="paper-momentum-title">
+                <figure class="paper-visual" data-figure-explorer="" data-figure-title="Momentum across batch fractions" data-full-src="images/research/momentum.svg" data-full-alt="The six original parameter-space panels from Figure 4. Horizontal axes show momentum Δ and vertical axes show learning rate γ; color scales and axis ranges differ by panel." data-full-caption="All six published panels. Horizontal axis: momentum Δ. Vertical axis: learning rate γ. Axes and color scales vary by setting." data-source="https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf#page=7">
+                    <div class="figure-stage">
+                        <div class="figure-graphic" data-figure-graphic id="figure-momentum">
+                            <img aria-describedby="caption-momentum" data-figure-image="" src="images/research/momentum-085.svg" alt="Original parameter-space panel for batch fraction 0.85. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." width="134" height="99" loading="lazy" decoding="async" />
+                        </div>
+                    </div>
+                    <div class="figure-tools">
+                        <div class="figure-options" role="group" aria-label="Batch fraction" data-enhancement hidden>
+                            <span class="figure-control-label">Batch fraction</span>
+                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-085.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.85. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="134" data-panel-height="99" data-panel-caption="Batch fraction 0.85. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="true" aria-controls="figure-momentum">0.85</button>
+                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-070.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.70. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="133" data-panel-height="100" data-panel-caption="Batch fraction 0.70. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="false" aria-controls="figure-momentum">0.70</button>
+                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-050.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.50. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="133" data-panel-height="100" data-panel-caption="Batch fraction 0.50. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="false" aria-controls="figure-momentum">0.50</button>
+                            <button type="button" class="figure-button" data-panel-src="images/research/momentum-025.svg" data-panel-alt="Original parameter-space panel for batch fraction 0.25. Horizontal axis: momentum Δ. Vertical axis: learning rate γ." data-panel-width="134" data-panel-height="100" data-panel-caption="Batch fraction 0.25. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting." aria-pressed="false" aria-controls="figure-momentum">0.25</button>
+                        </div>
+                        <a class="figure-expand" data-expand-figure href="images/research/momentum.svg" target="_blank" rel="noopener noreferrer" aria-label="Expand Momentum across batch fractions">Expand <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="figure-playback" data-enhancement hidden>
+                        <button type="button" class="figure-button figure-action" data-play-settings aria-pressed="false">Play settings</button>
+                        <span class="figure-control-note">Four original panels</span>
+                    </div>
+                    <figcaption id="caption-momentum">
+                        <p data-figure-caption>Batch fraction 0.85. Horizontal axis: momentum Δ; vertical axis: learning rate γ. Published panels; axes and color scales vary by setting.</p>
+                        <a class="figure-source" href="https://proceedings.neurips.cc/paper_files/paper/2022/file/efcb76ac1df9231a24893a957fcb9001-Paper-Conference.pdf#page=7" target="_blank" rel="noopener noreferrer">Figure 4 · source paper <span aria-hidden="true">↗</span></a>
+                    </figcaption>
+                    <span class="figure-announcement" data-figure-announcement aria-live="polite" aria-atomic="true"></span>
+                </figure>
+                <div class="paper-content">
+                    <p class="paper-meta"><span class="paper-status" data-status="published">NeurIPS</span><time datetime="2022">2022</time></p>
+                    <h3 id="paper-momentum-title">Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions</h3>
+                    <p class="paper-authors">Kiwon Lee, <strong>Andrew Cheng</strong>, Elliot Paquette, Courtney Paquette</p>
+                    <p class="paper-description">We describe how batch size controls momentum dynamics on high-dimensional least-squares problems. An implicit conditioning ratio identifies when mini-batch momentum can match the accelerated convergence rate of full-batch momentum.</p>
+                    <div class="paper-links">
+                        <a class="paper-link" href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/efcb76ac1df9231a24893a957fcb9001-Abstract-Conference.html" target="_blank" rel="noopener noreferrer" aria-label="Read Trajectory of Mini-Batch Momentum: Batch Size Saturation and Convergence in High Dimensions">Read paper <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
+    <dialog id="research-figure-dialog" class="figure-dialog" aria-labelledby="figure-dialog-title">
+        <header class="figure-dialog-header">
+            <div>
+                <h2 id="figure-dialog-title" data-dialog-title>Research figure</h2>
+                <p data-dialog-caption></p>
+            </div>
+            <button type="button" class="figure-button figure-close" data-dialog-close autofocus aria-label="Close expanded figure">Close <span aria-hidden="true">×</span></button>
+        </header>
+        <div class="figure-dialog-toolbar">
+            <div class="figure-options" role="group" aria-label="Figure view" data-dialog-views>
+                <button type="button" class="figure-button" data-dialog-view="selected" aria-pressed="true">Selected panel</button>
+                <button type="button" class="figure-button" data-dialog-view="full" aria-pressed="false">Complete figure</button>
+            </div>
+            <div class="figure-options" role="group" aria-label="Zoom level">
+                <button type="button" class="figure-button" data-dialog-zoom="fit" aria-pressed="true">Fit</button>
+                <button type="button" class="figure-button" data-dialog-zoom="2" aria-pressed="false">2×</button>
+                <button type="button" class="figure-button" data-dialog-zoom="3" aria-pressed="false">3×</button>
+            </div>
+            <a class="figure-source" data-dialog-source target="_blank" rel="noopener noreferrer">Source paper <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="figure-dialog-viewport" data-dialog-viewport tabindex="0" aria-label="Expanded figure; scroll to inspect when zoomed">
+            <img data-dialog-image alt="" />
+        </div>
+    </dialog>
 </section>
 
