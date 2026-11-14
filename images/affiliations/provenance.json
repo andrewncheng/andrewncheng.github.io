@@ -124,6 +124,26 @@
         "external_image_or_script_dependencies": false,
         "visual_preview": "reviewed in /private/tmp/andrew-affiliation-assets/company-final-preview.png"
       }
+    },
+    {
+      "institution": "Valence Labs",
+      "filename": "valence-mark.png",
+      "format": "image/png",
+      "dimensions": [
+        23,
+        26
+      ],
+      "source_url": "https://www.valencelabs.com/wp-content/uploads/2025/04/Clip-path-group.png",
+      "source_page": "https://www.valencelabs.com/",
+      "modifications": "None; official site icon copied byte-for-byte, accompanied by live-text company name.",
+      "sha256": "0bbc4f9da61123f9af313e71376c6420dd91d4b75884abdccef4c5906b8f623f",
+      "bytes": 1334,
+      "retrieved_on": "2026-11-14",
+      "validation": {
+        "decode": "passed",
+        "external_image_or_script_dependencies": false,
+        "visual_preview": "Original icon inspected. The full wordmark was not used: its mask/pattern cannot be accurately previewed by the available SVG renderers."
+      }
     }
   ]
 }

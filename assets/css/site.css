@@ -284,8 +284,8 @@ summary:focus-visible {
 .about-details {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
-    gap: 32px clamp(48px, 7vw, 96px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
+    gap: 32px clamp(40px, 5vw, 64px);
     padding-top: 31px;
     border-top: 1px solid var(--site-line);
 }
@@ -356,18 +356,24 @@ summary:focus-visible {
     object-fit: contain;
 }
 
-.about-details .background-experience {
-    margin-top: 20px;
-}
-
-.about-sidebar {
+.about-background {
     display: grid;
     align-content: start;
     gap: 30px;
 }
 
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 28px;
+}
+
+.about-details .affiliation-heading {
+    min-height: 56px;
+}
+
 .affiliation-wordmark-wide img {
-    width: 130px;
+    width: 120px;
 }
 
 .site-footer {
@@ -493,6 +499,13 @@ summary:focus-visible {
 @media (max-width: 480px) {
     .intro-portrait {
         width: 180px;
+    }
+}
+
+@media (max-width: 560px) {
+    .experience-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
     }
 }
 
