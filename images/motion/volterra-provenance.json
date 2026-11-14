@@ -58,12 +58,13 @@
       1024,
       4096
     ],
-    "dimension": "d/n is fixed; its numeric value is not stated in this caption.",
+    "dimension": "d/n is fixed. The numeric value and the covariance used for this figure were not identified in the paper or located original code; neither is inferred from related experiments.",
     "momentum": 0.8,
     "learning_rate": 0.5,
     "batch_fraction": 0.5,
     "prediction": "One original Volterra prediction is drawn for all four n values within each method. The predictions differ between the two methods.",
-    "caution": "The original bands need not be nested, symmetric, centered on the prediction, or contain it at every iteration. They are confidence bands, not individual trajectories."
+    "caution": "The original bands need not be nested, symmetric, centered on the prediction, or contain it at every iteration. They are confidence bands, not individual trajectories.",
+    "neighboring_spectrum": "The neighboring Marchenko–Pastur spectrum is a separate finite-dimensional illustration with its own specified covariance and aspect ratio. Sharing the sample-size presentation clock does not identify it with the experiment that generated these paper bands."
   },
   "shape_counts": {
     "prediction_vertices": 25,
@@ -76,12 +77,25 @@
   },
   "presentation": {
     "code": "assets/js/motion-volterra.js",
+    "shared_clock": "assets/js/motion-growth.js",
     "fallback": "images/motion/volterra.svg",
     "palette": "Original geometry recolored warm sage for bands and rust for the fixed prediction; stroke styling is adapted for the small header.",
-    "animation": "Opacity-only crossfades and holds between the four original confidence polygons in n=64,256,1024,4096 order, followed by a fade/reset. No intermediate sample sizes or coordinate interpolation between bands.",
-    "static": "All four original bands at restrained opacity plus the unchanged prediction.",
+    "animation": "Smoothstep opacity-only crossfades and holds between the four original confidence polygons in n=64,256,1024,4096 order. Each band opacity is proportional only to its shared-clock weight; inactive bands have exactly zero opacity. The original prediction stays visible throughout the fade/reset. No intermediate sample sizes or coordinate interpolation between bands.",
+    "static": "Only the original n=4096 confidence polygon plus the unchanged prediction; all other bands have zero opacity.",
     "scale": "Original plot aspect ratio and logarithmic vertical-coordinate mapping are retained.",
-    "period_seconds": 12,
+    "period_seconds": 16,
+    "timeline_seconds": [
+      { "from": 0, "to": 0.6, "action": "fade in n=64" },
+      { "from": 0.6, "to": 3.2, "action": "hold n=64" },
+      { "from": 3.2, "to": 4.4, "action": "crossfade n=64 to n=256" },
+      { "from": 4.4, "to": 7, "action": "hold n=256" },
+      { "from": 7, "to": 8.2, "action": "crossfade n=256 to n=1024" },
+      { "from": 8.2, "to": 10.8, "action": "hold n=1024" },
+      { "from": 10.8, "to": 12, "action": "crossfade n=1024 to n=4096" },
+      { "from": 12, "to": 14.6, "action": "hold n=4096" },
+      { "from": 14.6, "to": 15.4, "action": "fade out n=4096" },
+      { "from": 15.4, "to": 16, "action": "all confidence bands invisible; prediction remains visible; reset label is n=64" }
+    ],
     "default_canvas": [
       170,
       130
@@ -92,6 +106,10 @@
     "source_normalized_vertices": "exact",
     "original_vs_reconstructed_geometry_pixel_difference": 0,
     "mapped_vertex_error_px": 0,
+    "shared_clock_weight_samples_checked": 16001,
+    "shared_clock_explicit_stage_cases_checked": 21,
+    "inactive_band_opacity": "exactly zero",
+    "static_final_band_only": true,
     "finite_framing_checked_at": [
       [
         80,
@@ -119,6 +137,6 @@
       ]
     ],
     "reproducible_extraction": "/Users/andrewcheng/mambaforge/bin/python /private/tmp/andrew-site-motion-v3/extract-volterra.py",
-    "reproducible_renderer_check": "node /private/tmp/andrew-site-motion-v3/check-volterra.cjs /Users/andrewcheng/Documents/andrew-website/andrewncheng.github.io"
+    "reproducible_renderer_check": "node /private/tmp/andrew-site-motion-v4/check-growth-volterra.cjs /Users/andrewcheng/Documents/andrew-website/andrewncheng.github.io"
   }
 }

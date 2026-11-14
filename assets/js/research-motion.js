@@ -1,4 +1,4 @@
-/* Shared lifecycle for the two small homepage illustrations. */
+/* Shared lifecycle for the research-topic illustrations. */
 (() => {
     "use strict";
 
@@ -8,6 +8,9 @@
     const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const toggle = group.querySelector("[data-motion-toggle]");
     const label = toggle && toggle.querySelector("[data-motion-label]");
+    const growthStatus = group.querySelector("[data-growth-status]");
+    const growthNames = new Set(["spectrum", "volterra"]);
+    const growthViews = [];
     const scenes = [];
     let paused = false;
     let visible = !("IntersectionObserver" in window);
@@ -19,6 +22,7 @@
     group.querySelectorAll("canvas[data-motion-scene]").forEach(canvas => {
         const factory = window.ResearchMotion && window.ResearchMotion[canvas.dataset.motionScene];
         const fallback = canvas.parentElement.querySelector("[data-motion-fallback]");
+        if (fallback && growthNames.has(canvas.dataset.motionScene)) growthViews.push({ canvas, fallback });
         if (!factory || !fallback) return;
         try {
             if (typeof canvas.getContext !== "function" || !canvas.getContext("2d")) return;
@@ -35,6 +39,28 @@
 
     if (!scenes.length) return;
 
+    function updateGrowthStatus() {
+        const paired = growthViews.length === 2 && growthViews.every(view =>
+            scenes.some(scene => scene.canvas === view.canvas));
+        // Both plots share one sample-size readout. If either renderer fails,
+        // restore both largest-size stills so their displayed states agree.
+        if (!paired) {
+            growthViews.forEach(view => {
+                view.canvas.hidden = true;
+                view.fallback.hidden = false;
+                const index = scenes.findIndex(scene => scene.canvas === view.canvas);
+                if (index !== -1) scenes.splice(index, 1);
+            });
+        }
+        if (growthStatus) {
+            const growth = window.ResearchMotion && window.ResearchMotion.growth;
+            const state = paired && growth ? growth.state(elapsed, motionPreference.matches) :
+                { label: "n = 4096", opacity: 1 };
+            growthStatus.textContent = state.label;
+            growthStatus.parentElement.style.opacity = String(state.opacity);
+        }
+    }
+
     function paint() {
         for (let index = scenes.length - 1; index >= 0; index -= 1) {
             const scene = scenes[index];
@@ -46,6 +72,7 @@
                 scenes.splice(index, 1);
             }
         }
+        updateGrowthStatus();
         if (toggle) toggle.hidden = !scenes.length || motionPreference.matches;
     }
 

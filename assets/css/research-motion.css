@@ -43,6 +43,24 @@
     gap: 10px;
 }
 
+.motion-highdim-visual {
+    min-width: 0;
+}
+
+.motion-growth {
+    min-height: 1.4em;
+    margin: 6px 0 0;
+    color: var(--site-muted);
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.motion-growth [data-growth-status] {
+    white-space: nowrap;
+}
+
 .motion-figure figcaption {
     min-height: 2.9em;
     color: var(--site-text);
@@ -146,6 +164,10 @@
     .motion-highdim-pair {
         grid-template-columns: minmax(0, 1fr);
         gap: 6px;
+    }
+
+    .motion-growth {
+        min-height: 2.8em;
     }
 
     .motion-decisions .motion-frame {

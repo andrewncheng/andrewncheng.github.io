@@ -1,0 +1,92 @@
+{
+  "generatedAtUTC": "2026-11-14T17:01:00.696999+00:00",
+  "seed": 20261114,
+  "bitGenerator": "PCG64",
+  "largestDrawShape": [
+    2048,
+    4096
+  ],
+  "matrixStorageOrder": "C",
+  "dtype": "float64",
+  "coupling": "top-left prefixes of one Gaussian draw",
+  "levels": [
+    64,
+    256,
+    1024,
+    4096
+  ],
+  "dimensions": [
+    32,
+    128,
+    512,
+    2048
+  ],
+  "populationSpikes": [
+    2.6,
+    3.5
+  ],
+  "gamma": 0.5,
+  "covarianceNormalization": "XX^T/n; known zero mean, no sample centering",
+  "histogramNormalization": "counts/(p*0.125) after excluding the largest two eigenvalues",
+  "histogramRangeRule": "zero to max(5,ceil(maximum observed eigenvalue/0.125)*0.125), shared by all checkpoints",
+  "verticalRangeRule": "max(2,ceil(maximum histogram height*1.05/0.25)*0.25), shared by all checkpoints",
+  "eigensolver": "scipy.linalg.eigvalsh, driver=evr, lower=True, overwrite_a=True, eigenvalues only",
+  "solvesCompleted": 4,
+  "retries": 0,
+  "workerWallSeconds": 0.641523041005712,
+  "peakRSSBytesWorkerOS": 195608576,
+  "conservativeWorkingArrayEstimateMiB": 160,
+  "versions": {
+    "python": "3.10.10 | packaged by conda-forge | (main, Mar 24 2023, 20:12:31) [Clang 14.0.6 ]",
+    "numpy": "1.25.2",
+    "scipy": "1.9.3",
+    "platform": "macOS-14.5-arm64-arm-64bit",
+    "numericalBackends": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "version": "0.3.23.dev",
+        "num_threads": 4,
+        "architecture": "armv8"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "version": "0.3.18",
+        "num_threads": 4,
+        "architecture": "armv8"
+      }
+    ]
+  },
+  "source": {
+    "url": "https://arxiv.org/pdf/math/0408165v1",
+    "authors": [
+      "Jinho Baik",
+      "Jack W. Silverstein"
+    ],
+    "model": "Section1.1, Eqs1.5-1.8",
+    "bulk": "Eq1.2 and discussion on PDF pages2/5",
+    "outliers": "Theorem1.1, Eq1.10"
+  },
+  "interpretation": [
+    "One coupled realization at each of four sizes illustrates finite-dimensional behavior; it does not estimate a rate or confidence level.",
+    "The two stems show actual largest sample eigenvalues. They are neither forced outside the bulk nor forced toward theoretical limits.",
+    "Each excluded eigenvalue has empirical mass1/p; equal-height stems encode positions only. Their finite-rank mass vanishes in the limiting MP law.",
+    "Crossfades are visual transitions between computed checkpoints, not spectra at intermediate sample sizes.",
+    "This synthetic Gaussian model is separate from the original published Volterra bands; their covariance and exact aspect ratio are not asserted identical."
+  ],
+  "exitCode": 0,
+  "stoppedReason": null,
+  "wallSeconds": 1.1889273750130087,
+  "peakRSSBytesMonitored": 195297280,
+  "budgets": {
+    "wallSeconds": 180,
+    "workingArrayMiB": 512,
+    "RSSSafetyStopMiB": 512,
+    "threads": 4
+  },
+  "generatorPath": "scripts/generate-spectrum-illustration.py",
+  "generatorSHA256": "9fbfcc6a9a67a42dd75a33c62f4533b3d055718dec81de92a2a3bce31f694088",
+  "dataPath": "images/motion/spectrum-concentration-data.json",
+  "dataSHA256": "6eaa8869c12ba7e895d8d790b9dee4e97059b58382a77277164eaf7ef1f3ce30"
+}
