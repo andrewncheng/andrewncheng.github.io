@@ -91,3 +91,7 @@ Original SVGs and source hashes/crop coordinates are recorded in images/research
 - At the user's request, rewrote the Exact Dynamics paper description around alternating ridge regression and AGOP feature updates, followed by feature evolution and sample requirements. Used the paper's term "multi-output regression."
 - Checked the mechanism and scope against the original PDF abstract and introduction (pages 1–2). This is an explanation of the analyzed method, not a claim of a new algorithm. Figure captions, plots, and interactions are unchanged.
 - Verified the exact text replacement and CRLF-aware whitespace; publish and verify the live HTML.
+
+## Revision — Research introduction, 2026-11-14
+- Per the user's direction, described interpretable tabular-model development as previous work and added the recent focus on fast decision-making from unstructured data using large language models. Preserved the broader research interests and application areas.
+- Verified the targeted text replacement and preserved HTML line endings; publish and verify the live introduction.
