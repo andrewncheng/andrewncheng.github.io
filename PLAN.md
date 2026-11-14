@@ -99,3 +99,5 @@ Original SVGs and source hashes/crop coordinates are recorded in images/research
 ## Revision — Current and past research grouping, 2026-11-14
 - The user clarified that Riemannian optimization and high-dimensional learning dynamics belong with past work. Reorganized the introduction into two paragraphs: broad interests and recent LLM work first; earlier geometry, learning dynamics, and interpretable tabular-model work second.
 - Added a small paragraph gap and refreshed the stylesheet URL. Checked the focused HTML/CSS changes and preserved line endings; verify the deployed HTML and stylesheet.
+
+- 2026-11-14 wording refinement: replaced the recent-work sentence with the user's exact wording, "My recent work focuses on enabling fast decision-making for foundation models on unstructured data."
