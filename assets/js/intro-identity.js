@@ -1,13 +1,13 @@
 (function () {
     "use strict";
 
-    const knot = document.querySelector("[data-intro-knot]");
-    if (!knot) return;
+    const mark = document.querySelector("[data-intro-identity]");
+    if (!mark) return;
 
-    const canvas = knot.querySelector("[data-trefoil-canvas]");
-    const fallback = knot.querySelector("[data-trefoil-fallback]");
-    const toggle = knot.querySelector("[data-trefoil-toggle]");
-    if (!canvas || !fallback || !toggle || !window.TrefoilGeometry) return;
+    const canvas = mark.querySelector("[data-identity-canvas]");
+    const fallback = mark.querySelector("[data-identity-fallback]");
+    const toggle = mark.querySelector("[data-identity-toggle]");
+    if (!canvas || !fallback || !toggle || !window.IdentityGeometry) return;
 
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     let renderer;
@@ -68,7 +68,7 @@
     }
 
     function sync() {
-        const label = paused || still() ? "Play trefoil animation" : "Pause trefoil animation";
+        const label = paused || still() ? "Play mathematical emblem animation" : "Pause mathematical emblem animation";
         toggle.setAttribute("aria-label", label);
         toggle.title = label;
         if (active()) {
@@ -81,7 +81,7 @@
     // Keep the SVG visible until a complete canvas frame has rendered successfully.
     try {
         canvas.hidden = false;
-        renderer = window.TrefoilGeometry.create(canvas);
+        renderer = window.IdentityGeometry.create(canvas);
         paint();
         if (!healthy) return;
         fallback.hidden = true;
@@ -116,7 +116,7 @@
             visible = entries.some(function (entry) { return entry.isIntersecting; });
             sync();
         });
-        observer.observe(knot);
+        observer.observe(mark);
     }
 
     function resize() {
@@ -124,7 +124,7 @@
     }
     if ("ResizeObserver" in window) {
         const observer = new ResizeObserver(resize);
-        observer.observe(knot);
+        observer.observe(mark);
     } else {
         window.addEventListener("resize", resize);
     }
