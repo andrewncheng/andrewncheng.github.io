@@ -169,44 +169,6 @@ summary:focus-visible {
 .intro-copy {
     min-width: 0;
     padding-top: 4px;
-    container-type: inline-size;
-}
-
-.intro-name {
-    white-space: nowrap;
-}
-
-.intro-identity {
-    position: relative;
-    display: inline-block;
-    width: 1.25em;
-    height: 1.05em;
-    margin-left: 0.18em;
-    vertical-align: -0.18em;
-    letter-spacing: normal;
-}
-
-.intro-identity img,
-.intro-identity canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.intro-identity [hidden] {
-    display: none !important;
-}
-
-.intro-identity-toggle {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: transparent;
-    cursor: pointer;
 }
 
 .site-eyebrow {
@@ -236,11 +198,10 @@ summary:focus-visible {
     margin-bottom: 27px;
     color: var(--site-ink);
     font-family: var(--site-serif);
-    font-size: min(clamp(56px, 6.4vw, 88px), 13cqi);
+    font-size: clamp(56px, 6.4vw, 88px);
     font-weight: 400;
     letter-spacing: -0.06em;
     line-height: 1.04;
-    white-space: nowrap;
 }
 
 .intro-lead {
@@ -517,7 +478,7 @@ summary:focus-visible {
 
     .intro-copy h1 {
         margin-bottom: 22px;
-        font-size: min(clamp(48px, 9vw, 66px), 13cqi);
+        font-size: clamp(48px, 9vw, 66px);
         letter-spacing: -0.055em;
     }
 
@@ -588,7 +549,7 @@ summary:focus-visible {
     }
 
     .intro-copy h1 {
-        font-size: min(46px, 13cqi);
+        font-size: 46px;
     }
 }
 
