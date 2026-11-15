@@ -10,10 +10,10 @@
     <link rel="icon" href="images/favicon.svg?v=ac1" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/site.css?v=mila1">
     <link rel="stylesheet" href="assets/css/research.css?v=figure1">
-    <link rel="stylesheet" href="assets/css/rfm-figure.css?v=figure1">
+    <link rel="stylesheet" href="assets/css/rfm-figure.css?v=features1">
     <link rel="stylesheet" href="assets/css/research-motion.css?v=motion6">
     <script src="assets/js/research-figures.js?v=figure1" defer></script>
-    <script src="assets/js/rfm-figure.js?v=figure1" defer></script>
+    <script src="assets/js/rfm-figure.js?v=features1" defer></script>
     <script src="assets/js/motion-manifold.js?v=motion2" defer></script>
     <script src="assets/js/motion-decisions.js?v=motion2" defer></script>
     <script src="assets/js/motion-growth.js?v=motion6" defer></script>
@@ -217,7 +217,8 @@
                                     <button type="button" data-rfm-checkpoint="5" aria-pressed="true" aria-controls="rfm-word-neighbors">t = 5</button>
                                 </div>
                             </div>
-                            <table class="rfm-word-table" id="rfm-word-neighbors" aria-label="Selected words from Figure 1 panel C">
+                            <p class="rfm-stage-note" id="rfm-word-note" data-rfm-stage-note>Words similar to each query in the feature space learned at iteration t = 5 of our algorithm.</p>
+                            <table class="rfm-word-table" id="rfm-word-neighbors" aria-label="Selected words from Figure 1 panel C" aria-describedby="rfm-word-note">
                                 <thead><tr><th scope="col">Query</th><th scope="col">Selected words</th></tr></thead>
                                 <tbody>
                                     <tr data-rfm-query="democracy"><th scope="row">democracy</th><td data-rfm-neighbors>authoritarian, dictatorship, political, legitimacy, revolution</td></tr>
@@ -229,7 +230,6 @@
                                     <tr data-rfm-query="influx"><th scope="row">influx</th><td data-rfm-neighbors>migrants, migration, refugees, asylum, refugee</td></tr>
                                 </tbody>
                             </table>
-                            <p class="rfm-stage-note" data-rfm-stage-note>Selected cosine neighbors from the learned embedding at t = 5.</p>
                             <span class="figure-announcement" data-rfm-announcement aria-live="polite" aria-atomic="true"></span>
                         </div>
                     </div>

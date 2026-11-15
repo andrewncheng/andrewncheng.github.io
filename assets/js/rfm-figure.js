@@ -8,7 +8,7 @@
     const checkpoints = {
         '0': {
             label: 'Random baseline',
-            note: 'Randomly selected words at t = 0, not learned neighbors.',
+            note: 'Randomly selected words at t = 0 provide a baseline before our algorithm learns features.',
             words: {
                 democracy: 'banana, violin, glacier, cactus, toaster',
                 bank: 'octopus, velvet, comet, cabbage, lantern',
@@ -21,7 +21,7 @@
         },
         '1': {
             label: 'After 1 update',
-            note: 'Selected cosine neighbors at t = 1, reproduced from Figure 1.',
+            note: 'Words similar to each query in the feature space learned at iteration t = 1 of our algorithm.',
             words: {
                 democracy: 'political, revolution, politics, politicians, politically',
                 bank: 'deposits, banks, central, deposit, banking',
@@ -34,7 +34,7 @@
         },
         '5': {
             label: 'After 5 updates',
-            note: 'Selected cosine neighbors at t = 5, reproduced from Figure 1.',
+            note: 'Words similar to each query in the feature space learned at iteration t = 5 of our algorithm.',
             words: {
                 democracy: 'authoritarian, dictatorship, political, legitimacy, revolution',
                 bank: 'deposits, fargo, deposit, central, banks',

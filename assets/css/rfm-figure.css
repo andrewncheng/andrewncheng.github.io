@@ -118,7 +118,7 @@
 
 #research .rfm-stage-note {
     min-height: 3em;
-    margin: 12px 0 0;
+    margin: 0 0 12px;
     color: var(--research-muted);
     font-size: 12px;
     line-height: 1.5;
